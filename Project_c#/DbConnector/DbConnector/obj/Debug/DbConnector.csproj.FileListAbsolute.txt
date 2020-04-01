@@ -1,0 +1,10 @@
+C:\Users\omryb\source\repos\DbConnector\DbConnector\obj\Debug\DbConnector.csprojAssemblyReference.cache
+C:\Users\omryb\source\repos\DbConnector\DbConnector\obj\Debug\DbConnector.csproj.CoreCompileInputs.cache
+C:\Users\omryb\source\repos\DbConnector\DbConnector\bin\Debug\DbConnector.exe.config
+C:\Users\omryb\source\repos\DbConnector\DbConnector\bin\Debug\DbConnector.exe
+C:\Users\omryb\source\repos\DbConnector\DbConnector\bin\Debug\DbConnector.pdb
+C:\Users\omryb\source\repos\DbConnector\DbConnector\obj\Debug\DbConnector.exe
+C:\Users\omryb\source\repos\DbConnector\DbConnector\obj\Debug\DbConnector.pdb
+C:\Users\omryb\source\repos\DbConnector\DbConnector\bin\Debug\DAL.dll
+C:\Users\omryb\source\repos\DbConnector\DbConnector\bin\Debug\DAL.pdb
+C:\Users\omryb\source\repos\DbConnector\DbConnector\obj\Debug\DbConnector.csproj.CopyComplete
