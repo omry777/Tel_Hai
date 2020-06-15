@@ -1,0 +1,26 @@
+prog fibonacci;  
+var     a: int,  
+	b: int, 
+	c: int;
+start
+	a <= 2;  
+	b <= 1;
+	loop a < 1000 do
+		loop b > 3 do
+			put 5;
+			c <= (a+b);
+			a <= b;
+			b <= c;
+		endl;
+		if a > b then 
+			a <= b; 
+		else 
+			if a < b then
+				b <= a;
+			else
+				a <= 1;
+				b <= 0;
+			endi;
+		endi;
+	endl;
+endp.
