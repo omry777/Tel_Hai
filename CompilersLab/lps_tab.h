@@ -1,8 +1,5 @@
-#ifndef YYSTYPE
-#define YYSTYPE int
-#endif
-#define	ID	258
-#define	NUM	259
+#define	NUM	258
+#define	ID	259
 #define	RELOP	260
 #define	LOGOP	261
 #define	ADDOP	262

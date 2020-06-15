@@ -772,7 +772,7 @@ YY_RULE_SETUP
 case 23:
 YY_RULE_SETUP
 #line 51 "sle_la.l"
-{ yylval = atoi(yytext); ret(NUM); }
+{ yylval = atof(yytext); ret(NUM); }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP

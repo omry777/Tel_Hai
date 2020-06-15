@@ -47,8 +47,8 @@ endp		ret(ENDP);
 
 {addop}     ret(ADDOP);
 {mulop} 	ret(MULOP);
-{id} 		{ yylval = ret(ID)};
-{num} 		{ yylval = atoi(yytext); ret(NUM); }
+{id} 		{ ret(ID)};
+{num} 		{ yylval = atof(yytext); ret(NUM); }
 {relop} 	ret(RELOP);  
 {logop}		ret(LOGOP);
 {assignop}  ret(ASSIGNOP);

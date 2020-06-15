@@ -4,8 +4,8 @@
 
 #define YYBISON 1  /* Identify Bison output.  */
 
-#define	ID	258
-#define	NUM	259
+#define	NUM	258
+#define	ID	259
 #define	RELOP	260
 #define	LOGOP	261
 #define	ADDOP	262
@@ -36,14 +36,33 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define YYSTYPE double
+#define MAX_VARS 20
+#define MAX_VAR_NAME 20
+#define ERRCODE 0x8fffffff
+
+typedef struct var{
+    double data;
+    char id[MAX_VAR_NAME];
+};
 
 int lineCnt = 1;
 extern FILE *yyin;
 extern FILE *yyout;
 extern char *yytext;
+var vars[MAX_VARS];
+int varCnt = 0;
 
 int yylex();
 void yyerror(char *err);
+int insertToVar(char* id, int num);
+int getVar(char* id);
+void printVars();
+typedef %union {
+    int  num;                 /* integer value */
+    char id[MAX_VAR_NAME];              /* symbol table id */
+}STYPE;
+#define YYSTYPE STYPE
 
 #ifndef YYLTYPE
 typedef
@@ -61,9 +80,6 @@ typedef
 #define YYLTYPE yyltype
 #endif
 
-#ifndef YYSTYPE
-#define YYSTYPE int
-#endif
 #include <stdio.h>
 
 #ifndef __cplusplus
@@ -121,18 +137,18 @@ static const short yyprhs[] = {     0,
 };
 
 static const short yyrhs[] = {    13,
-    49,     3,    50,    15,    37,    14,    51,    38,    28,    29,
-     0,    49,     3,    30,    49,    48,    49,    31,    51,    37,
-     0,    49,     3,    30,    49,    48,    50,     0,    50,     0,
+    49,     4,    50,    15,    37,    14,    51,    38,    28,    29,
+     0,    49,     4,    30,    49,    48,    49,    31,    51,    37,
+     0,    49,     4,    30,    49,    48,    50,     0,    50,     0,
     49,    38,     0,    44,    50,    38,     0,    39,    38,     0,
     40,    38,     0,    43,    38,     0,    42,    38,     0,    49,
      0,    25,    51,    45,    16,    51,    38,    26,    50,     0,
     18,    45,    24,    51,    38,    41,    49,    19,    50,     0,
     49,     0,    49,    17,    51,    38,     0,    16,    51,    38,
-    49,    27,    45,    50,    26,    50,     0,    22,    49,     3,
+    49,    27,    45,    50,    26,    50,     0,    22,    49,     4,
     50,     0,    47,     9,    47,     0,    49,    21,    10,    47,
      0,    51,     0,    50,     0,     0,    47,    46,    47,     0,
-     5,     0,     6,     0,    49,     4,    49,     0,    49,     3,
+     5,     0,     6,     0,    49,     3,    49,     0,    49,     4,
     49,     0,    47,     7,    47,     0,    47,     8,    47,     0,
      7,    47,     0,    49,    32,    47,    33,    49,     0,    20,
      0,    23,     0,    10,     0,     0,    49,    34,    51,    49,
@@ -143,13 +159,13 @@ static const short yyrhs[] = {    13,
 
 #if YYDEBUG != 0
 static const short yyrline[] = { 0,
-    20,    21,    21,    21,    22,    22,    22,    22,    22,    22,
-    22,    23,    24,    25,    25,    26,    27,    29,    29,    29,
-    29,    29,    30,    31,    31,    32,    32,    32,    32,    32,
-    32,    33,    33,    34,    34,    35,    36,    36
+    46,    47,    47,    47,    48,    48,    48,    48,    48,    48,
+    48,    49,    50,    51,    51,    52,    53,    55,    55,    55,
+    55,    55,    56,    57,    57,    58,    58,    58,    58,    58,
+    58,    59,    59,    60,    60,    61,    62,    62
 };
 
-static const char * const yytname[] = {   "$","error","$undefined.","ID","NUM",
+static const char * const yytname[] = {   "$","error","$undefined.","NUM","ID",
 "RELOP","LOGOP","ADDOP","MULOP","ASSIGNOP","WS","SEP","RES","PROG","START","VAR",
 "DO","ELSE","IF","ENDI","INT","PUT","GET","REAL","THEN","LOOP","ENDL","UNTIL",
 "ENDP","'.'","':'","','","'('","')'","';'","'\\n'","Start","Vars","SttmntList",
@@ -180,7 +196,7 @@ static const short yydefact[] = {     0,
      0,    35,     0,     7,     8,    10,     9,    35,    35,    35,
     35,    35,    35,     0,    35,     5,    32,    33,    35,    35,
     35,    24,    25,    35,    35,     0,     1,     6,    28,    29,
-    18,    27,    26,    35,     0,     0,     3,     0,    35,    23,
+    18,    26,    27,    35,     0,     0,     3,     0,    35,    23,
     17,    35,    19,    35,    35,    35,    35,    35,    31,    35,
     35,    35,    14,     0,     2,     0,     0,    35,    35,    35,
     35,    35,    12,    16,    13,    15,     0,     0,     0
@@ -191,18 +207,18 @@ static const short yydefgoto[] = {   107,
     31,    59,    32,    33,    34
 };
 
-static const short yypact[] = {   -11,
-    -2,-32768,     1,    -2,   -18,     9,    -2,    -2,    -5,    -2,
-    28,     2,-32768,-32768,-32768,    -2,    14,   154,    -2,    18,
-    -2,    18,    -2,    -2,    33,   154,   154,   154,   154,    -2,
-    48,   133,-32768,-32768,    -6,    25,     7,   154,    22,    87,
-    44,    18,    40,-32768,-32768,-32768,-32768,   154,    18,    18,
-    18,    -2,    -2,    52,    18,-32768,-32768,-32768,    -2,    -2,
-    -2,-32768,-32768,    18,    -2,    54,-32768,-32768,    25,    25,
-    25,-32768,-32768,    18,     5,     3,-32768,    45,   154,    25,
--32768,    -2,    25,    -2,    -2,    18,    -2,   154,-32768,    -2,
-    -2,    -2,    57,    49,-32768,    50,    59,    -2,    -2,    -2,
-    -2,   154,-32768,-32768,-32768,-32768,    79,    96,-32768
+static const short yypact[] = {    -5,
+     2,-32768,    24,     2,    -4,    22,     2,     2,     9,     2,
+    20,    -2,-32768,-32768,-32768,     2,    16,   154,     2,     6,
+     2,     6,     2,     2,    10,   154,   154,   154,   154,     2,
+    48,   133,-32768,-32768,    -6,    17,     1,   154,    37,    87,
+    43,     6,    33,-32768,-32768,-32768,-32768,   154,     6,     6,
+     6,     2,     2,    59,     6,-32768,-32768,-32768,     2,     2,
+     2,-32768,-32768,     6,     2,    54,-32768,-32768,    17,    17,
+    17,-32768,-32768,     6,     3,     8,-32768,    45,   154,    17,
+-32768,     2,    17,     2,     2,     6,     2,   154,-32768,     2,
+     2,     2,    57,    49,-32768,    50,    60,     2,     2,     2,
+     2,   154,-32768,-32768,-32768,-32768,    78,    96,-32768
 };
 
 static const short yypgoto[] = {-32768,
@@ -215,14 +231,14 @@ static const short yypgoto[] = {-32768,
 
 
 static const short yytable[] = {     3,
-    66,     1,     5,     4,    17,     9,    12,     2,    15,    52,
-    53,    49,    50,    57,     9,     7,    58,    35,    37,     9,
-    37,    41,     9,     8,    20,    10,     6,     2,     5,    14,
-    13,    49,    50,    85,    18,     7,     7,    84,    55,    38,
-    37,    16,    42,    19,    91,    61,    65,    37,    37,    37,
+    66,    17,     5,    52,    53,     9,    12,     1,    15,    49,
+    50,     2,    20,    57,     9,     2,    58,    35,    37,     9,
+    37,    41,     9,    49,    50,    10,     6,     4,     5,     7,
+    13,     7,    55,    16,    18,    84,     8,    43,    85,    38,
+    37,     7,    42,    14,    91,    19,    65,    37,    37,    37,
     72,    73,    48,    37,    49,    50,    51,    76,    78,     9,
-    43,    74,    37,     5,    44,    45,    46,    47,    67,    82,
-    56,    86,    37,    98,    99,   100,    60,   101,   108,    79,
+    61,    67,    37,     5,    44,    45,    46,    47,    74,    82,
+    56,    86,    37,    98,    99,   100,    60,   108,   101,    79,
      9,    77,    89,     9,    37,    93,    68,    81,    12,     5,
     97,    62,    63,    49,    50,   109,     9,     5,     5,     5,
     88,    95,    36,    90,    40,     0,     0,     0,     0,     0,
@@ -237,14 +253,14 @@ static const short yytable[] = {     3,
 };
 
 static const short yycheck[] = {     1,
-    42,    13,     4,     3,     3,     7,     8,    10,    10,     3,
-     4,     7,     8,    20,    16,    34,    23,    19,    20,    21,
-    22,    23,    24,    15,     7,     7,     4,    10,    30,    35,
-     8,     7,     8,    31,    16,    34,    34,    33,    32,    21,
-    42,    14,    24,    30,    86,    24,     3,    49,    50,    51,
+    42,     4,     4,     3,     4,     7,     8,    13,    10,     7,
+     8,    10,     7,    20,    16,    10,    23,    19,    20,    21,
+    22,    23,    24,     7,     8,     7,     4,     4,    30,    34,
+     8,    34,    32,    14,    16,    33,    15,    28,    31,    21,
+    42,    34,    24,    35,    86,    30,     4,    49,    50,    51,
     52,    53,    30,    55,     7,     8,     9,    59,    60,    61,
-    28,    10,    64,    65,    26,    27,    28,    29,    29,    16,
-    32,    27,    74,    17,    26,    26,    38,    19,     0,    61,
+    24,    29,    64,    65,    26,    27,    28,    29,    10,    16,
+    32,    27,    74,    17,    26,    26,    38,     0,    19,    61,
     82,    59,    84,    85,    86,    87,    48,    65,    90,    91,
     92,     5,     6,     7,     8,     0,    98,    99,   100,   101,
     82,    90,    20,    85,    22,    -1,    -1,    -1,    -1,    -1,
@@ -750,39 +766,39 @@ yyreduce:
   switch (yyn) {
 
 case 1:
-#line 20 "lps.y"
+#line 46 "lps.y"
 {printf("SUCCESS!!\n");;
     break;}
 case 19:
-#line 29 "lps.y"
-{ yyval = yyvsp[0]; printf("%d\n", yyval) ;
+#line 55 "lps.y"
+{ yyval = yyvsp[0]; printf("%g\n", 1.0) ;
     break;}
 case 26:
-#line 32 "lps.y"
+#line 58 "lps.y"
 { yyval = yylval; ;
     break;}
 case 27:
-#line 32 "lps.y"
+#line 58 "lps.y"
 {yyval = yylval;;
     break;}
 case 28:
-#line 32 "lps.y"
+#line 58 "lps.y"
 {yyval = yyvsp[-2] + yyvsp[-1];;
     break;}
 case 29:
-#line 32 "lps.y"
+#line 58 "lps.y"
 {yyval = yyvsp[-2] * yyvsp[-1];;
     break;}
 case 30:
-#line 32 "lps.y"
+#line 58 "lps.y"
 {yyval = -yyvsp[-1];
     break;}
 case 31:
-#line 32 "lps.y"
+#line 58 "lps.y"
 {yyval = yyvsp[-2];;
     break;}
 case 37:
-#line 36 "lps.y"
+#line 62 "lps.y"
 {lineCnt++;;
     break;}
 }
@@ -984,17 +1000,17 @@ yyerrhandle:
   goto yynewstate;
 }
 
-#line 37 "lps.y"
+#line 63 "lps.y"
 
 
 int main(int argc, char * argv[]){
     if(argc==1){
         fprintf(stderr,"No input");
-        exit(1);
+        return 1;
     }
     if (strstr(argv[1],".sle") == 0){
         fprintf(stderr, "Input file type not supported\n");
-        exit(1);
+        return 1;
     }
 
     yyin = fopen(argv[1], "r");
@@ -1010,3 +1026,38 @@ void yyerror(char *err){
     fprintf(yyout,"%s\n%s in line: %d", yytext, err, lineCnt);
     exit(1);
 }
+
+int insertToVar(char* id, double num)
+{
+  int i;
+  for( i = 0; i < varCnt; i++)
+    if(!strcmp( id, vars[i].id)){
+      vars[i].data = num;
+      return 0;
+    }
+  if(varCnt < MAX_VARS){
+    strcpy(vars[varCnt].id, id);
+    vars[varCnt++].data = num;
+    return 0;
+  }
+  return ERRCODE;
+}
+
+double getVar(char* id)
+{
+  int i;
+  for( i = 0; i < varCnt; i++){
+    if(!strcmp(vars[i].id, id))
+      return vars[i].data ;
+  }
+  return ERRCODE;
+} 
+
+void printVars()
+{
+  int i;
+  for(i=0; i<varCnt ; i++){
+    printf("%s:  %d\n",vars[i].id,vars[i].data);
+  }
+}
+
