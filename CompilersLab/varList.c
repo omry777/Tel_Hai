@@ -15,13 +15,20 @@ char *getData(char *nm)
 {
     var *v = getVar(nm);
     char *res = (char *)malloc(sizeof(char) * MAX_LEN);
+    res[0] = '\0';
+    if (v == NULL)
+    {
+        printf("ERROR! %s is undeclared!\n", nm);
+        return NULL;
+    }
+
     if (v->type == Int)
         sprintf(res, "%d", *(int *)v->data);
     else if (v->type == Float)
         snprintf(res, MAX_LEN, "%f\0", *(float *)v->data);
     else
         printf("ERROR!\n");
-    
+
     return res;
 }
 
@@ -39,11 +46,18 @@ var *insertVar(char *nm, char *vType)
             v->data = (float *)malloc(sizeof(float));
     }
     else
-        printf("ERROR! variable %s already exists!\n", nm);
+        printf("ERROR! %s already exists!\n", nm);
 }
 void setData(char *nm, char *value)
 {
     var *v = getVar(nm);
+    if (value == NULL)
+        return;
+
+    if (!isdigit(value[0]))
+        if ((value = getData(value)) == NULL)
+            return;
+
     if (v != NULL)
     {
         if (v->type == Int)
@@ -57,7 +71,7 @@ void setData(char *nm, char *value)
             *(float *)v->data = atof(value);
     }
     else
-        printf("ERROR! no such variable %s\n", nm);
+        printf("ERROR! %s is undeclared\n", nm);
 }
 var *getVar(char *nm)
 {

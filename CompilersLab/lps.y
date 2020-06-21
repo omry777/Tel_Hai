@@ -29,7 +29,7 @@ Start :         PROG Empty ID EndLine VAR Vars START CR SttmntList ENDP '.' {pri
 Vars :          Vars1 ',' CR Vars | Vars1 EndLine | EndLine
 Vars1:          GetID ':' Empty Type Empty { insertVar($1, $4) }
 SttmntList:     Empty SttmntList | Statement EndLine SttmntList | Loop SttmntList | If SttmntList | Get SttmntList | Do SttmntList | Empty
-Loop:           LOOP CR BooleanStatement DO CR SttmntList ENDL EndLine
+Loop:           LOOP Empty BooleanStatement DO CR SttmntList ENDL EndLine
 If:             IF BooleanStatement THEN CR SttmntList Else Empty ENDI EndLine
 Else:           Empty | Empty ELSE CR SttmntList
 Do:             DO CR SttmntList Empty UNTIL BooleanStatement EndLine ENDL EndLine
