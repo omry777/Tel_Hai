@@ -18,7 +18,7 @@ char *getData(char *nm)
     res[0] = '\0';
     if (v == NULL)
     {
-        printf("ERROR! %s is undeclared!\n", nm);
+        printf("ERROR! %s is undeclared! ", nm);
         return NULL;
     }
 
@@ -48,15 +48,15 @@ var *insertVar(char *nm, char *vType)
     else
         printf("ERROR! %s already exists!\n", nm);
 }
-void setData(char *nm, char *value)
+int setData(char *nm, char *value)
 {
     var *v = getVar(nm);
     if (value == NULL)
-        return;
+        return 0;
 
-    if (!isdigit(value[0]))
+    if (!isdigit(value[0]) && value[0] != '-')
         if ((value = getData(value)) == NULL)
-            return;
+            return 0;
 
     if (v != NULL)
     {
@@ -64,14 +64,15 @@ void setData(char *nm, char *value)
         {
             if (strchr(value, '.') == NULL)
                 *(int *)v->data = atoi(value);
-            else
+            else{
                 printf("ERROR! can't assign float to int!\n");
+                return 0;
+            }
         }
         else
             *(float *)v->data = atof(value);
     }
-    else
-        printf("ERROR! %s is undeclared\n", nm);
+    return 1;
 }
 var *getVar(char *nm)
 {
@@ -90,6 +91,11 @@ void printVars()
 }
 char *MathOp(char *nm1, char op, char *nm2)
 {
+    if (nm1 == NULL || nm2 == NULL)
+    {
+        return NULL;
+    }
+    
     char *res = (char *)malloc(sizeof(char) * MAX_LEN);
     VarType t1 = Int, t2 = Int;
 

@@ -15,7 +15,7 @@ FILE* token_file;
 digit       [0-9]
 letter      [a-zA-Z]
 id          {letter}({letter}|{digit})*
-num         {digit}+|{digit}*\.{digit}+
+num         {digit}+|{digit}*\.{digit}+|-{digit}
 relop       =|<|>|<>
 assignop    <=|==|>=
 logop       &|!

@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 typedef enum VarType {None, Int, Float} VarType;
 
 typedef struct var{
@@ -16,7 +17,7 @@ typedef struct var{
 } var;
 
 var *insertVar(char *nm, char *vType);
-void setData(char *nm, char *value);
+int setData(char *nm, char *value);
 var *getVar(char *nm);
 void printVars();
 char *MathOp(char *nm1, char op, char *nm2);
