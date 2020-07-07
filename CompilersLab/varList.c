@@ -65,7 +65,7 @@ int setData(char *nm, char *value)
             if (strchr(value, '.') == NULL)
                 *(int *)v->data = atoi(value);
             else{
-                printf("ERROR! can't assign float to int!\n");
+                printf("ERROR! can't assign float to int! ");
                 return 0;
             }
         }

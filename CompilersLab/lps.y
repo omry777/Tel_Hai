@@ -40,7 +40,7 @@ Else:           Empty | Empty ELSE CR SttmntList
 Do:             DO CR SttmntList Empty UNTIL BooleanStatement EndLine ENDL EndLine
 Get:            GET GetID EndLine {setData($2, "1"); }
 
-Statement : GetID Empty ASSIGNOP Literal { setData($1, $4); } | Empty PUT WS Literal { printf("%s\n", $4); } | CR | EndLine | GetID Empty ASSIGNOP error {yyerror("Not a legal assignment!");}
+Statement : GetID Empty ASSIGNOP Literal { if(!setData($1, $4)) yyerror("");} | Empty PUT WS Literal { printf("%s\n", $4); } | CR | EndLine | GetID Empty ASSIGNOP error {yyerror("Not a legal assignment!");}
 BooleanStatement:  Literal Empty BooleanOp Literal Empty
 BooleanOp:  RELOP | LOGOP
 Literal :   Empty NUM { $$ = allocText(); } | Empty ID { $$ = getData(yytext); if($$ == NULL) yyerror(""); } | Literal GetSign Literal { $$ =  MathOp($1, $2, $3);} | GetSign Literal {if ($1 == '-') $$ = MathOp($2,'*',"-1");} | Empty '(' Literal Empty ')' {$$ = $3}

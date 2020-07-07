@@ -1,7 +1,11 @@
 {
     "files.associations": {
         "complex": "cpp",
+<<<<<<< HEAD
         "new": "cpp",
         "iostream": "cpp"
+=======
+        "new": "cpp"
+>>>>>>> ab847cf5164c1df5b89c33c949eb9ceae950cc3f
     }
 }

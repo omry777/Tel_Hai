@@ -15,11 +15,11 @@ FILE* token_file;
 digit       [0-9]
 letter      [a-zA-Z]
 id          {letter}({letter}|{digit})*
-num         {digit}+|{digit}*\.{digit}+|-{digit}
 relop       =|<|>|<>
 assignop    <=|==|>=
 logop       &|!
 addop       \+|-
+num         {addop}*{digit}+|{digit}*\.{digit}+|-{digit}
 mulop       \*|\/|mod
 WS          [ \t]+
 %x          comment
