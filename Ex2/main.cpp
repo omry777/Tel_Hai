@@ -12,7 +12,6 @@ int main(int argc, char* argv[]){
     for (size_t i = 1; i < argc; i++)
     {
         if(strcmp(argv[i],"-i")==0){
-            // graph.load(argv[i+1]);
             for (size_t j = i+1; j < argc; j++)
             {
                 cout << argv[j] << endl;
@@ -21,9 +20,6 @@ int main(int argc, char* argv[]){
             
 
         }
-        // else{
-        //     cout << "Unrecognized argument" << endl;
-        // }
     }
     
     graph.printEverything();

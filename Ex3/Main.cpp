@@ -1,10 +1,13 @@
 #include "Model.h"
 
-using namespace std;
 
 int main(int argc, char *argv[]){
-    Model *m = Model::getInstance();
+    Model m = Model();
+
+    m.print();
     cout << "DONE!\n";
-    m->addAgent("peasant");
-    m->print();
+    m.addAgent();
+    cout << "DONE!\n";
+    m.print();
+    cout << "DONE!\n";
 }

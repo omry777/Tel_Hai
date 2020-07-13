@@ -19,11 +19,9 @@ View::View(float sc, int si)
             matrix[i][j] = ' ';
         }    
     }
-cout << "gbhg\n";
 
-    origin = Point();      //TODO: WTF IS WRONG HERE?! 
-    objects = nullptr;
 
+    //origin = Point();      TODO: WTF IS WRONG HERE?! 
 }
 
 void View::draw()
@@ -36,7 +34,7 @@ void View::draw()
     cout << endl;
     for (size_t i = 0; i < size; i++)
     {
-        cout << "| ";
+        cout << " | ";
         for (size_t j = 0; j < size; j++)
         {
             cout << " " << matrix[i][j] << " ";
@@ -56,19 +54,18 @@ void View::update_location()
     int x, y;
     for (int i = 0; i < *objectCurr; i++)
     {
-        if (inRange((*objects)[i]->getLocation()))
-        {
-            cerr << i << endl;
-            x = (*objects)[i]->getLocation().getX() / scale;
-            y = (*objects)[i]->getLocation().getY() / scale;
-            matrix[x][y] = '*';
-        }
+
+         if ( inRange(*objects[i]))
+         {
+             cerr << i << endl;
+             x = objects[i]->x/ scale;
+             y = objects[i]->y / scale;
+             matrix[x][y] = '*';
+         }
     }
 }
 
-bool View::inRange(Point &p)
-{
-    Point endP = origin + Point(scale * size, scale * size);
-    cerr << "NOPE\n";
-    return (p > origin && p < endP);
-}
+ bool View::inRange(Sim_object &p)
+ {
+     return (p.x > 0 && p.y > 0 && p.x < scale * size && p.y < scale * size );
+ }

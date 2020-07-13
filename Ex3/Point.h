@@ -19,23 +19,54 @@ private:
     float y;
 
 public:
-    Point(float a=0, float b=0) { x = a; y=b; };
+    Point(){ }
+    Point(float a, float b)
+    {
+        cout << a <<  ", " << b << endl;
+        x = a;
+        y = b;
+    };
+    float getX() const { return x; }
 
-    float getX() const;
-    float getY() const;
+    float getY() const { return y; }
 
-    string toString() const;
-    bool operator==(const Point &p2) const;
-    bool operator!=(const Point &p2) const;
-    Point & operator=(const Point &p2);
-    Point &operator+(const Point &p2) const;
-    Point &operator-(const Point &p2) const;
-    Point &operator*(const float num) const;
-    bool operator>(const Point &p2) const;
-    bool operator<(const Point &p2) const;
-    void *operator new(const size_t size){return malloc(sizeof(float)*2); };
+    bool operator==(const Point &p2) const
+    {
+        return (x == p2.x && y == p2.y);
+    }
+    bool operator!=(const Point &p2) const
+    {
+        return !(*this == p2);
+    }
+    Point &operator=(const Point &p2)
+    {
+        x = p2.x;
+        y = p2.y;
+        return *this;
+    }
+
+    Point &operator+(const Point &p2) const
+    {
+        return *(new Point(x + p2.x, y + p2.y));
+    }
+    Point &operator-(const Point &p2) const
+    {
+        return *(new Point(x - p2.x, y - p2.y));
+    }
+    bool operator>(const Point &p2) const
+    {
+        return x >= p2.x && y >= p2.y;
+    }
+    bool operator<(const Point &p2) const
+    {
+        return x <= p2.x && y <= p2.y;
+    }
+    Point &operator*(const float num) const
+    {
+        return *(new Point(x * num, y * num));
+    }
 };
 
-std::ostream &operator<<(std::ostream &os, const Point &pt);
+ostream &operator<<(ostream &os, const Point &pt);
 
 #endif

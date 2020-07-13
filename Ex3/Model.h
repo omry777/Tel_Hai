@@ -1,31 +1,32 @@
 #ifndef MODEL_H
 #define MODEL_H
 
+#include "Sim_object.h"
 #include "View.h"
-#include "Peasant.h"
+#include <vector>
+#define DEF_SIZE 100
+
+#define VECTOR_TYPE (Sim_object *)
 
 class Model
 {
 private:
-    static Model *instance;
-  
-    vector<Sim_object *> objList;
-    int objCurr = 0;
-    vector<Agent *> agentList;
-    int agentCurr = 0;
-    vector<Sim_object *> strctList; //vector<Struct>
-    int strctCurr = 0;
+    Sim_object *list[DEF_SIZE];
+    size_t curr;
+
     View *v;
-    int time;
-    Model();
+
 public:
-    static Model *getInstance();
-    void addAgent(string n);
-    void update();
-    void attach(){v->setObjects(&objList, &objCurr); };
-    void detach();
-    void print(){attach(); v->draw();}
-    ~Model();
+    Model(/* args */) {curr = 0; v = new View(); };
+    ~Model() { delete v; }
+
+    void addAgent();
+    void print()
+    {
+        attach();
+        v->draw();
+    }
+    void attach() { v->setObjects(list, &curr); }
 };
 
 #endif
