@@ -4,68 +4,69 @@ View::View(float sc, int si)
 {
     scale = sc;
     size = si;
-    matrix = (char **)malloc(sizeof(char) * size * size);
-    char *p = matrix[1];
-    for (size_t i = 1; i < size; i++)
-    {
-        matrix[i] = p;
-        p += size;
-    }
-
+    matrix = new char *[size];
     for (size_t i = 0; i < size; i++)
     {
+        matrix[i] = new char[size];
         for (size_t j = 0; j < size; j++)
         {
             matrix[i][j] = ' ';
-        }    
+        }
     }
-
-
-    //origin = Point();      TODO: WTF IS WRONG HERE?! 
+    origin = Point();
 }
 
 void View::draw()
 {
     update_location();
-    for (size_t i = 0; i < size + 2; i++)
+    for (size_t i = 0; i < size + 3; i++)
     {
-        cout << "---";
+        cout << "--";
     }
     cout << endl;
-    for (size_t i = 0; i < size; i++)
+    for (int i = size - 1; i >= 0; i--)
     {
         cout << " | ";
         for (size_t j = 0; j < size; j++)
         {
-            cout << " " << matrix[i][j] << " ";
+            cout << matrix[i][j] << " ";
         }
         cout << " |" << endl;
     }
 
-    for (size_t i = 0; i < size + 2; i++)
+    for (size_t i = 0; i < size + 3; i++)
     {
-        cout << "---";
+        cout << "--";
     }
     cout << endl;
+    for (const auto &obj : *objects)
+        cout << obj << endl;
+    cout << "----------" << endl<< endl;
 }
 
 void View::update_location()
 {
     int x, y;
-    for (int i = 0; i < *objectCurr; i++)
+    for (auto &o : *objects)
     {
-
-         if ( inRange(*objects[i]))
-         {
-             cerr << i << endl;
-             x = objects[i]->x/ scale;
-             y = objects[i]->y / scale;
-             matrix[x][y] = '*';
-         }
+        if (inRange(o))
+        {
+            x = o.loc.getX() / scale;
+            y = o.loc.getY() / scale;
+            matrix[x][y] = '*';
+        }
     }
 }
 
- bool View::inRange(Sim_object &p)
- {
-     return (p.x > 0 && p.y > 0 && p.x < scale * size && p.y < scale * size );
- }
+bool View::inRange(const Sim_object &p)
+{
+    return (p.loc >= origin && p.loc < (float)(scale * size));
+}
+
+View::~View()
+{
+    for (size_t i = 0; i < size; i++)
+        delete[] matrix[i];
+
+    delete[] matrix;
+}

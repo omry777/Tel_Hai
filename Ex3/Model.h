@@ -1,32 +1,36 @@
 #ifndef MODEL_H
 #define MODEL_H
 
-#include "Sim_object.h"
 #include "View.h"
-#include <vector>
-#define DEF_SIZE 100
+#include <list>
+#define DEF_SIZE 10
 
-#define VECTOR_TYPE (Sim_object *)
+//TODO: Add Controller Class
+//TODO: Add Agent (moving_object?) Class
+//TODO: Add (Peasant,Knight,Thug)::Agent Class
+//TODO: Add Structure Class
+//TODO: Add (Castle, Farm)::Structure Class
 
 class Model
 {
 private:
-    Sim_object *list[DEF_SIZE];
-    size_t curr;
+    ListType list = {};
+    // TODO: Add lists of Agents and Structures
 
-    View *v;
+    View v;
+    size_t time;
+    friend class View;
 
 public:
-    Model(/* args */) {curr = 0; v = new View(); };
-    ~Model() { delete v; }
+    Model(/* args */) { v = *(new View()); }
+    ~Model() {}
 
-    void addAgent();
-    void print()
-    {
-        attach();
-        v->draw();
-    }
-    void attach() { v->setObjects(list, &curr); }
+    void addAgent(string nm = "NO NAME", float x = 0, float y = 0) { list.push_front(Sim_object(nm, x, y)); }
+    void print();
+    void attach() { v.setObjects(list); }
+    //TODO Add detach();
+    //TODO Add update()
+    //TODO Add notify_location()
 };
 
 #endif

@@ -18,53 +18,39 @@ private:
     float x;
     float y;
 
+    friend ostream &operator<<(ostream &os, const Point &pt);
 public:
-    Point(){ }
-    Point(float a, float b)
-    {
-        cout << a <<  ", " << b << endl;
-        x = a;
-        y = b;
-    };
+    Point(float a = 0, float b = 0);
     float getX() const { return x; }
-
     float getY() const { return y; }
 
-    bool operator==(const Point &p2) const
-    {
-        return (x == p2.x && y == p2.y);
-    }
-    bool operator!=(const Point &p2) const
-    {
-        return !(*this == p2);
-    }
-    Point &operator=(const Point &p2)
-    {
-        x = p2.x;
-        y = p2.y;
-        return *this;
-    }
-
-    Point &operator+(const Point &p2) const
-    {
-        return *(new Point(x + p2.x, y + p2.y));
-    }
-    Point &operator-(const Point &p2) const
-    {
-        return *(new Point(x - p2.x, y - p2.y));
-    }
-    bool operator>(const Point &p2) const
-    {
-        return x >= p2.x && y >= p2.y;
-    }
-    bool operator<(const Point &p2) const
-    {
-        return x <= p2.x && y <= p2.y;
-    }
-    Point &operator*(const float num) const
-    {
-        return *(new Point(x * num, y * num));
-    }
+    Point &operator=(const Point &p2);
+    Point &operator+=(const Point &p2);
+    Point &operator-=(const Point &p2);
+    Point &operator+=(const float &num);
+    Point &operator-=(const float &num);
+    Point &operator*=(const Point &p2);
+    Point &operator/=(const Point &p2);
+    Point &operator*=(const float &num);
+    Point &operator/=(const float &num);
+    bool operator==(const Point &p2) const { return (x == p2.x && y == p2.y); }
+    bool operator!=(const Point &p2) const { return !(*this == p2); }
+    bool operator==(const float &num) const { return *this == Point(num,num); }
+    bool operator!=(const float &num) const { return !(*this == num); }
+    bool operator>(const Point &p2) const { return x > p2.x && y > p2.y; }
+    bool operator<(const Point &p2) const { return x < p2.x && y < p2.y; }
+    bool operator>(const float num) const { return x > num && y > num; }
+    bool operator<(const float num) const { return x < num && y < num; }
+    bool operator>=(const Point &p2) const { return !(*this < p2); }
+    bool operator<=(const Point &p2) const { return !(*this > p2); }
+    bool operator>=(const float num) const { return !(*this < Point(num,num)); }
+    bool operator<=(const float num) const { return !(*this > Point(num,num)); }
+    Point &operator+(const Point &p2) const { return *(new Point(x + p2.x, y + p2.y)); }
+    Point &operator-(const Point &p2) const { return *(new Point(x - p2.x, y - p2.y)); }
+    Point &operator*(const Point &p2) const { return *(new Point(x * p2.x, y * p2.y)); }
+    Point &operator/(const Point &p2) const { return *(new Point(x / p2.x, y / p2.y)); }
+    Point &operator*(const float num) const { return *(new Point(x * num, y * num)); }
+    Point &operator/(const float num) const { return *(new Point(x / num, y / num)); }
 };
 
 ostream &operator<<(ostream &os, const Point &pt);
