@@ -42,8 +42,14 @@ Point &Point::operator*=(const Point &p2)
 }
 Point &Point::operator/=(const Point &p2)
 {
-    x /= p2.x;
-    y /= p2.y;
+    if (p2.x)
+        x /= p2.x;
+    else
+        x= 0;
+    if (p2.y)
+        y /= p2.y;
+    else
+        y = 0;
     return *this;
 }
 Point &Point::operator*=(const float &num)

@@ -2,7 +2,7 @@
 #define MODEL_H
 
 #include "View.h"
-#include "Agent.h"
+#include "Peasant.h"
 #include <list>
 #define DEF_SIZE 10
 
@@ -12,10 +12,14 @@
 //TODO: Add Structure Class
 //TODO: Add (Castle, Farm)::Structure Class
 
+using namespace std;
+
 class Model
 {
 private:
-    ListType list = {};
+    list<Agent> agentList;
+    list<Sim_object *> AllList;
+
     // TODO: Add lists of Agents and Structures
 
     View v;
@@ -26,9 +30,10 @@ public:
     Model(/* args */) { v = *(new View()); }
     ~Model() {}
 
-    void addAgent(string nm = "NO NAME", Point p = Point()) { list.push_back(Agent(nm, p)); }
+    void addAgent(Agent a = Agent()) { agentList.push_back(a); AllList.push_back(&agentList.back()); }
+    void moveAll(){ for (auto &agent : agentList) agent.Move(); }
     void print();
-    void attach() { v.setObjects(list); }
+    void attach() { v.setObjects(AllList); }
     //TODO Add detach();
     //TODO Add update()
     //TODO Add notify_location()

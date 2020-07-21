@@ -10,7 +10,6 @@ bool Agent::Move() // returns true if Agent has reached it's destenation
     Point absDiff = abs(diff);
 
     diff /= absDiff;
-
     if (absDiff.x < speed)
         diff.x *= absDiff.x;
     else

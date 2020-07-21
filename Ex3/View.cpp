@@ -17,8 +17,8 @@ View::View(float sc, int si)
 }
 
 void View::draw()
-{
-    update_location();
+{   
+    update();
     for (size_t i = 0; i < size + 3; i++)
     {
         cout << "--";
@@ -40,19 +40,23 @@ void View::draw()
     }
     cout << endl;
     for (const auto &obj : *objects)
-        cout << obj << endl;
+        cout << *obj << endl;
     cout << "----------" << endl<< endl;
 }
 
-void View::update_location()
+void View::update()
 {
+    for (size_t i = 0; i < size; i++)
+        for (size_t j = 0; j < size; j++)
+            matrix[i][j] = ' ';
+
     int x, y;
     for (auto &o : *objects)
     {
-        if (inRange(o))
+        if (inRange(*o))
         {
-            x = o.loc.getX() / scale;
-            y = o.loc.getY() / scale;
+            x = o->loc.getX() / scale;
+            y = o->loc.getY() / scale;
             matrix[x][y] = '*';
         }
     }
