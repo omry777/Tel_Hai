@@ -1,8 +1,8 @@
 #include "Sim_object.h"
 
-Sim_object::Sim_object(string nm, float x, float y)
+Sim_object::Sim_object(string nm, Point p)
 {
     name = nm;
-    loc = Point(x, y);
+    loc = p;
 }
 ostream &operator<<(ostream &out, const Sim_object &obj) { out << obj.name << " at: " << obj.loc; }
