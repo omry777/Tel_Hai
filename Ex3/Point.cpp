@@ -60,3 +60,4 @@ Point &Point::operator/=(const float &num)
 }
 
 ostream &operator<<(ostream &os, const Point &pt) { return os << "(" << pt.x << "," << pt.y << ")"; }
+Point abs(Point p) { p.x = abs(p.x); p.y = abs(p.y); }

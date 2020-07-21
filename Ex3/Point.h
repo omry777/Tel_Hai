@@ -19,6 +19,8 @@ private:
     float y;
 
     friend ostream &operator<<(ostream &os, const Point &pt);
+    friend Point abs(Point p);
+    friend class Agent;
 public:
     Point(float a = 0, float b = 0);
     float getX() const { return x; }

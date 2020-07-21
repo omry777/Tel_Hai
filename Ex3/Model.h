@@ -2,6 +2,7 @@
 #define MODEL_H
 
 #include "View.h"
+#include "Agent.h"
 #include <list>
 #define DEF_SIZE 10
 
@@ -25,7 +26,7 @@ public:
     Model(/* args */) { v = *(new View()); }
     ~Model() {}
 
-    void addAgent(string nm = "NO NAME", float x = 0, float y = 0) { list.push_front(Sim_object(nm, x, y)); }
+    void addAgent(string nm = "NO NAME", Point p = Point()) { list.push_back(Agent(nm, p)); }
     void print();
     void attach() { v.setObjects(list); }
     //TODO Add detach();
