@@ -24,8 +24,8 @@ public:
     ~Sim_object() { }
 
     string getName() { return name; }
-
-    virtual void update() = 0;
+    virtual void print() {cout << *this << endl;}
+    virtual void update(){}
 };
 ostream &operator<<(ostream &out, const Sim_object &obj);
 

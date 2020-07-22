@@ -2,8 +2,10 @@
 #define MODEL_H
 
 #include "Peasant.h"
-#include "Structure.h"
+#include "Farm.h"
+#include "Castle.h"
 #include <list>
+#include <map>
 #include <mutex>
 #include <vector>
 #include <cmath>
@@ -11,7 +13,7 @@
 #include <memory>
 
 #define DEF_SIZE 10
-
+#define MAX_CROPS_TO_MOVE 5
 //TODO: Add Controller Class
 //TODO: Add Agent (moving_object?) Class
 //TODO: Add (Peasant,Knight,Thug)::Agent Class
@@ -28,12 +30,8 @@ private:
     list<Sim_object *> AllList;
     static shared_ptr<Model> m;
 
-
-    // TODO: Add lists of Agents and Structures
-
     size_t time;
-    // friend class Controller;
-
+    friend class Controller;
 public:
     Model();
     ~Model() {};
@@ -44,8 +42,9 @@ public:
     void addStructure(Sim_object *s);
     list<Sim_object *> &getAllList(){return AllList;}
     void update();
-    void print();
-    // void attach() { v.setObjects(AllList); }
+    bool setPeasantWork(string peasantName, string farmName, string castleName);
+    Structure *findStructure(string name);
+    Structure *findStructure(Point pos);
 };
 
 #endif

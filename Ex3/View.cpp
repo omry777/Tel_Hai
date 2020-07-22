@@ -27,7 +27,7 @@ void View::draw()
     }
     cout << endl;
     for (const auto &obj : *objects)
-        cout << *obj << endl;
+        obj->print();
     cout << "----------" << endl<< endl;
 }
 

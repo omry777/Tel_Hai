@@ -11,12 +11,18 @@ private:
     size_t packs = 0;
 
     char getSign() { return 'P'; }
+
+    friend class Model;
+    friend ostream &operator<<(ostream &out, const Peasant &obj);
 public:
-    Peasant(string name="NO NAME", Point p = Point(), Point cd = Point(), Point source = Point(), Point d = Point(), float s = 5, size_t hp = 10): Agent{name,p,cd,s,hp} {src = source; dest = d; }
+    Peasant(string name="NO NAME", Point p = Point(), float s = 5, size_t hp = 10): Agent{name,p,s,hp}, src{p}, dest{p} {}
     ~Peasant(){};
 
     void update();
+    void print() {cout << *this << endl;}
 };
+
+ostream &operator<<(ostream &out, const Peasant &obj);
 
 
 #endif

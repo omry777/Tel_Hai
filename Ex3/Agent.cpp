@@ -27,3 +27,7 @@ bool Agent::Move() // returns true if Agent has reached it's destenation
 
     return false;
 }
+
+ostream &operator<<(ostream &out, const Agent &obj){
+    return out << (Sim_object)obj << ", HP: " << obj.health;
+}

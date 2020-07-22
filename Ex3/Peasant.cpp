@@ -4,13 +4,16 @@ void Peasant::update()
 {
     if (Move())
     {
-        if (loc == dest){
-            //TODO: move packs to Castle
+        if (loc == dest)
+        {
             currDest = src;
+            health++;
         }
-        else{
-            //TODO: get packs from Farm
+        else
             currDest = dest;
-        }
     }
+}
+ostream &operator<<(ostream &out, const Peasant &obj)
+{
+    return out << (Agent)obj << " Inventory: " << obj.packs;
 }
