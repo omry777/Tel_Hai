@@ -1,10 +1,15 @@
 #ifndef MODEL_H
 #define MODEL_H
 
-#include "View.h"
 #include "Peasant.h"
 #include "Structure.h"
 #include <list>
+#include <mutex>
+#include <vector>
+#include <cmath>
+#include <cstring>
+#include <memory>
+
 #define DEF_SIZE 10
 
 //TODO: Add Controller Class
@@ -21,22 +26,26 @@ private:
     list<Agent *> agentList;
     list<Structure *> structsList;
     list<Sim_object *> AllList;
+    static shared_ptr<Model> m;
+
 
     // TODO: Add lists of Agents and Structures
 
-    View v;
     size_t time;
-    friend class View;
+    // friend class Controller;
 
 public:
-    Model(/* args */) { v = *(new View()); }
-    ~Model() {}
-
+    Model();
+    ~Model() {};
+    static Model &getInstance();
+    Model(const Model &) = delete;
+    Model(Model &&) = delete;
     void addAgent(Sim_object *a);
     void addStructure(Sim_object *s);
+    list<Sim_object *> &getAllList(){return AllList;}
     void update();
     void print();
-    void attach() { v.setObjects(AllList); }
+    // void attach() { v.setObjects(AllList); }
 };
 
 #endif
