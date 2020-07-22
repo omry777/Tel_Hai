@@ -14,7 +14,7 @@ class View
 private:
     float scale = 2;
     int size = 25;
-    char **matrix;
+    char matrix[30][30];
     Point origin;
     list<Sim_object *> *objects;
 

@@ -4,15 +4,6 @@ View::View(float sc, int si)
 {
     scale = sc;
     size = si;
-    matrix = new char *[size];
-    for (size_t i = 0; i < size; i++)
-    {
-        matrix[i] = new char[size];
-        for (size_t j = 0; j < size; j++)
-        {
-            matrix[i][j] = ' ';
-        }
-    }
     origin = Point();
 }
 
@@ -57,7 +48,7 @@ void View::update()
         {
             x = o->loc.getX() / scale;
             y = o->loc.getY() / scale;
-            matrix[x][y] = '*';
+            matrix[x][y] = o->getSign();
         }
     }
 }
@@ -69,8 +60,4 @@ bool View::inRange(const Sim_object &p)
 
 View::~View()
 {
-    for (size_t i = 0; i < size; i++)
-        delete[] matrix[i];
-
-    delete[] matrix;
 }

@@ -3,6 +3,7 @@
 
 #include "View.h"
 #include "Peasant.h"
+#include "Structure.h"
 #include <list>
 #define DEF_SIZE 10
 
@@ -17,7 +18,8 @@ using namespace std;
 class Model
 {
 private:
-    list<Agent> agentList;
+    list<Agent *> agentList;
+    list<Structure *> structsList;
     list<Sim_object *> AllList;
 
     // TODO: Add lists of Agents and Structures
@@ -30,13 +32,11 @@ public:
     Model(/* args */) { v = *(new View()); }
     ~Model() {}
 
-    void addAgent(Agent a = Agent()) { agentList.push_back(a); AllList.push_back(&agentList.back()); }
-    void moveAll(){ for (auto &agent : agentList) agent.Move(); }
+    void addAgent(Sim_object *a);
+    void addStructure(Sim_object *s);
+    void update();
     void print();
     void attach() { v.setObjects(AllList); }
-    //TODO Add detach();
-    //TODO Add update()
-    //TODO Add notify_location()
 };
 
 #endif

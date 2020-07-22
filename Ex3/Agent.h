@@ -19,17 +19,14 @@ protected:
     size_t health;
     StateType state;
 
+    virtual char getSign() { return 'A'; }
+    bool Move();
 public:
-    Agent(string name = "NO NAME", Point p = Point(), Point d = Point(), float s = 0, size_t hp = 0) : Sim_object{name, p}
-    {
-        currDest = d;
-        speed = s;
-        health = hp;
-    };
+    Agent(string name="NO NAME",Point p = Point(), Point d = Point(),  float s = 0, size_t hp = 0) : Sim_object{name,p}, currDest{d}, speed{s}, health{hp} {}
     ~Agent(){};
 
     void setDest(Point dest) { currDest = dest; }
-    bool Move();
+    virtual void update() { Move(); }
 };
 
 #endif

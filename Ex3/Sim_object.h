@@ -9,18 +9,23 @@ using namespace std;
 class Sim_object
 {
 protected:
-    Point loc;
     string name;
+    Point loc;
+    
+
+    virtual char getSign() { return 's'; }
 
     friend class View;
     friend class Model;
     friend ostream &operator<<(ostream &out, const Sim_object &obj);
+
 public:
-    Sim_object(string nm = "NO NAME", Point p = Point());
-    ~Sim_object() {}
+    Sim_object(string nm = "NO NAME", Point p= Point()) : loc{p}, name{nm} {}
+    ~Sim_object() { }
 
+    string getName() { return name; }
 
-    //TODO: Add update()
+    virtual void update() = 0;
 };
 ostream &operator<<(ostream &out, const Sim_object &obj);
 

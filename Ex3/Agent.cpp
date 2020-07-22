@@ -3,7 +3,10 @@
 bool Agent::Move() // returns true if Agent has reached it's destenation
 {
     if (loc == currDest)
+    {
+        state = Stopped;
         return true;
+    }
 
     state = Moving;
     Point diff = currDest - loc;
@@ -22,10 +25,5 @@ bool Agent::Move() // returns true if Agent has reached it's destenation
 
     loc += diff;
 
-    if (loc == currDest)
-    {
-        state = Stopped;
-        return true;
-    }
     return false;
 }
