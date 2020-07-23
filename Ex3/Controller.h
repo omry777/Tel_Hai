@@ -15,6 +15,7 @@ public:
     Controller();
     void control();
     void run();
+    void init(int argc, char* argv[]);
     void attach();
     ~Controller(){};
 };

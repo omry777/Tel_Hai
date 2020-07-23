@@ -15,6 +15,7 @@ Model &Model::getInstance()
 }
 void Model::addAgent(Sim_object *a)
 {
+
     agentList.push_back((Agent *)a);
     AllList.push_back(a);
 }
@@ -24,12 +25,28 @@ void Model::addStructure(Sim_object *s)
     structsList.push_back((Structure *)s);
     AllList.push_back(s);
 }
+
+bool Model::findAgent(string name){
+    for (auto &s : agentList)
+        if (s->name == name)
+            return true;
+    return false;
+}
+
+Agent *Model::getAgent(string name){
+    for (auto &s : agentList)
+        if (s->name == name)
+            return s;
+    return nullptr;
+}
+
 Structure *Model::findStructure(string name){
     for (auto &s : structsList)
         if (s->name == name)
             return s;
     return nullptr;
 }
+
 Structure *Model::findStructure(Point pos){
     for (auto &s : structsList)
         if (s->loc == pos)
@@ -109,20 +126,23 @@ bool Model::setPeasantWork(string peasantName, string farmName, string castleNam
             peasant->currDest = s->loc;
             f1 = true;
             if (f2)
-                return true;
+                break;
         }
         else if (s->getSign() == 'C' && s->name == castleName)
         {
             peasant->dest = s->loc;
             f2 = true;
             if (f1)
-                return true;
+                break;
         }
     }
     if (!f1)
         cerr << "ERROR! can't find " << farmName << endl;
     if (!f2)
         cerr << "ERROR! can't find " << castleName << endl;
+
+    if(f1 && f2)
+        peasant->state = Moving;
 
     return f1 && f2;
 }

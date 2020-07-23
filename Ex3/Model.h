@@ -42,6 +42,8 @@ public:
     void addStructure(Sim_object *s);
     list<Sim_object *> &getAllList(){return AllList;}
     void update();
+    bool findAgent(string);
+    Agent *getAgent(string);
     bool setPeasantWork(string peasantName, string farmName, string castleName);
     Structure *findStructure(string name);
     Structure *findStructure(Point pos);

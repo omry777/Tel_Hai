@@ -7,6 +7,7 @@
 int main(int argc, char *argv[])
 {
     Controller c;
+    c.init(argc, argv);
     c.run();
     cout << "DONE!\n";
 

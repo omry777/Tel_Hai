@@ -28,6 +28,22 @@ bool Agent::Move() // returns true if Agent has reached it's destenation
     return false;
 }
 
+string Agent::getState () const{
+    switch (state)
+    {
+    case Dead:
+        return "Dead";
+    
+    case Stopped:
+        return "Stopped";
+        
+    case Moving:
+        return "Moving";
+
+    }
+    return "No state found :(";
+}
+
 ostream &operator<<(ostream &out, const Agent &obj){
-    return out << (Sim_object)obj << ", HP: " << obj.health;
+    return out << (Sim_object)obj << ", HP: " << obj.health << " , " <<  obj.getState();
 }

@@ -15,5 +15,5 @@ void Peasant::update()
 }
 ostream &operator<<(ostream &out, const Peasant &obj)
 {
-    return out << (Agent)obj << " Inventory: " << obj.packs;
+    return out << (Agent)obj << ", Inventory: " << obj.packs;
 }

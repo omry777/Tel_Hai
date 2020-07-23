@@ -25,10 +25,12 @@ protected:
     friend class Model;
     friend ostream &operator<<(ostream &out, const Agent &obj);
 public:
-    Agent(string name="NO NAME",Point p = Point(),  float s = 0, size_t hp = 0) : Sim_object{name,p}, currDest{p}, speed{s}, health{hp}, state{Moving} {}
+    Agent(string name="NO NAME",Point p = Point(),  float s = 0, size_t hp = 0) : Sim_object{name,p}, currDest{p}, speed{s}, health{hp}, state{Stopped} {}
     ~Agent(){};
 
     void setDest(Point dest) { currDest = dest; }
+    void stop(){ currDest = loc; state = Stopped; }
+    string getState() const;
     virtual void print() {cout << *this << endl;}
     virtual void update() { Move(); }
 };
