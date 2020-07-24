@@ -26,6 +26,7 @@ public:
     string getName() { return name; }
     virtual void print() {cout << *this << endl;}
     virtual bool update(){ return true; }
+    Point getLoc(){return loc;}
 };
 ostream &operator<<(ostream &out, const Sim_object &obj);
 

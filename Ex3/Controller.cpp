@@ -44,7 +44,7 @@ void Controller::control()
     string input, input2, input3;
     int num;
     float sc, x1, y1, x2, y2;
-    
+    Point p;
     do 
     {
         cout << "Time " << Model::getInstance().time << ": ";
@@ -53,6 +53,8 @@ void Controller::control()
         {
             v->setSize(25);
             v->setScale(2);
+            p = Point();
+            v->setOrigin(p);
         }
         else if (input == "show")
         {
@@ -69,6 +71,11 @@ void Controller::control()
             cin >> num;
             v->setScale(num);
         }
+        else if(input == "pan"){
+            cin >> x1 >> y1;
+            Point p = Point(x1, y1);
+            v->setOrigin(p);
+        }
         else if (input == "create")
         {
             cin >> input >> input2 ;
@@ -83,7 +90,10 @@ void Controller::control()
                 replace(input2.begin(), input2.end(), ')', ' ');
                 Model::getInstance().addAgent(new Peasant(input, Point(stoi(input3), stoi(input2))));
             }
-            // else if(input2 == "knight")
+            else if(input2 == "Knight"){
+                cin >> input3;
+                Model::getInstance().addAgent(new Knight(input,Model::getInstance().findStructure(input3)->getLoc()));
+            }
         }
         else if (input == "go")
         {
@@ -101,6 +111,13 @@ void Controller::control()
             }
             if(input2 == "stop"){
                 Model::getInstance().getAgent(input)->stop();
+            }
+            if(input2 == "destination"){
+                cin >> input3;
+                if(Model::getInstance().findStructure(input3)!=nullptr){
+                    Model::getInstance().getAgent(input)->setDest(Model::getInstance().findStructure(input3)->getLoc());
+                    cout << input << " is heading to " << input3 << " to patrol" <<endl;
+                }
             }
         }
     }while (input != "exit");

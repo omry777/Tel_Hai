@@ -2,6 +2,7 @@
 #define MODEL_H
 
 #include "Peasant.h"
+#include "Knight.h"
 #include "Farm.h"
 #include "Castle.h"
 #include <list>
