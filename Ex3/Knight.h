@@ -8,11 +8,13 @@ class Knight : public Agent
 {
 private:
     // Structure *dest;
-    char getSign() { return 'K'; }
     friend ostream &operator<<(ostream &out, const Knight &obj);
 public:
     Knight(string name="NO NAME", Point p = Point()) : Agent{name,p,10,100}{} ;
+    char getSign() { return 'K'; }
     ~Knight(){};
+
+
 };
 ostream &operator<<(ostream &out, const Knight &obj);
 

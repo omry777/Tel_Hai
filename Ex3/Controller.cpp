@@ -112,13 +112,41 @@ void Controller::control()
         }
         else if ((at = Model::getInstance().getAgent(input)) != nullptr)
         {
-            cin >> input2;
-            if (input2 == "start_working")
-            {
-                cin >> input2 >> input3;
-                Model::getInstance().setPeasantWork(input, input2, input3);
-                cout << input << " is going to work, from " << input2 << " to " << input3 << endl;
+            if(at->getSign() == 'P'){
+                cin >> input2;
+                if (input2 == "start_working")
+                {
+                    cin >> input2 >> input3;
+                    Model::getInstance().setPeasantWork(input, input2, input3);
+                    cout << input << " is going to work, from " << input2 << " to " << input3 << endl;
+                }
             }
+            else if(at->getSign() == 'K'){
+                cin >> input2;
+                if (input2 == "destination")
+                {
+                    cin >> input3;
+                    if ((st = Model::getInstance().findStructure(input3)) != nullptr)
+                    {
+                        at->setDest(st);
+                        cout << input << " is heading to " << input3 << " on patrol" << endl;
+                    }
+                }
+                else if (input2 == "course"){
+                    cin >> x1;
+                    at->setCourse(x1);
+                }
+
+                else if(input2 == "position"){
+                    cin >> x1 >> x2;
+                    Point p = Point(x1,x2);
+                    at->setPos(p);
+                }
+
+                // else if(input2 == "position")
+            }
+
+
             else if (input2 == "status")
             {
                 at->print();
@@ -126,19 +154,6 @@ void Controller::control()
             else if (input2 == "stop")
             {
                 at->stop();
-            }
-            else if (input2 == "destination")
-            {
-                cin >> input3;
-                if ((st = Model::getInstance().findStructure(input3)) != nullptr)
-                {
-                    at->setDest(st);
-                    cout << input << " is heading to " << input3 << " on patrol" << endl;
-                }
-            }
-            else if (input2 == "course"){
-                cin >> x1;
-                at->setCourse(x1);
             }
         }
         else if (input != "exit")

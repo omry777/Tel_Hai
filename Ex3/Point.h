@@ -4,13 +4,14 @@
  * This interface exports a class representing an integer-valued x-y pair.
  */
 
+#define _USE_MATH_DEFINES
+
 #ifndef POINT_H
 #define POINT_H
 
 #include <iostream>
 #include <string>
 #include <math.h>
-#define _USE_MATH_DEFINES
 
 using namespace std;
 
@@ -25,7 +26,7 @@ private:
     friend class Agent;
 public:
     Point(float a = 0, float b = 0);
-    float getX() const { return x; }
+    float getX() const { return floor(x*100)/100; cout << floor(x*100)/100; }
     float getY() const { return y; }
 
     Point &operator=(const Point &p2);
@@ -59,8 +60,9 @@ public:
     Point operator/(const float num) const { return Point(x / num, y / num); }
 
     Point onCircle(const float r, size_t deg){
-        return Point(x+cos(deg*3.14/180)*r, y+sin(deg*3.14/180)*r);
+        return Point(x+cos(deg*M_PI/180)*r, y+sin(deg*M_PI/180)*r);
     }
+
 };
 
 ostream &operator<<(ostream &os, const Point &pt);
