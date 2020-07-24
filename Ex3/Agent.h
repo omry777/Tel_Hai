@@ -15,6 +15,7 @@ class Agent : public Sim_object
 {
 protected:
     Point currDest;
+    string currDestName;
     float speed;
     size_t health;
     StateType state;
@@ -29,6 +30,7 @@ public:
     ~Agent(){};
 
     void setDest(Point dest) { currDest = dest; }
+    // void setCourse()
     void stop(){ currDest = loc; state = Stopped; }
     string getState() const;
     virtual void print() {cout << *this << endl;}

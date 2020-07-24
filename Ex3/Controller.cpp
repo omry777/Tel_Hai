@@ -71,12 +71,19 @@ void Controller::control()
         }
         else if (input == "create")
         {
-            cin >> input >> x1 >> y1;
+            cin >> input >> input2 ;
             if(Model::getInstance().findAgent(input)){
                 cout << "Error ! an agent by this name already exist !" << endl;
                 continue;
             }
-            Model::getInstance().addAgent(new Peasant(input, Point(x1, y1)));
+            if(input2 == "Peasant"){
+                cin >> input3 >> input2;
+                replace(input3.begin(), input3.end(), ',', ' ');
+                replace(input3.begin(), input3.end(), '(', ' ');
+                replace(input2.begin(), input2.end(), ')', ' ');
+                Model::getInstance().addAgent(new Peasant(input, Point(stoi(input3), stoi(input2))));
+            }
+            // else if(input2 == "knight")
         }
         else if (input == "go")
         {

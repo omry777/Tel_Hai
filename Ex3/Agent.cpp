@@ -38,12 +38,14 @@ string Agent::getState () const{
         return "Stopped";
         
     case Moving:
-        return "Moving";
+        string s = "Moving to ";
+        s.append(currDestName);
+        return s;
 
     }
     return "No state found :(";
 }
 
 ostream &operator<<(ostream &out, const Agent &obj){
-    return out << (Sim_object)obj << ", HP: " << obj.health << " , " <<  obj.getState();
+    return out << (Sim_object)obj << ", HP: " << obj.health << " , " <<  obj.getState() ;
 }

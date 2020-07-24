@@ -132,6 +132,7 @@ bool Model::setPeasantWork(string peasantName, string farmName, string castleNam
 
     if(f1 && f2 && peasant->currDest != peasant->loc)
         peasant->state = Moving;
+        peasant->currDestName = castleName;
 
     return f1 && f2;
 }
