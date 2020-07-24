@@ -2,14 +2,18 @@
 
 bool Agent::Move() // returns true if Agent has reached it's destenation
 {
-    if (loc == currDest)
+    if (loc == currDest->loc)
     {
         state = Stopped;
         return true;
     }
 
     state = Moving;
-    Point diff = currDest - loc;
+    Point diff;
+    if (currDest != nullptr)
+        diff = currDest->loc - loc;
+    else
+        diff = loc.onCircle(speed, deg) - loc;
     Point absDiff = abs(diff);
 
     diff /= absDiff;
@@ -28,24 +32,26 @@ bool Agent::Move() // returns true if Agent has reached it's destenation
     return false;
 }
 
-string Agent::getState () const{
+string Agent::getState() const
+{
     switch (state)
     {
     case Dead:
         return "Dead";
-    
+
     case Stopped:
         return "Stopped";
-        
-    case Moving:
-        string s = "Moving to ";
-        s.append(currDestName);
-        return s;
 
+    case Moving:
+        if (currDest != nullptr)
+            return string("Heading to ") + currDest->name;
+        else
+            return string("Heading on course %d deg", deg);
     }
     return "No state found :(";
 }
 
-ostream &operator<<(ostream &out, const Agent &obj){
-    return out << (Sim_object)obj << ", HP: " << obj.health << " , " <<  obj.getState() ;
+ostream &operator<<(ostream &out, const Agent &obj)
+{
+    return out << (Sim_object)obj << ", HP: " << obj.health << " , " << obj.getState();
 }

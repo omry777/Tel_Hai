@@ -4,13 +4,14 @@ bool Peasant::update()
 {
     if (Move())
     {
-        if (loc == dest->loc)
-        {
-            currDest = src->loc;
-            health++;
-        }
-        else
-            currDest = dest->loc;
+        if (dest != nullptr)
+            if (loc == dest->loc)
+            {
+                currDest = src;
+                health++;
+            }
+            else
+                currDest = dest;
         return true;
     }
     return false;

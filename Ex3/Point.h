@@ -9,6 +9,7 @@
 
 #include <iostream>
 #include <string>
+#include <math.h>
 
 using namespace std;
 
@@ -51,8 +52,14 @@ public:
     Point operator-(const Point p2) const { return Point(x - p2.x, y - p2.y); }
     Point operator*(const Point p2) const { return Point(x * p2.x, y * p2.y); }
     Point operator/(const Point p2) const { return Point(x / p2.x, y / p2.y); }
+    Point operator+(const float num) const { return Point(x + num, y + num); }
+    Point operator-(const float num) const { return Point(x - num, y - num); }
     Point operator*(const float num) const { return Point(x * num, y * num); }
     Point operator/(const float num) const { return Point(x / num, y / num); }
+
+    Point onCircle(const float r, const size_t deg){
+        return Point(x+cos(deg)*r, y+sin(deg)*r);
+    }
 };
 
 ostream &operator<<(ostream &os, const Point &pt);

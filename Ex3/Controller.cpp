@@ -2,16 +2,19 @@
 
 Controller::Controller() : v(new View()) {}
 
-void Controller::init(int argc, char* argv[]){
+void Controller::init(int argc, char *argv[])
+{
     ifstream file1;
     string line, s1, s2, s3, s4, s5;
     for (size_t i = 1; i < argc; i++)
     {
         file1.open(argv[i]);
         s1 = (argv[i]);
-        if(s1.find("castle")!= string::npos){
-            cout << "castle file found" << endl;
-            while (getline(file1, line)) {
+        if (s1.find("castle") != string::npos)
+        {
+            //cout << "castle file found" << endl;
+            while (getline(file1, line))
+            {
                 replace(line.begin(), line.end(), ',', ' ');
                 replace(line.begin(), line.end(), '(', ' ');
                 replace(line.begin(), line.end(), ')', ' ');
@@ -21,8 +24,10 @@ void Controller::init(int argc, char* argv[]){
             }
             file1.close();
         }
-        if(s1.find("farm")!= string::npos){
-            while (getline(file1, line)) {
+        if (s1.find("farm") != string::npos)
+        {
+            while (getline(file1, line))
+            {
                 replace(line.begin(), line.end(), ',', ' ');
                 replace(line.begin(), line.end(), '(', ' ');
                 replace(line.begin(), line.end(), ')', ' ');
@@ -32,7 +37,7 @@ void Controller::init(int argc, char* argv[]){
             }
             file1.close();
         }
-  }
+    }
 }
 
 void Controller::attach()
@@ -44,8 +49,10 @@ void Controller::control()
     string input, input2, input3;
     int num;
     float sc, x1, y1, x2, y2;
+    Agent *at;
+    Structure *st;
     Point p;
-    do 
+    do
     {
         cout << "Time " << Model::getInstance().time << ": ";
         cin >> input;
@@ -71,56 +78,75 @@ void Controller::control()
             cin >> num;
             v->setScale(num);
         }
-        else if(input == "pan"){
+        else if (input == "pan")
+        {
             cin >> x1 >> y1;
             Point p = Point(x1, y1);
             v->setOrigin(p);
         }
         else if (input == "create")
         {
-            cin >> input >> input2 ;
-            if(Model::getInstance().findAgent(input)){
+            cin >> input >> input2;
+            if (Model::getInstance().findAgent(input))
+            {
                 cout << "Error ! an agent by this name already exist !" << endl;
                 continue;
             }
-            if(input2 == "Peasant"){
+            if (input2 == "Peasant")
+            {
                 cin >> input3 >> input2;
                 replace(input3.begin(), input3.end(), ',', ' ');
                 replace(input3.begin(), input3.end(), '(', ' ');
                 replace(input2.begin(), input2.end(), ')', ' ');
                 Model::getInstance().addAgent(new Peasant(input, Point(stoi(input3), stoi(input2))));
             }
-            else if(input2 == "Knight"){
+            else if (input2 == "Knight")
+            {
                 cin >> input3;
-                Model::getInstance().addAgent(new Knight(input,Model::getInstance().findStructure(input3)->getLoc()));
+                Model::getInstance().addAgent(new Knight(input, Model::getInstance().findStructure(input3)->getLoc()));
             }
         }
         else if (input == "go")
         {
             Model::getInstance().update();
         }
-        else if(Model::getInstance().findAgent(input)){
+        else if ((at = Model::getInstance().getAgent(input)) != nullptr)
+        {
             cin >> input2;
-            if(input2 == "start_working"){
-                cin >> input2 >> input3 ;
+            if (input2 == "start_working")
+            {
+                cin >> input2 >> input3;
                 Model::getInstance().setPeasantWork(input, input2, input3);
-                cout << input << " is going to work, from " << input2 << " to " << input3 <<endl;
+                cout << input << " is going to work, from " << input2 << " to " << input3 << endl;
             }
-            if(input2 == "status"){
-                Model::getInstance().getAgent(input)->print();
+            else if (input2 == "status")
+            {
+                at->print();
             }
-            if(input2 == "stop"){
-                Model::getInstance().getAgent(input)->stop();
+            else if (input2 == "stop")
+            {
+                at->stop();
             }
-            if(input2 == "destination"){
+            else if (input2 == "destination")
+            {
                 cin >> input3;
-                if(Model::getInstance().findStructure(input3)!=nullptr){
-                    Model::getInstance().getAgent(input)->setDest(Model::getInstance().findStructure(input3)->getLoc());
-                    cout << input << " is heading to " << input3 << " to patrol" <<endl;
+                if ((st = Model::getInstance().findStructure(input3)) != nullptr)
+                {
+                    at->setDest(st);
+                    cout << input << " is heading to " << input3 << " on patrol" << endl;
                 }
             }
+            else if (input2 == "course"){
+                cin >> x1;
+                at->setCourse(x1);
+            }
         }
-    }while (input != "exit");
+        else if (input != "exit")
+        {
+            cerr << "ERROR! wrong input!" << endl;
+        }
+
+    } while (input != "exit");
 }
 
 void Controller::run()

@@ -39,8 +39,8 @@ public:
     static Model &getInstance();
     Model(const Model &) = delete;
     Model(Model &&) = delete;
-    void addAgent(Sim_object *a);
-    void addStructure(Sim_object *s);
+    void addAgent(Agent *a);
+    void addStructure(Structure *s);
     list<Sim_object *> &getAllList(){return AllList;}
     void update();
     bool findAgent(string);

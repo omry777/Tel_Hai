@@ -47,23 +47,3 @@ void Polar_vector::operator=(const Cartesian_vector& cv)
 	if (theta < 0.)
 		theta = 2. * pi + theta; // normalize theta positive
 }
-
-Point::Point(double x, double y) : x(x), y(y)
-{
-}
-
-Point::Point()
-{
-	x = 0.0;
-	y = 0.0;
-}
-
-void Point::print() const
-{
-	cout << setprecision(2) << "(" << x << ", " << y << ")";
-}
-
-bool Point::operator==(const Point & rhs)
-{
-	return x == rhs.x && y == rhs.y;
-}
