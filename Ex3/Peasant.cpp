@@ -4,6 +4,7 @@ bool Peasant::update()
 {
     if (Move())
     {
+        cerr << "HI\n";
         if (dest != nullptr)
             if (loc == dest->loc)
             {

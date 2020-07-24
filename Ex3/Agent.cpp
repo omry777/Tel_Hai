@@ -2,7 +2,10 @@
 
 bool Agent::Move() // returns true if Agent has reached it's destenation
 {
-    if (loc == currDest->loc)
+    if (currDest == nullptr && deg == 999)
+        return false;
+
+    if (currDest != nullptr && loc == currDest->loc)
     {
         state = Stopped;
         return true;
@@ -46,7 +49,7 @@ string Agent::getState() const
         if (currDest != nullptr)
             return string("Heading to ") + currDest->name;
         else
-            return string("Heading on course %d deg", deg);
+            return string("Heading on course ") + to_string(deg) + string(" deg");
     }
     return "No state found :(";
 }

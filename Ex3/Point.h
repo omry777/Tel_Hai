@@ -10,6 +10,7 @@
 #include <iostream>
 #include <string>
 #include <math.h>
+#define _USE_MATH_DEFINES
 
 using namespace std;
 
@@ -57,8 +58,8 @@ public:
     Point operator*(const float num) const { return Point(x * num, y * num); }
     Point operator/(const float num) const { return Point(x / num, y / num); }
 
-    Point onCircle(const float r, const size_t deg){
-        return Point(x+cos(deg)*r, y+sin(deg)*r);
+    Point onCircle(const float r, size_t deg){
+        return Point(x+cos(deg*3.14/180)*r, y+sin(deg*3.14/180)*r);
     }
 };
 
