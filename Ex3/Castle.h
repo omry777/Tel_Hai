@@ -5,7 +5,7 @@
 class Castle : public Structure
 {
     friend class Model;
-
+    friend class Peasant;
 public:
     Castle(string name = "NO NAME", Point p = Point(), size_t c = 0) : Structure{name, p, c} {}
     ~Castle() {}

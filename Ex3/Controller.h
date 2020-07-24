@@ -6,6 +6,14 @@
 #include <iterator>
 #include <algorithm>
 #include <cstring>
+#include "Singleton.h"
+#include <cstring>
+#include <bits/stdc++.h> 
+#include "Farm.h"
+#include "string"
+#include <fstream>
+#include "Castle.h"
+using namespace std;
 
 class Controller
 {

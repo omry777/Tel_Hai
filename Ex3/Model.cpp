@@ -57,43 +57,32 @@ Structure *Model::findStructure(Point pos){
 void Model::update()
 {
     time++;
-    map<Point, size_t> farms;
-    map<Point, size_t> castles;
     for (auto &obj : structsList)
-    {
         obj->update();
-        // if (obj->getSign() == 'F')
-        //     farms.insert(make_pair(obj->loc, ((Farm *)obj)->crops));
-        // else if (obj->getSign() == 'C')
-        //     castles.insert(make_pair(obj->loc, ((Castle *)obj)->crops));
-    }
-    Structure *it;
+
     for (auto &obj : agentList)
     {
-        obj->update();
-        if (obj->getSign() == 'P' && ((Agent *)obj)->state == Stopped)
+        if (obj->update() && obj->getSign() == 'P' && ((Agent *)obj)->state == Stopped)
         {
-            if (obj->loc == ((Peasant *)obj)->src)
+            if (obj->loc == ((Peasant *)obj)->src->loc)
             {
-                it = findStructure(obj->loc);
-                if (it->crops == 0)
+                if (((Peasant *)obj)->src->crops == 0)
                     //obj->state = Moving;
                     break;
-                else if (it->crops < MAX_CROPS_TO_MOVE)
+                else if (((Peasant *)obj)->src->crops < MAX_CROPS_TO_MOVE)
                 {
-                    ((Peasant *)obj)->packs = it->crops;
-                    it->crops = 0;
+                    ((Peasant *)obj)->packs = ((Peasant *)obj)->src->crops;
+                    ((Peasant *)obj)->src->crops = 0;
                 }
                 else
                 {
                     ((Peasant *)obj)->packs = MAX_CROPS_TO_MOVE;
-                    it->crops -= MAX_CROPS_TO_MOVE;
+                    ((Peasant *)obj)->src->crops -= MAX_CROPS_TO_MOVE;
                 }
             }
-            else if (obj->loc == ((Peasant *)obj)->dest)
+            else if (obj->loc == ((Peasant *)obj)->dest->loc)
             {
-                it = findStructure(obj->loc);
-                it->crops += ((Peasant *)obj)->packs;
+                ((Peasant *)obj)->dest->crops += ((Peasant *)obj)->packs;
                 ((Peasant *)obj)->packs = 0;
             }
         }
@@ -122,7 +111,7 @@ bool Model::setPeasantWork(string peasantName, string farmName, string castleNam
     {
         if (s->getSign() == 'F' && s->name == farmName)
         {
-            peasant->src = s->loc;
+            peasant->src = (Farm *)s;
             peasant->currDest = s->loc;
             f1 = true;
             if (f2)
@@ -130,7 +119,7 @@ bool Model::setPeasantWork(string peasantName, string farmName, string castleNam
         }
         else if (s->getSign() == 'C' && s->name == castleName)
         {
-            peasant->dest = s->loc;
+            peasant->dest = (Castle *)s;
             f2 = true;
             if (f1)
                 break;
@@ -141,7 +130,7 @@ bool Model::setPeasantWork(string peasantName, string farmName, string castleNam
     if (!f2)
         cerr << "ERROR! can't find " << castleName << endl;
 
-    if(f1 && f2)
+    if(f1 && f2 && peasant->currDest != peasant->loc)
         peasant->state = Moving;
 
     return f1 && f2;

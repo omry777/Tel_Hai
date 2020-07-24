@@ -2,12 +2,14 @@
 #define PEASANT_H
 
 #include "Agent.h"
+#include "Farm.h"
+#include "Castle.h"
 
 class Peasant : public Agent
 {
 private:
-    Point src;
-    Point dest;
+    Farm *src;
+    Castle *dest;
     size_t packs = 0;
 
     char getSign() { return 'P'; }
@@ -15,10 +17,10 @@ private:
     friend class Model;
     friend ostream &operator<<(ostream &out, const Peasant &obj);
 public:
-    Peasant(string name="NO NAME", Point p = Point(), float s = 5, size_t hp = 10): Agent{name,p,s,hp}, src{p}, dest{p} {}
+    Peasant(string name="NO NAME", Point p = Point(), float s = 5, size_t hp = 10): Agent{name,p,s,hp}, src{nullptr}, dest{nullptr} {}
     ~Peasant(){};
 
-    void update();
+    bool update();
     void print() {cout << *this << endl;}
 };
 

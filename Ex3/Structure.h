@@ -14,7 +14,7 @@ public:
     Structure(string name = "NO NAME", Point p = Point(), size_t c = 0): Sim_object{name,p}, crops{c} {}
     ~Structure() {}
 
-    virtual void update(){}
+    virtual bool update(){ return true; }
     void print() {cout << *this << endl;}
 };
 

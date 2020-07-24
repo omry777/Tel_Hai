@@ -32,7 +32,7 @@ public:
     void stop(){ currDest = loc; state = Stopped; }
     string getState() const;
     virtual void print() {cout << *this << endl;}
-    virtual void update() { Move(); }
+    virtual bool update() { return Move(); }
 };
 ostream &operator<<(ostream &out, const Agent &obj);
 

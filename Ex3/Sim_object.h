@@ -25,7 +25,7 @@ public:
 
     string getName() { return name; }
     virtual void print() {cout << *this << endl;}
-    virtual void update(){}
+    virtual bool update(){ return true; }
 };
 ostream &operator<<(ostream &out, const Sim_object &obj);
 

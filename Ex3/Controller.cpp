@@ -1,12 +1,4 @@
 #include "Controller.h"
-#include "Singleton.h"
-#include <cstring>
-#include <bits/stdc++.h> 
-#include "Farm.h"
-#include "string"
-#include <fstream>
-#include "Castle.h"
-using namespace std;
 
 Controller::Controller() : v(new View()) {}
 
