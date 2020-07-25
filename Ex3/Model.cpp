@@ -135,3 +135,14 @@ bool Model::setPeasantWork(string peasantName, string farmName, string castleNam
 
     return f1 && f2;
 }
+
+bool Model::isCloseEnough(Agent* a){
+    for (auto &obj : agentList){
+        if(obj->getSign()=='K')
+            if(obj->getLoc().distanceFrom(a->getLoc()) <= 2.5 && a->getName() != obj->getName()){
+                cout << obj->getLoc().distanceFrom(a->getLoc()) << endl;
+                return false;
+            }
+    }
+    return true;
+}

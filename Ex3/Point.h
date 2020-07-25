@@ -28,6 +28,7 @@ public:
     Point(float a = 0, float b = 0);
     float getX() const { return floor(x*100)/100; cout << floor(x*100)/100; }
     float getY() const { return y; }
+    float distanceFrom(const Point& p) const;
 
     Point &operator=(const Point &p2);
     Point &operator+=(const Point &p2);

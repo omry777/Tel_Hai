@@ -35,6 +35,7 @@ public:
     Agent(string name = "NO NAME", Point p = Point(), float s = 0, size_t hp = 0) : Sim_object{name, p}, currDest{nullptr}, destPoint(Point(-1,-1)), speed{s}, health{hp}, state{Stopped}, deg{999} {}
     ~Agent(){};
     virtual char getSign() { return 'A'; }
+    size_t getHealth(){ return health;}
     void setDest(Structure *dest)
     {
         currDest = dest;
@@ -55,6 +56,7 @@ public:
         state = Stopped;
     }
     string getState() const;
+    float distanceFrom(const Point& p) const;
     virtual void print() { cout << *this << endl; }
     virtual bool update() { return Move(); }
 };

@@ -65,5 +65,9 @@ Point &Point::operator/=(const float &num)
     return *this;
 }
 
+float Point::distanceFrom(const Point& p) const{
+    return sqrt(pow(x - p.x, 2) + pow(y - p.y, 2));
+}
+
 ostream &operator<<(ostream &os, const Point &pt) { return os << "(" << pt.x << "," << pt.y << ")"; }
 Point abs(Point p) { p.x = (p.x > 0)? p.x:-p.x; p.y = (p.y > 0)? p.y:-p.y; return p; }

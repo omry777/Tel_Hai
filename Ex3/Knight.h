@@ -12,6 +12,7 @@ private:
 public:
     Knight(string name="NO NAME", Point p = Point()) : Agent{name,p,10,100}{} ;
     char getSign() { return 'K'; }
+    void print() {cout << *this << endl;}
     ~Knight(){};
 
 

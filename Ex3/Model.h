@@ -3,6 +3,7 @@
 
 #include "Peasant.h"
 #include "Knight.h"
+#include "Thug.h"
 #include "Farm.h"
 #include "Castle.h"
 #include <list>
@@ -43,6 +44,7 @@ public:
     void addStructure(Structure *s);
     list<Sim_object *> &getAllList(){return AllList;}
     void update();
+    bool isCloseEnough(Agent *a);
     bool findAgent(string);
     Agent *getAgent(string);
     bool setPeasantWork(string peasantName, string farmName, string castleName);

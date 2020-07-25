@@ -71,5 +71,5 @@ string Agent::getState() const
 
 ostream &operator<<(ostream &out, const Agent &obj)
 {
-    return out << (Sim_object)obj << ", HP: " << obj.health << " , " << obj.getState();
+    return out << (Sim_object)obj << " , " << obj.getState();
 }

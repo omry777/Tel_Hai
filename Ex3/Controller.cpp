@@ -49,7 +49,7 @@ void Controller::control()
     string input, input2, input3;
     int num;
     float sc, x1, y1, x2, y2;
-    Agent *at;
+    Agent *at, *at2;
     Structure *st;
     Point p;
     do
@@ -105,6 +105,18 @@ void Controller::control()
                 cin >> input3;
                 Model::getInstance().addAgent(new Knight(input, Model::getInstance().findStructure(input3)->getLoc()));
             }
+            else if(input2 == "Thug"){
+                cin >> input3 >> input2;
+                replace(input3.begin(), input3.end(), ',', ' ');
+                replace(input3.begin(), input3.end(), '(', ' ');
+                replace(input2.begin(), input2.end(), ')', ' ');
+                Model::getInstance().addAgent(new Thug(input, Point(stoi(input3), stoi(input2))));
+            }
+            else
+            {
+                cerr << "Wrong input !" << endl;
+            }
+            
         }
         else if (input == "go")
         {
@@ -112,8 +124,8 @@ void Controller::control()
         }
         else if ((at = Model::getInstance().getAgent(input)) != nullptr)
         {
+            cin >> input2;
             if(at->getSign() == 'P'){
-                cin >> input2;
                 if (input2 == "start_working")
                 {
                     cin >> input2 >> input3;
@@ -122,7 +134,6 @@ void Controller::control()
                 }
             }
             else if(at->getSign() == 'K'){
-                cin >> input2;
                 if (input2 == "destination")
                 {
                     cin >> input3;
@@ -143,15 +154,47 @@ void Controller::control()
                     at->setPos(p);
                 }
 
-                // else if(input2 == "position")
+            }
+            else if(at->getSign() == 'T'){
+                if (input2 == "attack")
+                {
+                    cin >> input3;
+                    if ((at2 = Model::getInstance().getAgent(input3)) != nullptr)
+                    {
+                        cout << at->getLoc().distanceFrom(at2->getLoc()) << endl;
+                        if(at->getLoc().distanceFrom(at2->getLoc()) <= 1){
+                            cout << "Within 1 km from peasant\n";
+                            if(at->getHealth() > at2->getHealth()){
+                                cout << "Got more HP\n";
+                                if(Model::getInstance().isCloseEnough(at))
+                                    cout << "Attack Succeed!\n";
+                            }
+                        }
+                        cout << "Attack failed\n";
+
+                    }
+                }
+                else if (input2 == "course"){
+                    cin >> x1 >> y1;
+                    at->setCourse(x1);
+                    at->setSpeed(y1);
+                }
+
+                else if(input2 == "position"){
+                    cin >> x1 >> x2 >> y1;
+                    Point p = Point(x1,x2);
+                    at->setSpeed(y1);
+                    at->setPos(p);
+                }
+                
             }
 
 
-            else if (input2 == "status")
+            if (input2 == "status")
             {
                 at->print();
             }
-            else if (input2 == "stop")
+            if (input2 == "stop")
             {
                 at->stop();
             }
