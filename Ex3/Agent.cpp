@@ -2,21 +2,27 @@
 
 bool Agent::Move() // returns true if Agent has reached it's destenation
 {
+    if (!health)
+    {
+        state = Dead;
+        return false;
+    }
     if (currDest != nullptr)
         destPoint = currDest->loc;
     else if (deg != 999)
         destPoint = loc.onCircle(speed, deg);
-    
-    if (loc == destPoint)
-    {
-        state = Stopped;
-        return true;
-    }
+
     state = Moving;
     if (loc.distanceFrom(destPoint) > speed)
         loc = loc.onCircle(speed, loc.getDegree(destPoint));
     else
         loc = destPoint;
+
+    if (loc == destPoint)
+    {
+        state = Stopped;
+        return true;
+    }
 
     return false;
 }
@@ -37,7 +43,7 @@ string Agent::getState() const
         else if (deg != 999)
             return string("Heading on course ") + to_string(deg) + string(" deg");
         else
-            return string("Heading to ") + string("(") + to_string(destPoint.x) + string(",") + to_string(destPoint.y) + string(")");
+            return string("Heading to ") + string("(") + to_string((int)destPoint.x) + string(".") + to_string(((int)(destPoint.x * 100) % 100)) + string(",") + to_string((int)destPoint.y) + string(".") + to_string(((int)(destPoint.y * 100) % 100)) + string(")");
     }
     return "No state found :(";
 }

@@ -25,7 +25,6 @@ protected:
 
     StateType state;
 
-    
     bool Move();
     friend class Model;
     friend ostream &operator<<(ostream &out, const Agent &obj);
@@ -56,7 +55,10 @@ public:
     string getState() const;
     float distanceFrom(const Point &p) const;
     virtual void print() { cout << *this << endl; }
-    virtual bool update() { return Move(); }
+    virtual bool update()
+    {
+        return Move();
+    }
 };
 ostream &operator<<(ostream &out, const Agent &obj);
 

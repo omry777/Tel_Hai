@@ -11,6 +11,7 @@ protected:
     virtual char getSign() { return 'S'; }
     friend class Model;
     friend class Agent;
+    friend class Knight;
     friend ostream &operator<<(ostream &out, const Structure &obj);
 public:
     Structure(string name = "NO NAME", Point p = Point(), size_t c = 0): Sim_object{name,p}, crops{c} {}

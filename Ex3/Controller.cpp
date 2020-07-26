@@ -103,7 +103,8 @@ void Controller::control()
             else if (input2 == "Knight")
             {
                 cin >> input3;
-                Model::getInstance().addAgent(new Knight(input, Model::getInstance().findStructure(input3)->getLoc()));
+                Model::getInstance().addAgent((at = new Knight(Model::getInstance().structsList, input, (st = Model::getInstance().findStructure(input3))->getLoc())));
+                ((Knight *)at)->startPatrol(st);
             }
             else if (input2 == "Thug")
             {
@@ -141,8 +142,8 @@ void Controller::control()
                     cin >> input3;
                     if ((st = Model::getInstance().findStructure(input3)) != nullptr)
                     {
-                        at->setDest(st);
-                        cout << input << " is heading to " << input3 << " on patrol" << endl;
+                        ((Knight *)at)->startPatrol(st);
+                        //cout << input << " is heading to " << input3 << " on patrol" << endl;
                     }
                 }
                 else if (input2 == "course")
