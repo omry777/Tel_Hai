@@ -6,6 +6,7 @@
 
 int main(int argc, char *argv[])
 {
+    Point p;
     Controller c;
     c.init(argc, argv);
     c.run();

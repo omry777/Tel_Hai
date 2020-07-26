@@ -7,6 +7,7 @@ class Structure : public Sim_object
 {
 protected:
     size_t crops;
+    Structure *nearest;
     virtual char getSign() { return 'S'; }
     friend class Model;
     friend class Agent;

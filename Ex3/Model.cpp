@@ -62,30 +62,7 @@ void Model::update()
 
     for (auto &obj : agentList)
     {
-        if (obj->update() && obj->getSign() == 'P' && ((Agent *)obj)->state == Stopped)
-        {
-            if (obj->loc == ((Peasant *)obj)->src->loc)
-            {
-                if (((Peasant *)obj)->src->crops == 0)
-                    //obj->state = Moving;
-                    break;
-                else if (((Peasant *)obj)->src->crops < MAX_CROPS_TO_MOVE)
-                {
-                    ((Peasant *)obj)->packs = ((Peasant *)obj)->src->crops;
-                    ((Peasant *)obj)->src->crops = 0;
-                }
-                else
-                {
-                    ((Peasant *)obj)->packs = MAX_CROPS_TO_MOVE;
-                    ((Peasant *)obj)->src->crops -= MAX_CROPS_TO_MOVE;
-                }
-            }
-            else if (obj->loc == ((Peasant *)obj)->dest->loc)
-            {
-                ((Peasant *)obj)->dest->crops += ((Peasant *)obj)->packs;
-                ((Peasant *)obj)->packs = 0;
-            }
-        }
+        obj->update();
     }
 }
 
@@ -104,7 +81,7 @@ bool Model::setPeasantWork(string peasantName, string farmName, string castleNam
     }
     if (peasant == nullptr)
     {
-        cerr << "ERROR! can't find " << peasantName << endl;
+        cerr << "ERROR! can't find Peasant by the name of " << peasantName << endl;
         return false;
     }
     for (auto &s : structsList)
@@ -112,7 +89,7 @@ bool Model::setPeasantWork(string peasantName, string farmName, string castleNam
         if (s->getSign() == 'F' && s->name == farmName)
         {
             peasant->src = (Farm *)s;
-            peasant->currDest = s;
+            
             f1 = true;
             if (f2)
                 break;
@@ -126,9 +103,14 @@ bool Model::setPeasantWork(string peasantName, string farmName, string castleNam
         }
     }
     if (!f1)
-        cerr << "ERROR! can't find " << farmName << endl;
+        cerr << "ERROR! can't find Farm by the name of " << farmName << endl;
     if (!f2)
-        cerr << "ERROR! can't find " << castleName << endl;
+        cerr << "ERROR! can't find Castle by the name of " << castleName << endl;
+
+    if (peasant->packs == 0)
+        peasant->currDest = peasant->src;
+    else
+        peasant->currDest = peasant->dest;
 
     if(f1 && f2 && peasant->currDest != nullptr)
         peasant->state = Moving;

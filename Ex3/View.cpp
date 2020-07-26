@@ -7,7 +7,7 @@ void View::draw()
     update();
     for (size_t i = 0; i < _size + 3; i++)
     {
-        cout << "--";
+        cout << "---";
     }
     cout << endl;
     for (int i = _size - 1; i >= 0; i--)
@@ -35,7 +35,7 @@ void View::update()
 {
     for (size_t i = 0; i < _size; i++)
         for (size_t j = 0; j < _size; j++)
-            matrix[i][j] = ' ';
+            matrix[i][j] = ". ";
 
     int x, y;
     Point temp;
@@ -46,7 +46,7 @@ void View::update()
             temp = o->loc - origin;
             x = temp.getX() / scale;
             y = temp.getY() / scale;
-            matrix[x][y] = o->getSign();
+            matrix[y][x] = o->name.substr(0,2);
         }
     }
 }

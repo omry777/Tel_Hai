@@ -15,7 +15,7 @@
 #include <memory>
 
 #define DEF_SIZE 10
-#define MAX_CROPS_TO_MOVE 5
+
 //TODO: Add Controller Class
 //TODO: Add Agent (moving_object?) Class
 //TODO: Add (Peasant,Knight,Thug)::Agent Class

@@ -15,7 +15,7 @@ class View
     // TODO: incorporate images and better view screen
 private:
     float scale;
-    char matrix[30][30];
+    string matrix[30][30];
     Point origin;
     list<Sim_object *> *objects;
     int _size;

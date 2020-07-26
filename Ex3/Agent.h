@@ -25,17 +25,16 @@ protected:
 
     StateType state;
 
-    // virtual char getSign() { return 'A'; }
+    
     bool Move();
-
     friend class Model;
     friend ostream &operator<<(ostream &out, const Agent &obj);
 
 public:
-    Agent(string name = "NO NAME", Point p = Point(), float s = 0, size_t hp = 0) : Sim_object{name, p}, currDest{nullptr}, destPoint(Point(-1,-1)), speed{s}, health{hp}, state{Stopped}, deg{999} {}
+    Agent(string name = "NO NAME", Point p = Point(), float s = 0, size_t hp = 0) : Sim_object{name, p}, currDest{nullptr}, speed{s}, health{hp}, state{Stopped}, deg{999} {}
     ~Agent(){};
     virtual char getSign() { return 'A'; }
-    size_t getHealth(){ return health;}
+    size_t getHealth() { return health; }
     void setDest(Structure *dest)
     {
         currDest = dest;
@@ -46,17 +45,16 @@ public:
         deg = degr;
         currDest = nullptr;
     }
-    void setPos(Point p){destPoint = p;};
+    void setPos(Point p) { destPoint = p; };
     void setSpeed(float s) { speed = s; }
     void stop()
     {
         currDest = nullptr;
-        destPoint = Point(-1, -1);
         deg = 999;
         state = Stopped;
     }
     string getState() const;
-    float distanceFrom(const Point& p) const;
+    float distanceFrom(const Point &p) const;
     virtual void print() { cout << *this << endl; }
     virtual bool update() { return Move(); }
 };

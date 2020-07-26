@@ -89,7 +89,7 @@ void Controller::control()
             cin >> input >> input2;
             if (Model::getInstance().findAgent(input))
             {
-                cout << "Error ! an agent by this name already exist !" << endl;
+                cout << "Error! an agent by this name already exist !" << endl;
                 continue;
             }
             if (input2 == "Peasant")
@@ -105,7 +105,8 @@ void Controller::control()
                 cin >> input3;
                 Model::getInstance().addAgent(new Knight(input, Model::getInstance().findStructure(input3)->getLoc()));
             }
-            else if(input2 == "Thug"){
+            else if (input2 == "Thug")
+            {
                 cin >> input3 >> input2;
                 replace(input3.begin(), input3.end(), ',', ' ');
                 replace(input3.begin(), input3.end(), '(', ' ');
@@ -114,9 +115,8 @@ void Controller::control()
             }
             else
             {
-                cerr << "Wrong input !" << endl;
+                cerr << "Wrong input! create Peasant/Knight/Thug" << endl;
             }
-            
         }
         else if (input == "go")
         {
@@ -125,15 +125,17 @@ void Controller::control()
         else if ((at = Model::getInstance().getAgent(input)) != nullptr)
         {
             cin >> input2;
-            if(at->getSign() == 'P'){
+            if (at->getSign() == 'P')
+            {
                 if (input2 == "start_working")
                 {
                     cin >> input2 >> input3;
-                    Model::getInstance().setPeasantWork(input, input2, input3);
-                    cout << input << " is going to work, from " << input2 << " to " << input3 << endl;
+                    if (Model::getInstance().setPeasantWork(input, input2, input3))
+                        cout << input << " is going to work, from " << input2 << " to " << input3 << endl;
                 }
             }
-            else if(at->getSign() == 'K'){
+            else if (at->getSign() == 'K')
+            {
                 if (input2 == "destination")
                 {
                     cin >> input3;
@@ -143,52 +145,55 @@ void Controller::control()
                         cout << input << " is heading to " << input3 << " on patrol" << endl;
                     }
                 }
-                else if (input2 == "course"){
+                else if (input2 == "course")
+                {
                     cin >> x1;
                     at->setCourse(x1);
                 }
 
-                else if(input2 == "position"){
+                else if (input2 == "position")
+                {
                     cin >> x1 >> x2;
-                    Point p = Point(x1,x2);
+                    Point p = Point(x1, x2);
                     at->setPos(p);
                 }
-
             }
-            else if(at->getSign() == 'T'){
+            else if (at->getSign() == 'T')
+            {
                 if (input2 == "attack")
                 {
                     cin >> input3;
                     if ((at2 = Model::getInstance().getAgent(input3)) != nullptr)
                     {
                         cout << at->getLoc().distanceFrom(at2->getLoc()) << endl;
-                        if(at->getLoc().distanceFrom(at2->getLoc()) <= 1){
+                        if (at->getLoc().distanceFrom(at2->getLoc()) <= 1)
+                        {
                             cout << "Within 1 km from peasant\n";
-                            if(at->getHealth() > at2->getHealth()){
+                            if (at->getHealth() > at2->getHealth())
+                            {
                                 cout << "Got more HP\n";
-                                if(Model::getInstance().isCloseEnough(at))
+                                if (Model::getInstance().isCloseEnough(at))
                                     cout << "Attack Succeed!\n";
                             }
                         }
                         cout << "Attack failed\n";
-
                     }
                 }
-                else if (input2 == "course"){
+                else if (input2 == "course")
+                {
                     cin >> x1 >> y1;
                     at->setCourse(x1);
                     at->setSpeed(y1);
                 }
 
-                else if(input2 == "position"){
+                else if (input2 == "position")
+                {
                     cin >> x1 >> x2 >> y1;
-                    Point p = Point(x1,x2);
+                    Point p = Point(x1, x2);
                     at->setSpeed(y1);
                     at->setPos(p);
                 }
-                
             }
-
 
             if (input2 == "status")
             {
@@ -209,20 +214,5 @@ void Controller::control()
 
 void Controller::run()
 {
-    // Model::getInstance().addStructure(new Farm("Manor_Farm", Point(0, 0), 4));
-    // Model::getInstance().addStructure(new Farm("Animal_Farm", Point(49, 49), 9));
-    // Model::getInstance().addStructure(new Farm("Foxwood_Farm", Point(0, 49), 2));
-    // Model::getInstance().addStructure(new Farm("Pinchfield_Farm", Point(49, 0), 3));
-    // Model::getInstance().addStructure(new Castle("White_Castle", Point(25, 25)));
-    // Model::getInstance().addAgent(new Peasant("Gorge"));
-    // Model::getInstance().addAgent(new Peasant("John"));
-    // Model::getInstance().addAgent(new Peasant("Paul"));
-    // Model::getInstance().addAgent(new Peasant("Ringo"));
-    // Model::getInstance().setPeasantWork("Gorge", "Manor_Farm", "White_Castle");
-    // Model::getInstance().setPeasantWork("John", "Animal_Farm", "White_Castle");
-    // Model::getInstance().setPeasantWork("Paul", "Foxwood_Farm", "White_Castle");
-    // Model::getInstance().setPeasantWork("Ringo", "Pinchfield_Farm", "White_Castle");
-    // attach();
-    // v->draw();
     control();
 }
