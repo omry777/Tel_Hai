@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Trivia King</title>
+    <link rel="stylesheet" type="text/css" href="../css/Categories.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js"
+        integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/mouse0270-bootstrap-notify/3.1.7/bootstrap-notify.min.js"></script>
+    <script src="../javascript/Categories.js"></script>
+    <script src="../javascript/Question.js"></script>
+    <div type="userInt" style="float: right; position: relative; margin: auto; width:auto;">
+        <a href="login.html"><input type="button" id="signOutBtn" class="signOutBtn" value="Sign Out"></a>
+        <br><br><br>
+        <label for=signOutBtn>Hello *username*</label>
+    </div>
+
+</head>
+
+<body onload="readJSONFiles()" style="background-color: rgb(199, 191, 241);">
+    <form>
+        <div id="container">
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+
+        <div>
+            <label for="Leaderboard">Leaderboard:</label>
+            <iframe src="Leaderboard.html" name="common/productsTable" allowTransparency="true" scrolling="no"
+                frameborder="0" style="width: auto;">
+            </iframe>
+        </div>
+
+    </form>
+
+</body>
+
+</html>

@@ -1,8 +1,9 @@
 <html>
+
 <head>
     <title>Trivia King</title>
     <link rel="stylesheet" type="text/css" href="../css/Questions.css">
-    
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.js"
         integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -13,12 +14,12 @@
         <br><br><br>
         <label for=signOutBtn>Hello *Enter username here*<br>High Score: ####</label>
     </div>
-    
 </head>
 
 <body style="background-color: rgb(199, 191, 241);">
     <form>
-        <script src="../javascript/Question.js" onload="readJSONFile('History')"></script>
+        
+            </script>
         <div class="container">
             <div id="question">
                 <div id="questionNum">
@@ -29,14 +30,20 @@
                     What is the right answer?
                 </div>
             </div>
-            <p> 
-                
+            <p>
+
             <div id="answers">
-                <button type="submit" class="answerBtn" id="ans0" value="Ans1" onclick="changeQuestion(this.value)" formaction="#"></button>
-                <button type="submit" class="answerBtn" id="ans1" value="Ans2" onclick="changeQuestion(this.value)" formaction="#"></button>
-                <button type="submit" class="answerBtn" id="ans2" value="Ans3" onclick="changeQuestion(this.value)" formaction="#"></button>
-                <button type="submit" class="answerBtn" id="ans3" value="Ans4" onclick="changeQuestion(this.value)" formaction="#"></button>
+                <button type="button" class="answerBtn" id="ans0" value="Ans1" onclick="changeQuestion(this.value)"
+                    formaction="#"></button>
+                <button type="button" class="answerBtn" id="ans1" value="Ans2" onclick="changeQuestion(this.value)"
+                    formaction="#"></button>
+                <button type="button" class="answerBtn" id="ans2" value="Ans3" onclick="changeQuestion(this.value)"
+                    formaction="#"></button>
+                <button type="button" class="answerBtn" id="ans3" value="Ans4" onclick="changeQuestion(this.value)"
+                    formaction="#"></button>
             </div>
+            <script src="../javascript/Question.js" onload="readJSONFile()"></script>
+            <script src="../javascript/Question.js" onload="resetScreen()"></script>
             <p id="Score" style="color: rgb(83, 85, 55);">Score: ####</p>
             </p>
             <div>
@@ -45,7 +52,7 @@
             </div>
         </div>
     </form>
-    
+
 </body>
 
 </html>
