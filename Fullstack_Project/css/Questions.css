@@ -52,6 +52,7 @@
 
   button:hover {
     opacity: 0.8;
+    border: 2px solid red;
   }
   
 .signOutBtn {
