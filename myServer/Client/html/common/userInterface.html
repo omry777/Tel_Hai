@@ -1,0 +1,16 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="../../css/userInterface.css">
+</head>
+
+<body>
+    <div type="userInt">
+        <label for=signOutBtn>Hello</label>
+        <br>
+        <a href="/login" target="_top"><input type="button" id="signOutBtn" class="signOutBtn" value="Sign Out"></a>
+        <br><br><br>
+        <a href="/Menu" target="_top"><input type="button" id="backtBtn" class="backBtn" value="Back"></a>
+        <br>
+        <p id="hello"></p>
+    </div>
+    <script>document.getElementById('hello').innerHTML = sessionStorage.getItem('userName') </script>
+</body>

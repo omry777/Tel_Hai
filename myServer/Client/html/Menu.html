@@ -1,0 +1,20 @@
+<head>
+    <title>Menu</title>
+    <link rel="stylesheet" type="text/css" href="css/Menu.css">
+    <div type="userint" style="float: right; position: relative; margin: auto; width:auto;">
+        <label for=signoutbtn>Hello <p id="hello"></p><script>document.getElementById('hello').innerHTML = sessionStorage.getItem('user_id')</script></label>
+        <br>
+        <a href="login"><input type="button" id="signoutbtn" class="signoutbtn" value="sign out"></a>
+        <br>
+    </div>
+</head>
+
+<body style="background-color: rgb(238, 236, 250);">
+    <form>
+        <div class="container">
+            <button type="submit" class="menuBtn" id="btn1" formaction="worker">Approve New Orders</button>
+            <button type="submit" class="menuBtn" id="btn2" formaction="worker">View Approved Orders</button>
+            <button type="submit" class="menuBtn" id="btn3" formaction="worker">Manage workers</button>
+        </div>
+    </form>
+</body>

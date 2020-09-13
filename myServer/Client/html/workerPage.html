@@ -1,0 +1,54 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="css/workerPage.css">
+    <title>Worker Page</title>
+    <iframe src="html/common/userInterface.html" name="userInterface" allowTransparency="true" scrolling="no" frameborder="0"
+        style="width: auto; float:right">
+    </iframe>
+</head>
+
+<body style="background-color: rgb(224, 235, 252);">
+    <form>
+        <div type="dropdown">
+            Choose an order to approve:<br>
+            <select name="selectMenu" id="selectMenu" style="width: max-content;">
+                <option value="default">-- Select --</option>
+                <!-- TODO: JS to add all orders from DB to dropdown menu-->
+            </select>
+        </div>
+       
+        <pre id="info">
+
+        </pre>
+
+
+    </form>
+      <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+        <script type="text/javascript">
+          // Initialize Firebase
+          let firebaseConfig = {
+            apiKey: "AIzaSyDPHPnY-OEUMQ_79r2eFmrSOPN5Ajc-7K0",
+            authDomain: "sacnnershop.firebaseapp.com",
+            databaseURL: "https://sacnnershop.firebaseio.com",
+            projectId: "sacnnershop",
+            storageBucket: "sacnnershop.appspot.com",
+            messagingSenderId: "743639413044",
+            appId: "1:743639413044:web:f7010c06eb14558a79b561",
+            measurementId: "G-0DCJTMZR0J"
+          };
+          firebase.initializeApp(firebaseConfig);
+          const db = firebase.database();
+          const id = sessionStorage.getItem('userName')
+          const purchasesRef = db.ref(`/purchases/${id}`);
+          purchasesRef.once('value',(snapshot)=>{
+           const workerDict = snapshot.val();
+           const debug = document.getElementById('info');
+             if (workerDict === null){
+              debug.append(`The user ${id} have 0 items`);
+             }
+             else{
+               //debug.append("\n",key)
+                debug.append(JSON.stringify(workerDict,null,2));
+            }
+           });
+    </script>
+</body>
