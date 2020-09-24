@@ -17,5 +17,4 @@ function updateCata(category){
     temp = temp.substr(temp.indexOf(" ")+1);
     temp = temp.substr(0, temp.indexOf("()"));
     sessionStorage.value = temp;
-
 }
