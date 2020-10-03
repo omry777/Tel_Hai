@@ -1,0 +1,109 @@
+/* Bordered form */
+
+body {
+    background-color: #daeff8;
+}
+
+.container {
+    position: static;
+  	
+	margin: auto;
+    border-radius: 25px;
+    padding: 2%;
+    border: 2px solid green;
+    background-color: rgb(240, 248, 210);
+    width:auto;
+    align-content: center;
+    text-align: center;
+}
+
+.hello{
+    font-size: 200%;
+}
+/* Full-width inputs */
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+/* Set a style for all buttons */
+
+button {
+    border: none;
+    border-radius: 25px;
+    border: 0px solid transparent;
+    font-size: 100%;
+    padding: 14px 20px;
+    margin: 8px 2px;
+    color: white;
+    cursor: pointer;
+}
+
+.loginButton {
+    background-color: #4CAF50;
+    width: 100%;
+    border: none;
+    border-radius: 25px;
+    border: 0px solid transparent;
+    font-size: 100%;
+    padding: 14px 20px;
+    margin: 8px 2px;
+    color: white;
+    cursor: pointer;
+}
+
+.signoutButton {
+    float: right;
+    background-color: #f36156;
+    border: none;
+    border-radius: 25px;
+    border: 0px solid transparent;
+    font-size: 100%;
+    padding: 14px 20px;
+    margin: 8px 2px;
+    color: white;
+    cursor: pointer;
+}
+
+.backBtn {
+    
+    float: right;
+    background-color: #6ab0e9;
+    border: none;
+    border-radius: 25px;
+    border: 0px solid transparent;
+    font-size: 100%;
+    padding: 14px 20px;
+    margin: 8px 2px;
+    color: white;
+    cursor: pointer;
+}
+
+.menuButton {
+    background-color: #6c6db1;
+    width: 100%;
+    border-radius: 25px;
+    font-size: 100%;
+    padding: 14px 20px;
+    margin: 8px 2px;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* Add a spesific effects for buttons */
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:disabled {
+    opacity: 0.3;
+}

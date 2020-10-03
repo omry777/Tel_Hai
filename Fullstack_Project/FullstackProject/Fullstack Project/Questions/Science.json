@@ -1,0 +1,24 @@
+{
+  "Questions": [
+    {
+      "question": "Who discoverd radioactivity?",
+      "answers": [
+        {
+          "txt": "Marie Curie"
+        },
+        {
+          "txt": "Alexander Grahm-Bell"
+        },
+        {
+          "txt": "Nicola Tesla"
+        },
+        {
+          "txt": "Rick Sanchez"
+        }
+      ]
+    }
+  ],
+  "HighScores": {
+    "Yair": 10
+  }
+}
