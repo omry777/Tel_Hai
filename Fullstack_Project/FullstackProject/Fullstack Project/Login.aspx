@@ -11,14 +11,9 @@
             <asp:Button ID="login" runat="server" CssClass="loginButton" Text="Login" OnClick="loginButton" />
             <a style="font-size=150%; float: left;" runat="server" href="Signup">don't have an account yet? SIGN UP FOR FREE!</a>
         </asp:Panel>
-            <asp:Label ID="loggedInLabel" runat="server"></asp:Label>
+        <asp:Label ID="loggedInLabel" runat="server"></asp:Label>
+        <asp:Label ID="message" runat="server"></asp:Label>
     </div>
-                    <asp:Label ID="message" runat="server"></asp:Label>
-
-    <br />
-    <table align="center">
-        <tr>
-            <td>
-        </tr>
-    </table>
+        
+        
 </asp:Content>

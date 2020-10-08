@@ -131,8 +131,6 @@
     <Content Include="Questions\images\rachel2.jpg" />
     <Content Include="Questions\Science.json" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="javascript\Categories.js" />
-    <Content Include="javascript\Question.js" />
     <Content Include="Leaderboard.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Scripts\bootstrap.js" />

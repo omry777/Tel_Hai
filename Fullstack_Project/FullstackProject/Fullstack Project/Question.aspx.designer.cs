@@ -7,13 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Fullstack_Project
-{
-
-
-    public partial class Question
-    {
-
+namespace Fullstack_Project {
+    
+    
+    public partial class Question {
+        
+        /// <summary>
+        /// Timer1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.Timer Timer1;
+        
         /// <summary>
         /// questionPanel control.
         /// </summary>
@@ -21,8 +28,8 @@ namespace Fullstack_Project
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel questionPanel;
-
+        protected global::System.Web.UI.UpdatePanel questionPanel;
+        
         /// <summary>
         /// qNum control.
         /// </summary>
@@ -31,7 +38,16 @@ namespace Fullstack_Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label qNum;
-
+        
+        /// <summary>
+        /// timerLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label timerLabel;
+        
         /// <summary>
         /// questionText control.
         /// </summary>
@@ -40,7 +56,7 @@ namespace Fullstack_Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label questionText;
-
+        
         /// <summary>
         /// answersPanel control.
         /// </summary>
@@ -49,7 +65,7 @@ namespace Fullstack_Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel answersPanel;
-
+        
         /// <summary>
         /// Image1 control.
         /// </summary>
@@ -58,7 +74,7 @@ namespace Fullstack_Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image Image1;
-
+        
         /// <summary>
         /// ans0 control.
         /// </summary>
@@ -67,7 +83,7 @@ namespace Fullstack_Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ans0;
-
+        
         /// <summary>
         /// ans1 control.
         /// </summary>
@@ -76,7 +92,7 @@ namespace Fullstack_Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ans1;
-
+        
         /// <summary>
         /// ans2 control.
         /// </summary>
@@ -85,7 +101,7 @@ namespace Fullstack_Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ans2;
-
+        
         /// <summary>
         /// ans3 control.
         /// </summary>
@@ -94,7 +110,7 @@ namespace Fullstack_Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ans3;
-
+        
         /// <summary>
         /// scoreLabel control.
         /// </summary>
@@ -103,7 +119,7 @@ namespace Fullstack_Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label scoreLabel;
-
+        
         /// <summary>
         /// massage control.
         /// </summary>

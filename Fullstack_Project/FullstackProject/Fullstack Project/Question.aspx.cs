@@ -16,6 +16,7 @@ namespace Fullstack_Project
     public partial class Question : System.Web.UI.Page
     {
         const int numberOfQuestions = 10;
+        const int timerStart = 20;
         static int qCount = 0;
         static int maxQuestion = 0;
         SqlConnection con;
@@ -41,12 +42,7 @@ namespace Fullstack_Project
             for (int i = 0; i < numberOfQuestions; i++)
                 wasAsked[i] = -1;
 
-
-            //using (WebClient wc = new WebClient())
-            //{
-            //    string jsontext = wc.DownloadString("https://www.npoint.io/docs/e6f3d2ed38e63ed9bc80");
-            //}
-            dir = $"C:\\Users\\omryb\\source\\repos\\FullstackProject2\\Fullstack Project\\Questions\\{Session["category"].ToString()}.json";
+            dir = $"C:\\Users\\Yair Charit\\Documents\\Tel Hai Collage\\SemE\\Tel_Hai\\Fullstack_Project\\FullstackProject\\Fullstack Project\\Questions\\{Session["category"].ToString()}.json";
             json = JObject.Parse(File.ReadAllText(@dir));
             getQuestionsAmount();
         }
@@ -70,12 +66,26 @@ namespace Fullstack_Project
                         command.Parameters.AddWithValue("@username", Session["username"]);
                         command.Parameters.AddWithValue("@score", score);
                         command.ExecuteNonQuery();
-
+                        
                         massage.Text = String.Format("Highscore has been updated {0}!", score);
                     }
-                    massage.Text = String.Format("Better luck next time! ", score);
                 }
                 reader.Close();
+            }
+        }
+
+        protected void tick(object sender, EventArgs e)
+        {
+            if (qCount > 0)
+            {
+                if (timerLabel.Text == "")
+                    timerLabel.Text = (timerStart + 1).ToString();
+                timerLabel.Text = (int.Parse(timerLabel.Text) - 1).ToString();
+                
+                if (timerLabel.Text == "0")
+                {
+                    loadQuestion(sender, e);
+                }
             }
         }
 
@@ -84,12 +94,43 @@ namespace Fullstack_Project
             if (qCount == numberOfQuestions)
             {
                 updateHS(score);
+                Timer1.Enabled = false;
+                questionText.Text = $"Good Job!\nFinal Score: {score}";
+                qNum.Text = "";
+                for (int num = 0; num < 4; num++)
+                {
+                    buttons[num].ID = $"ans{num}";
+                    buttons[num].Text = "";
+                }
+                if (json["HighScores"][Session["username"]] != null)
+                {
+                    int currScore = int.Parse(json["HighScores"][Session["username"]].ToString());
+                    if (score > currScore)
+                    {
+                        dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json.ToString());
+                        jsonObj["HighScores"][Session["username"]] = score;
+                        string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
+                        File.WriteAllText(dir, output);
+                    }
+                }
+                else
+                {
+                    dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json.ToString());
+                    jsonObj["HighScores"].Add(Session["username"].ToString(), score);
+                    string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
+                    File.WriteAllText(dir, output);
+                }
+                scoreLabel.Text = "";
+                timerLabel.Text = "";
+                score = 0;
             }
-            if (qCount < numberOfQuestions)
+            else if (qCount < numberOfQuestions)
             {
+                timerLabel.Text = timerStart.ToString();
                 int r = getRandomQuestion();
-                wasAsked[qCount++] = r;
+                wasAsked[qCount-1] = r;
                 qNum.Text = $"#{qCount}";
+                scoreLabel.Text = $"Score: {score}";
 
                 var currQ = json["Questions"][r];
                 questionText.Text = currQ["question"].ToString();
@@ -113,45 +154,23 @@ namespace Fullstack_Project
                     buttons[(num + count) % 4].Text = currQ["answers"][num]["txt"].ToString();
                 }
             }
-            else
-            {
-                questionText.Text = "Press any button to Start!";
-                qNum.Text = "";
-                for (int num = 0; num < 4; num++)
-                {
-                    buttons[num].ID = $"ans{num}";
-                    buttons[num].Text = "Click me!";
-                }
-                qCount = 0;
-                if (json["HighScores"][Session["username"]] != null)
-                {
-                    int currScore = int.Parse(json["HighScores"][Session["username"]].ToString());
-                    if (score > currScore)
-                    {
-                        dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json.ToString());
-                        jsonObj["HighScores"][Session["username"]] = score;
-                        string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
-                        File.WriteAllText(dir, output);
-                    } 
-                }
-                else
-                {
-                    dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json.ToString());
-                    jsonObj["HighScores"].Add(Session["username"].ToString(), score);
-                    string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
-                    File.WriteAllText(dir, output);
-                }
-                    score = 0;
-                scoreLabel.Text = $"Score: {score}";
-            }
+          
+
         }
+
 
         protected void buttonClick(object sender, EventArgs e)
         {
             if (((Button)sender).ID.ToString() == "ans0" && ((Button)sender).Text != "Click me!")
-                scoreLabel.Text = $"Score: {score += 50}";
-            //else
-              //  scoreLabel.Text = $"Score: {score}";
+                score += 10*int.Parse(timerLabel.Text);
+
+            if (((Button)sender).Text == "Click me!")
+            {
+                qCount = 1;
+                Timer1.Enabled = true;
+            }
+            else
+                qCount++;
 
             loadQuestion(sender, e);
         }

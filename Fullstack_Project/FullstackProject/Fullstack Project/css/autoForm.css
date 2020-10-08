@@ -20,7 +20,17 @@ body {
 .hello{
     font-size: 200%;
 }
-/* Full-width inputs */
+
+.questionNum{
+    font-size: 200%;
+    float: left;
+}
+
+.Timers {
+    font-size: 200%;
+    color: red;
+    float: right;
+}
 
 input[type=text],
 input[type=password] {

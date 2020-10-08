@@ -27,7 +27,7 @@ namespace Fullstack_Project
             int start;
             List<Button> buttons = new List<Button>();
 
-            foreach (string file in Directory.EnumerateFiles("C:\\Users\\omryb\\source\\repos\\FullstackProject2\\Fullstack Project\\Questions\\", "*.json"))
+            foreach (string file in Directory.EnumerateFiles("C:\\Users\\Yair Charit\\Documents\\Tel Hai Collage\\SemE\\Tel_Hai\\Fullstack_Project\\FullstackProject\\Fullstack Project\\Questions\\", "*.json"))
             {
                 start = file.LastIndexOf("\\") +1;
                 fileName = file.Substring(start, file.LastIndexOf(".") - start);
@@ -40,7 +40,7 @@ namespace Fullstack_Project
 
                 buttons[buttons.Count-1].Click += buttonClick;
                 container.Controls.Add(buttons[buttons.Count - 1]);
-                string dir = $"C:\\Users\\omryb\\source\\repos\\FullstackProject2\\Fullstack Project\\Questions\\{fileName}.json";
+                string dir = $"C:\\Users\\Yair Charit\\Documents\\Tel Hai Collage\\SemE\\Tel_Hai\\Fullstack_Project\\FullstackProject\\Fullstack Project\\Questions\\{fileName}.json";
                 json = JObject.Parse(File.ReadAllText(@dir));
 
                 if (json["HighScores"][Session["username"]] != null)

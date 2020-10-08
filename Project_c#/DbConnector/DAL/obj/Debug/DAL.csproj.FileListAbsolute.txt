@@ -1,6 +1,0 @@
-C:\Users\omryb\source\repos\DbConnector\DAL\bin\Debug\DAL.dll
-C:\Users\omryb\source\repos\DbConnector\DAL\bin\Debug\DAL.pdb
-C:\Users\omryb\source\repos\DbConnector\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
-C:\Users\omryb\source\repos\DbConnector\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-C:\Users\omryb\source\repos\DbConnector\DAL\obj\Debug\DAL.dll
-C:\Users\omryb\source\repos\DbConnector\DAL\obj\Debug\DAL.pdb
