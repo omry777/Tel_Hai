@@ -16,14 +16,14 @@ namespace Fullstack_Project
     public partial class Question : System.Web.UI.Page
     {
         const int numberOfQuestions = 10;
-        const int timerStart = 20;
+        const int timerStart = 5;
         static int qCount = 0;
         static int maxQuestion = 0;
         SqlConnection con;
         static int score = 0;
         static Button[] buttons;
         static int[] wasAsked;
-        JObject json;
+        static JObject json;
         string dir;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -66,7 +66,7 @@ namespace Fullstack_Project
                         command.Parameters.AddWithValue("@username", Session["username"]);
                         command.Parameters.AddWithValue("@score", score);
                         command.ExecuteNonQuery();
-                        
+                        Session["highscore"] = score;
                         massage.Text = String.Format("Highscore has been updated {0}!", score);
                     }
                 }
@@ -76,22 +76,21 @@ namespace Fullstack_Project
 
         protected void tick(object sender, EventArgs e)
         {
-            if (qCount > 0)
-            {
                 if (timerLabel.Text == "")
                     timerLabel.Text = (timerStart + 1).ToString();
                 timerLabel.Text = (int.Parse(timerLabel.Text) - 1).ToString();
-                
+                massage.Text = timerLabel.Text;
                 if (timerLabel.Text == "0")
                 {
+                    qCount++;
                     loadQuestion(sender, e);
                 }
-            }
         }
 
         protected void loadQuestion(object sender, EventArgs e)
         {
-            if (qCount == numberOfQuestions)
+
+            if (qCount == numberOfQuestions+1)
             {
                 updateHS(score);
                 Timer1.Enabled = false;
@@ -100,7 +99,7 @@ namespace Fullstack_Project
                 for (int num = 0; num < 4; num++)
                 {
                     buttons[num].ID = $"ans{num}";
-                    buttons[num].Text = "";
+                    buttons[num].Text = "Back";
                 }
                 if (json["HighScores"][Session["username"]] != null)
                 {
@@ -124,15 +123,15 @@ namespace Fullstack_Project
                 timerLabel.Text = "";
                 score = 0;
             }
-            else if (qCount < numberOfQuestions)
+            else if (qCount <= numberOfQuestions)
             {
-                timerLabel.Text = timerStart.ToString();
                 int r = getRandomQuestion();
                 wasAsked[qCount-1] = r;
                 qNum.Text = $"#{qCount}";
                 scoreLabel.Text = $"Score: {score}";
 
                 var currQ = json["Questions"][r];
+                massage.Text = qCount + currQ.ToString();
                 questionText.Text = currQ["question"].ToString();
                 if(currQ["url"] != null)
                 {
@@ -153,14 +152,19 @@ namespace Fullstack_Project
                     buttons[(num + count) % 4].ID = $"ans{num}";
                     buttons[(num + count) % 4].Text = currQ["answers"][num]["txt"].ToString();
                 }
+                timerLabel.Text = timerStart.ToString();
+
             }
-          
+
 
         }
 
 
         protected void buttonClick(object sender, EventArgs e)
         {
+            if (((Button)sender).Text == "Back")
+                Response.Redirect("Categories.aspx");
+
             if (((Button)sender).ID.ToString() == "ans0" && ((Button)sender).Text != "Click me!")
                 score += 10*int.Parse(timerLabel.Text);
 
