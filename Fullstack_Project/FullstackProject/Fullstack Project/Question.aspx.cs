@@ -16,7 +16,7 @@ namespace Fullstack_Project
     public partial class Question : System.Web.UI.Page
     {
         const int numberOfQuestions = 10;
-        const int timerStart = 5;
+        const int timerStart = 10;
         static int qCount = 0;
         static int maxQuestion = 0;
         SqlConnection con;
@@ -24,6 +24,7 @@ namespace Fullstack_Project
         static Button[] buttons;
         static int[] wasAsked;
         static JObject json;
+        static JToken currQ;
         string dir;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -79,18 +80,16 @@ namespace Fullstack_Project
                 if (timerLabel.Text == "")
                     timerLabel.Text = (timerStart + 1).ToString();
                 timerLabel.Text = (int.Parse(timerLabel.Text) - 1).ToString();
-                massage.Text = timerLabel.Text;
-                if (timerLabel.Text == "0")
+
+            if (timerLabel.Text == "0")
                 {
-                    qCount++;
                     loadQuestion(sender, e);
                 }
         }
 
         protected void loadQuestion(object sender, EventArgs e)
         {
-
-            if (qCount == numberOfQuestions+1)
+            if (qCount == numberOfQuestions)
             {
                 updateHS(score);
                 Timer1.Enabled = false;
@@ -98,7 +97,6 @@ namespace Fullstack_Project
                 qNum.Text = "";
                 for (int num = 0; num < 4; num++)
                 {
-                    buttons[num].ID = $"ans{num}";
                     buttons[num].Text = "Back";
                 }
                 if (json["HighScores"][Session["username"]] != null)
@@ -126,12 +124,12 @@ namespace Fullstack_Project
             else if (qCount <= numberOfQuestions)
             {
                 int r = getRandomQuestion();
-                wasAsked[qCount-1] = r;
-                qNum.Text = $"#{qCount}";
+                wasAsked[qCount] = r;
+                qNum.Text = $"#{++qCount}";
                 scoreLabel.Text = $"Score: {score}";
 
-                var currQ = json["Questions"][r];
-                massage.Text = qCount + currQ.ToString();
+                currQ = json["Questions"][r];
+               
                 questionText.Text = currQ["question"].ToString();
                 if(currQ["url"] != null)
                 {
@@ -149,7 +147,6 @@ namespace Fullstack_Project
 
                 for (int num = 0; num < 4; num++)
                 {
-                    buttons[(num + count) % 4].ID = $"ans{num}";
                     buttons[(num + count) % 4].Text = currQ["answers"][num]["txt"].ToString();
                 }
                 timerLabel.Text = timerStart.ToString();
@@ -162,19 +159,20 @@ namespace Fullstack_Project
 
         protected void buttonClick(object sender, EventArgs e)
         {
-            if (((Button)sender).Text == "Back")
-                Response.Redirect("Categories.aspx");
-
-            if (((Button)sender).ID.ToString() == "ans0" && ((Button)sender).Text != "Click me!")
-                score += 10*int.Parse(timerLabel.Text);
-
-            if (((Button)sender).Text == "Click me!")
-            {
-                qCount = 1;
-                Timer1.Enabled = true;
+            switch (((Button)sender).Text) {
+                case "Back":
+                    Response.Redirect("Categories.aspx");
+                    break;
+                case "Click me!":
+                        qCount = 0;
+                        Timer1.Enabled = true;
+                    break;
+                default:
+                    if (((Button)sender).Text.ToString() == currQ["answers"][0]["txt"].ToString())
+                        score += 10 * int.Parse(timerLabel.Text);
+                    break;
             }
-            else
-                qCount++;
+            
 
             loadQuestion(sender, e);
         }

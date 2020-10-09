@@ -7,28 +7,26 @@
     <div class="container" style="width: 30%">
         <asp:UpdatePanel ID="questionPanel" runat="server" CssClass="container">
             <ContentTemplate>
-                <asp:Label ID="qNum" runat="server" style="float:left; font-size:200%;"></asp:Label>
-                <asp:Label ID="timerLabel" runat="server" style="color:red; float:right; font-size: 200%"></asp:Label><br />
-                <asp:Label ID="questionText" runat="server" CssClass="hello" Text="Press any button to start!"></asp:Label>
+                <div class="container">
+                    <asp:Label ID="qNum" runat="server" Style="float: left; font-size: 200%;"></asp:Label>
+                    <asp:Label ID="timerLabel" runat="server" Style="color: red; float: right; font-size: 200%"></asp:Label><br />
+                    <asp:Label ID="questionText" runat="server" CssClass="hello" Text="Press any button to start!"></asp:Label>
+                    <asp:Image ID="Image1" runat="server" ImageUrl="null" Visible="false" Style="width: 100%;" />
+                </div>
+
+                <asp:Button ID="ans0" runat="server" CssClass="menuButton" Text="Click me!" OnClick="buttonClick" /><br />
+                <asp:Button ID="ans1" runat="server" CssClass="menuButton" Text="Click me!" OnClick="buttonClick" /><br />
+                <asp:Button ID="ans2" runat="server" CssClass="menuButton" Text="Click me!" OnClick="buttonClick" /><br />
+                <asp:Button ID="ans3" runat="server" CssClass="menuButton" Text="Click me!" OnClick="buttonClick" /><br />
+                <asp:Label ID="scoreLabel" runat="server"></asp:Label>
+
+                <asp:Label ID="massage" runat="server" CssClass="hello"></asp:Label></td>
             </ContentTemplate>
             <Triggers>
                 <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick"></asp:AsyncPostBackTrigger>
             </Triggers>
         </asp:UpdatePanel>
-        <asp:Panel ID="answersPanel" runat="server">
-            <asp:Image ID="Image1" runat="server" ImageUrl="null" Visible="false" Style="width: 100%;" />
-            <asp:Button ID="ans0" runat="server" CssClass="menuButton" Text="Click me!" OnClick="buttonClick" /><br />
-            <asp:Button ID="ans1" runat="server" CssClass="menuButton" Text="Click me!" OnClick="buttonClick" /><br />
-            <asp:Button ID="ans2" runat="server" CssClass="menuButton" Text="Click me!" OnClick="buttonClick" /><br />
-            <asp:Button ID="ans3" runat="server" CssClass="menuButton" Text="Click me!" OnClick="buttonClick" /><br />
-            <asp:Label ID="scoreLabel" runat="server"></asp:Label>
-        </asp:Panel>
     </div>
-    <table align="center">
-        <tr>
-            <td>
-                <asp:Label ID="massage" runat="server" CssClass="hello"></asp:Label></td>
-        </tr>
-    </table>
+
 
 </asp:Content>
