@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Fullstack_Project
 {
@@ -13,7 +8,7 @@ namespace Fullstack_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["username"] != null)
+            if ( Session["username"] != null )
             {
                 DitsPanel.Visible = false;
                 loggedInLabel.Visible = true;
@@ -30,20 +25,19 @@ namespace Fullstack_Project
             SqlCommand cmd = new SqlCommand(queryString, con);
             cmd.Parameters.AddWithValue("@uname", username.Text);
             cmd.Parameters.AddWithValue("@password", password.Text);
-            using (SqlDataReader reader = cmd.ExecuteReader())
+            using ( SqlDataReader reader = cmd.ExecuteReader() )
             {
-                if (reader.Read())
+                if ( reader.Read() )
                 {
                     Session["username"] = username.Text;
                     Session["highscore"] = reader.GetInt32(2);
                     Response.Redirect("Categories.aspx");
-                }
-                else
+                } else
                 {
-                    message.Text =  "username or password does not match";
+                    message.Text = "username or password does not match";
                 }
             }
         }
-        
+
     }
 }

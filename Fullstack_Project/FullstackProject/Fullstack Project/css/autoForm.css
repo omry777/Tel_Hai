@@ -19,10 +19,6 @@ body {
 
 .hello{
     font-size: 200%;
-    z-index: 1;
-    left: 626px;
-    top: 1067px;
-    position: absolute;
 }
 
 .questionNum{
@@ -64,6 +60,8 @@ button {
     background-color: #4CAF50;
     width: 100%;
     border: none;
+    border-radius: 25px;
+    border: 0px solid transparent;
     font-size: 100%;
     padding: 14px 20px;
     margin: 8px 2px;

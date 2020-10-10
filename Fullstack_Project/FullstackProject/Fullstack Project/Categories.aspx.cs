@@ -1,13 +1,8 @@
-﻿using Microsoft.Ajax.Utilities;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace Fullstack_Project
@@ -18,7 +13,7 @@ namespace Fullstack_Project
         string Hs;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["username"] == null)
+            if ( Session["username"] == null )
             {
                 Response.Redirect("Login.aspx");
             }
@@ -27,34 +22,32 @@ namespace Fullstack_Project
             int start;
             List<Button> buttons = new List<Button>();
 
-            foreach (string file in Directory.EnumerateFiles("C:\\Users\\Yair Charit\\Documents\\Tel Hai Collage\\SemE\\Tel_Hai\\Fullstack_Project\\FullstackProject\\Fullstack Project\\Questions\\", "*.json"))
+            foreach ( string file in Directory.EnumerateFiles( ConfigurationManager.ConnectionStrings["QuestionsDirectoryString"].ConnectionString, "*.json") )
             {
-                start = file.LastIndexOf("\\") +1;
+                start = file.LastIndexOf("\\") + 1;
                 fileName = file.Substring(start, file.LastIndexOf(".") - start);
-                buttons.Add(new Button
-                {
+                buttons.Add(new Button {
                     ID = fileName,
                     Text = fileName,
                     CssClass = "menuButton",
                 });
 
-                buttons[buttons.Count-1].Click += buttonClick;
+                buttons[buttons.Count - 1].Click += buttonClick;
                 container.Controls.Add(buttons[buttons.Count - 1]);
                 string dir = $"C:\\Users\\Yair Charit\\Documents\\Tel Hai Collage\\SemE\\Tel_Hai\\Fullstack_Project\\FullstackProject\\Fullstack Project\\Questions\\{fileName}.json";
                 json = JObject.Parse(File.ReadAllText(@dir));
 
-                if (json["HighScores"][Session["username"]] != null)
+                if ( json["HighScores"][Session["username"]] != null )
                 {
                     Hs = json["HighScores"][Session["username"]].ToString();
-                }
-                else
+                } else
                 {
                     Hs = "0";
                 }
 
                 Label l = new Label();
                 l.Text = String.Format("HighScore: {0}", Hs);
-                container.Controls.Add(l) ;
+                container.Controls.Add(l);
 
             }
         }
