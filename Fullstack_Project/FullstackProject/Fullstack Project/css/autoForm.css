@@ -75,8 +75,8 @@ button {
     border: none;
     border-radius: 25px;
     border: 0px solid transparent;
-    font-size: 100%;
-    padding: 14px 20px;
+    font-size: 80%;
+    padding: 10px 14px;
     margin: 8px 2px;
     color: white;
     cursor: pointer;

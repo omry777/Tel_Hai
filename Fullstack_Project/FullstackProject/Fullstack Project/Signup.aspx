@@ -1,14 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Signup.aspx.cs" Inherits="Fullstack_Project.Signup" %>
+﻿<%@ Page Title="Signup" Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="Signup.aspx.cs" Inherits="Fullstack_Project.Signup" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Trivia King</title>
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <link rel="stylesheet" type="text/css" href="css/autoForm.css">
-</head>
-<body>
-    <form id="form1" runat="server">
+        <br />
         <div class="container" style="width: 30%">
             <asp:Label ID="hello" CssClass="hello" runat="server">Signup:</asp:Label>
             <asp:Button ID="back" CssClass="backBtn" runat="server" Text="Back" PostBackUrl="~/Login.aspx" />
@@ -19,10 +13,7 @@
         <br />
         <table align="center">
             <tr>
-                <td>
-                    <asp:Label ID="massage" runat="server" CssClass="hello"></asp:Label></td>
+                <td><asp:Label ID="massage" runat="server" CssClass="hello"></asp:Label></td>
             </tr>
         </table>
-    </form>
-</body>
-</html>
+</asp:Content>

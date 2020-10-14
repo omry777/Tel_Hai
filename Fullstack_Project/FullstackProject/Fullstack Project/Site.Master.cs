@@ -18,7 +18,14 @@ namespace Fullstack_Project
                 HSLabel.Text = "Highscore: " +Session["highscore"].ToString();
                 nameLabel.Visible = true;
                 HSLabel.Visible = true;
+                logOutButton.Visible = true;
             }
+        }
+
+        protected void logoutButton(object sender, EventArgs e)
+        {
+            Session["username"] = null;
+            Response.Redirect("Login.aspx");
         }
     }
 }

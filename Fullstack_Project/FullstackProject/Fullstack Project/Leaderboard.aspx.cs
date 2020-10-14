@@ -15,10 +15,6 @@ namespace Fullstack_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["username"] == null)
-            {
-                Response.Redirect("Login.aspx");
-            }
 
             string connectionString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"].ConnectionString;
             string queryString = "SELECT Username, HighScore from TKUsersTable Order by HighScore Desc ";
@@ -32,12 +28,6 @@ namespace Fullstack_Project
 
         }
 
-        protected void textButton_OnClick(object sender, EventArgs e)
-        {
-            //Console.WriteLine(textInput.Text);
-            Debug.WriteLine(textInput.Text);
-            textLabel.Text = textInput.Text;
-        }
 
         protected void table_SelectedIndexChanged(object sender, EventArgs e)
         {

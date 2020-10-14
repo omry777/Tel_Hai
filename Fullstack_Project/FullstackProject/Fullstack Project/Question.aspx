@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="Question" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Question.aspx.cs" Inherits="Fullstack_Project.Question" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <br />
     <link rel="stylesheet" type="text/css" href="css/autoForm.css">
     <asp:Timer ID="Timer1" runat="server" Interval="1000" Enabled="false" OnTick="tick"></asp:Timer>
     <div class="container" style="width: 30%">

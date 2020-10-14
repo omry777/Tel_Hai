@@ -53,11 +53,18 @@
                         <li><a runat="server" href="Login.aspx">Home</a></li>
                         <li><a runat="server" href="Leaderboard.aspx">Leaderboard</a></li>
                         <li><asp:HyperLink ID="cataButton" runat="server" Visible="false" NavigateUrl="~/Categories.aspx" Text="Categories"></asp:HyperLink></li>
+
                     </ul>
-                    <div style="float:right; color: white; margin-right:2%;">
-                    <asp:Label ID="nameLabel" runat="server" Visible="false"></asp:Label><br />
-                    <asp:Label ID="HSLabel" runat="server" Visible="false"></asp:Label>
-                        </div>
+
+                    <div style="float: right; color: white; margin-right: 2%;">
+                        <ul class="nav navbar-nav">
+                            <li style="margin-top:4%;">
+                                <asp:Label ID="nameLabel" runat="server" Visible="false"></asp:Label><br />
+                                <asp:Label ID="HSLabel" runat="server" Visible="false"></asp:Label>
+                            </li>
+                            <li><asp:Button ID="logOutButton" runat="server" Text="Logout" Visible="false" CssClass="signoutButton" OnClick="logoutButton" /></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -66,7 +73,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <p>&copy; <%: DateTime.Now.Year %> - Trivia King</p>
             </footer>
         </div>
 

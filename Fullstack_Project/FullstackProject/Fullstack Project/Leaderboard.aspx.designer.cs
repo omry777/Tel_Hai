@@ -7,40 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Fullstack_Project
-{
-
-
-    public partial class Leaderboard
-    {
-
+namespace Fullstack_Project {
+    
+    
+    public partial class Leaderboard {
+        
         /// <summary>
-        /// form1 control.
+        /// tableDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
-        /// <summary>
-        /// textInput control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox textInput;
-
-        /// <summary>
-        /// textButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button textButton;
-
+        protected global::System.Web.UI.WebControls.Table tableDiv;
+        
         /// <summary>
         /// table control.
         /// </summary>
@@ -49,23 +29,5 @@ namespace Fullstack_Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView table;
-
-        /// <summary>
-        /// textLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label textLabel;
-
-        /// <summary>
-        /// back control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button back;
     }
 }
