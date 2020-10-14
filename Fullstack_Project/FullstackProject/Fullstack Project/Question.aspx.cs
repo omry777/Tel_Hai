@@ -27,7 +27,6 @@ namespace Fullstack_Project
                 Response.Redirect("Login.aspx");
 
             buttons = new Button[4] { ans0, ans1, ans2, ans3 };
-
             wasAsked = new int[numberOfQuestions];
             for ( int i = 0; i < numberOfQuestions; i++ )
                 wasAsked[i] = -1;
@@ -152,6 +151,7 @@ namespace Fullstack_Project
                     Response.Redirect("Categories.aspx");
                     break;
                 case "Click me!":
+                    score = 0;
                     qCount = 0;
                     Timer1.Enabled = true;
                     break;
