@@ -33,6 +33,159 @@
           "txt": "Rick Sanchez"
         }
       ]
+    },
+    {
+      "question": "When World War II Started?",
+      "answers": [
+        {
+          "txt": "1 September, 1939"
+        },
+        {
+          "txt": "20 June, 1938"
+        },
+        {
+          "txt": "20 April, 1940"
+        },
+        {
+          "txt": "4 June, 1939 "
+        }
+      ]
+    },
+    {
+      "question": "What Marked The End of Medieval Times?",
+      "answers": [
+        {
+          "txt": "Rise of The Ottoman Empire"
+        },
+        {
+          "txt": "Fall of Rome"
+        },
+        {
+          "txt": "The Bronze Age"
+        },
+        {
+          "txt": "The Printing Press"
+        }
+      ]
+    },
+    {
+      "question": "Who Discovered The Americas?",
+      "answers": [
+        {
+          "txt": "Christopher Colombus"
+        },
+        {
+          "txt": "Americo Vespuchi"
+        },
+        {
+          "txt": "Vasco De-Gamma"
+        },
+        {
+          "txt": "Rick Sanchez"
+        }
+      ]
+    },
+    {
+      "question": "Who Lead Great Britian During WWII?",
+      "answers": [
+        {
+          "txt": "Winston Cherchill"
+        },
+        {
+          "txt": "Elizabeth II"
+        },
+        {
+          "txt": "Neville Chamberlin"
+        },
+        {
+          "txt": "Alan Turing"
+        }
+      ]
+    },
+    {
+      "question": "When The French Revolution Accured?",
+      "answers": [
+        {
+          "txt": "1789"
+        },
+        {
+          "txt": "1764"
+        },
+        {
+          "txt": "1777"
+        },
+        {
+          "txt": "1806"
+        }
+      ]
+    },
+    {
+      "question": "What's written on the Amercian Dollar Bill($$$)?",
+      "answers": [
+        {
+          "txt": "In God We Trust"
+        },
+        {
+          "txt": "Make America Great Again"
+        },
+        {
+          "txt": "Illuminati"
+        },
+        {
+          "txt": "Rick Sanchez"
+        }
+      ]
+    },
+    {
+      "question": "What was the kingdom Thailand originated from?",
+      "answers": [
+        {
+          "txt": "Siam"
+        },
+        {
+          "txt": "Ming"
+        },
+        {
+          "txt": "Shu"
+        },
+        {
+          "txt": "Thing"
+        }
+      ]
+    },
+    {
+      "question": "Which house won 'Wars of The Roses'?",
+      "answers": [
+        {
+          "txt": "Lancaster"
+        },
+        {
+          "txt": "York"
+        },
+        {
+          "txt": "Cornwell"
+        },
+        {
+          "txt": "Oxford"
+        }
+      ]
+    },
+    {
+      "question": "Which nations faught in the 100 years war?",
+      "answers": [
+        {
+          "txt": "England & France"
+        },
+        {
+          "txt": "France & Austria"
+        },
+        {
+          "txt": "Austria & Germany"
+        },
+        {
+          "txt": "U.S.A & Great Britian"
+        }
+      ]
     }
   ],
   "HighScores": {

@@ -48,7 +48,6 @@ namespace Fullstack_Project
                 Label l = new Label();
                 l.Text = String.Format("HighScore: {0}", Hs);
                 container.Controls.Add(l);
-                //message.Text = Session["password"].ToString();
             }
         }
 
