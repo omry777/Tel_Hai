@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Fullstack_Project {
-    
-    
-    public partial class SiteMaster {
-        
+namespace Fullstack_Project
+{
+
+
+    public partial class SiteMaster
+    {
+
         /// <summary>
         /// cataButton control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace Fullstack_Project {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink cataButton;
-        
+
         /// <summary>
         /// nameLabel control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace Fullstack_Project {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label nameLabel;
-        
+
         /// <summary>
         /// HSLabel control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace Fullstack_Project {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label HSLabel;
-        
+
         /// <summary>
         /// logOutButton control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace Fullstack_Project {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button logOutButton;
-        
+
         /// <summary>
         /// MainContent control.
         /// </summary>

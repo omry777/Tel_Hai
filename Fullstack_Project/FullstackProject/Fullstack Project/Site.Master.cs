@@ -14,7 +14,7 @@ namespace Fullstack_Project
             if (Session["username"] != null)
             {
                 cataButton.Visible = true;
-                nameLabel.Text = "Hello " +Session["username"].ToString();
+                nameLabel.Text = "Hello, " + Session["username"].ToString() + "!";
                 HSLabel.Text = "Highscore: " +Session["highscore"].ToString();
                 nameLabel.Visible = true;
                 HSLabel.Visible = true;

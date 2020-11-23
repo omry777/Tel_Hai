@@ -56,11 +56,11 @@
 
                     </ul>
 
-                    <div style="float: right; color: white; margin-right: 2%;">
+                    <div style="float: right; color: white; margin-right: 1%;">
                         <ul class="nav navbar-nav">
-                            <li style="margin-top:4%;">
-                                <asp:Label ID="nameLabel" runat="server" Visible="false"></asp:Label><br />
-                                <asp:Label ID="HSLabel" runat="server" Visible="false"></asp:Label>
+                            <li style="margin-top: 1%;">
+                                <asp:Label ID="nameLabel" runat="server" Visible="false" CssClass="textHandler"></asp:Label><br />
+                                <asp:Label ID="HSLabel" runat="server" Visible="false" CssClass="textHandler"></asp:Label>
                             </li>
                             <li><asp:Button ID="logOutButton" runat="server" Text="Logout" Visible="false" CssClass="signoutButton" OnClick="logoutButton" /></li>
                         </ul>
@@ -71,9 +71,9 @@
         <div class="body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
+            <br />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Trivia King</p>
+                <p><b>&copy; <%: DateTime.Now.Year %> - Trivia King</b></p>
             </footer>
         </div>
 

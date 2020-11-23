@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Fullstack_Project {
-    
-    
-    public partial class Signup {
-        
+namespace Fullstack_Project
+{
+
+
+    public partial class Signup
+    {
+
         /// <summary>
         /// hello control.
         /// </summary>
@@ -20,16 +22,16 @@ namespace Fullstack_Project {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label hello;
-        
+
         /// <summary>
-        /// back control.
+        /// explaination control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button back;
-        
+        protected global::System.Web.UI.WebControls.Label explaination;
+
         /// <summary>
         /// username control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace Fullstack_Project {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox username;
-        
+
         /// <summary>
         /// password control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace Fullstack_Project {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox password;
-        
+
         /// <summary>
         /// signup control.
         /// </summary>
@@ -56,7 +58,16 @@ namespace Fullstack_Project {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button signup;
-        
+
+        /// <summary>
+        /// back control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button back;
+
         /// <summary>
         /// massage control.
         /// </summary>
