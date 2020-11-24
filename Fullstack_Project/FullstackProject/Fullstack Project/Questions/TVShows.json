@@ -1,0 +1,552 @@
+{
+    "ImageUrl": {
+        "url": "https://media.gq.com/photos/5dfab9fdcfe9ed0008dc11d9/master/pass/BestShows-Edit.jpg"
+    },
+    "Questions": [
+        /*1*/
+        {
+            "question": "In the TV show Friends, what color is Ross' favorite shirt?",
+            "answers": [
+                {
+                    "txt": "Pink"
+                },
+                {
+                    "txt": "Black"
+                },
+                {
+                    "txt": "White"
+                },
+                {
+                    "txt": "Blue"
+                }
+            ]
+        },
+        /*2*/
+        {
+            "question": "What type of dog is Scooby Doo from the cartoon series, 'Scooby Doo'?",
+            "answers": [
+                {
+                    "txt": "Great Dane"
+                },
+                {
+                    "txt": "English Mastiff"
+                },
+                {
+                    "txt": "Cane Corso"
+                },
+                {
+                    "txt": "Newfoundland"
+                }
+            ]
+        },
+        /*3*/
+        {
+            "question": "Where is Penny of 'The Big Bang Theory' originally from?",
+            "answers": [
+                {
+                    "txt": "Nebraska"
+                },
+                {
+                    "txt": "Texas"
+                },
+                {
+                    "txt": "New Delhi"
+                },
+                {
+                    "txt": "California"
+                }
+            ]
+        },
+        /*4*/
+        {
+            "question": "In 'Riverdale', what is the name of Veronica's mother?",
+            "answers": [
+                {
+                    "txt": "Hermione"
+                },
+                {
+                    "txt": "Emma"
+                },
+                {
+                    "txt": "Alison"
+                },
+                {
+                    "txt": "Sharlot"
+                }
+            ]
+        },
+        /*5*/
+        {
+            "question": "In TV drama 'Lost', the plane was flying between Los Angeles and which city?",
+            "answers": [
+                {
+                    "txt": "Sydney"
+                },
+                {
+                    "txt": "New York"
+                },
+                {
+                    "txt": "Canberra"
+                },
+                {
+                    "txt": "Miami"
+                }
+            ]
+        },
+        /*6*/
+        {
+            "question": "What type of business do the title characters open in the second season of '2 Broke Girls'?",
+            "answers": [
+                {
+                    "txt": "A cupcake store"
+                },
+                {
+                    "txt": "A candy shop"
+                },
+                {
+                    "txt": "A coffee shop"
+                },
+                {
+                    "txt": "A bakery"
+                }
+            ]
+        },
+        /*7*/
+        {
+            "question": "During season one of 'The Walking Dead', in which city was Rick Grimes reunited with his wife and son?",
+            "answers": [
+                {
+                    "txt": "Atlanta"
+                },
+                {
+                    "txt": "Augusta"
+                },
+                {
+                    "txt": "Columbus"
+                },
+                {
+                    "txt": "Athens"
+                }
+            ]
+        },
+        /*8*/
+        {
+            "question": "Which character does not work at the Krusty Krab, on 'SpongeBob'?",
+            "answers": [
+                {
+                    "txt": "Plankton"
+                },
+                {
+                    "txt": "Mr. Krabs"
+                },
+                {
+                    "txt": "SpongeBob"
+                },
+                {
+                    "txt": "Squidward"
+                }
+            ]
+        },
+        /*9*/
+        {
+            "question": "Which British actor plays the titular character on 'Sherlock'?",
+            "answers": [
+                {
+                    "txt": "Benedict Cumberbatch"
+                },
+                {
+                    "txt": "Tom Hiddleston"
+                },
+                {
+                    "txt": "Hugh Laurie"
+                },
+                {
+                    "txt": "Daniel Craig"
+                }
+            ]
+        },
+        /*10*/
+        {
+            "question": "Every episode of 'Seinfeld' contains an image or reference to what superhero?",
+            "answers": [
+                {
+                    "txt": "Superman"
+                },
+                {
+                    "txt": "Spiderman"
+                },
+                {
+                    "txt": "Batman"
+                },
+                {
+                    "txt": "Plastic man"
+                }
+            ]
+        },
+        /*11*/
+        {
+            "question": "What time is usually displayed on the clock in Rick's garage in the animated series 'Rick and Morty'?",
+            "answers": [
+                {
+                    "txt": "2:00"
+                },
+                {
+                    "txt": "1:00"
+                },
+                {
+                    "txt": "3:00"
+                },
+                {
+                    "txt": "12:00"
+                }
+            ]
+        },
+        /*12*/
+        {
+            "question": "Who plays the character Dexter on the show 'Dexter'?",
+            "answers": [
+                {
+                    "txt": "Michael C. Hall"
+                },
+                {
+                    "txt": "Michael Cera"
+                },
+                {
+                    "txt": "Johnny Depp"
+                },
+                {
+                    "txt": "Brad Pitt"
+                }
+            ]
+        },
+        /*13*/
+        {
+            "question": "Heisenberg is the nickname of the main character in which popular television series?",
+            "answers": [
+                {
+                    "txt": "Breaking Bad"
+                },
+                {
+                    "txt": "Van Helsing"
+                },
+                {
+                    "txt": "Archer"
+                },
+                {
+                    "txt": "Hannibal"
+                }
+            ]
+        },
+        /*14*/
+        {
+            "question": "In 'Brookyn Nine-Nine', what is the name of Hitchcock's long-time work partner and friend?",
+            "answers": [
+                {
+                    "txt": "Scully"
+                },
+                {
+                    "txt": "Jake"
+                },
+                {
+                    "txt": "Charles"
+                },
+                {
+                    "txt": "Terry"
+                }
+            ]
+        },
+        /*15*/
+        {
+            "question": "Who was responsible for the creation of the Night King on 'Game of Thrones'?",
+            "answers": [
+                {
+                    "txt": "The children of the forest"
+                },
+                {
+                    "txt": "The lord of the light"
+                },
+                {
+                    "txt": "The drowned god"
+                },
+                {
+                    "txt": "The first man"
+                }
+            ]
+        },
+        /*16*/
+        {
+            "question": "What is the name of the main bussiness of Erlich Bachman from 'Silicon Valley'?",
+            "answers": [
+                {
+                    "txt": "Aviato"
+                },
+                {
+                    "txt": "Raviga"
+                },
+                {
+                    "txt": "Hooli"
+                },
+                {
+                    "txt": "Pied Piper"
+                }
+            ]
+        },
+        /*17*/
+        {
+            "question": "Who has appeared in the most amount of episodes of 'American Horror Story'?",
+            "answers": [
+                {
+                    "txt": "Evan Peters"
+                },
+                {
+                    "txt": "Sara Paulson"
+                },
+                {
+                    "txt": "Jessica Lange"
+                },
+                {
+                    "txt": "Lily Rabe"
+                }
+            ]
+        },
+        /*18*/
+        {
+            "question": "In what town does 'The Vampire Diaries' primarily take place?",
+            "answers": [
+                {
+                    "txt": "Mystic Falls"
+                },
+                {
+                    "txt": "Rosewood"
+                },
+                {
+                    "txt": "Sunnydale"
+                },
+                {
+                    "txt": "Alicante"
+                }
+            ]
+        },
+        /*19*/
+        {
+            "question": "In Game of Thrones, what is the punishment for deserting the Night's Watch?",
+            "answers": [
+                {
+                    "txt": "Death"
+                },
+                {
+                    "txt": "Battle to the death with Gregor Clegane"
+                },
+                {
+                    "txt": "Castration"
+                },
+                {
+                    "txt": "Imprisonment"
+                }
+            ]
+        },
+        /*20*/
+        {
+            "question": "Where is Victoria in the episode of 'White Bear' of 'Black Mirror'?",
+            "answers": [
+                {
+                    "txt": "In virtual reality created for her to suffer"
+                },
+                {
+                    "txt": "In a game for people's entertainment"
+                },
+                {
+                    "txt": "Undergoing a punishment"
+                },
+                {
+                    "txt": "In an amusement park"
+                }
+            ]
+        },
+        /*21*/
+        {
+            "question": "In 'Pretty Little Liars', what sport does Emily excel at in high school?",
+            "answers": [
+                {
+                    "txt": "Swimming"
+                },
+                {
+                    "txt": "Lacrosse"
+                },
+                {
+                    "txt": "Track"
+                },
+                {
+                    "txt": "Volleyball"
+                }
+            ]
+        },
+        /*22*/
+        {
+            "question": "What's the name of the coffee shop used by the characters in 'Friends'?",
+            "answers": [
+                {
+                    "txt": "Central Perk"
+                },
+                {
+                    "txt": "St James' Perk"
+                },
+                {
+                    "txt": "Froth Of Khan"
+                },
+                {
+                    "txt": "Daily Grind"
+                }
+            ]
+        },
+        /*23*/
+        {
+            "question": "On 'Game of Thrones', what was the name of Ned Stark's sister who was abducted by the mad king?",
+            "answers": [
+                {
+                    "txt": "Lyanna"
+                },
+                {
+                    "txt": "Lysa"
+                },
+                {
+                    "txt": "Lorena"
+                },
+                {
+                    "txt": "Leanna"
+                }
+            ]
+        },
+        /*24*/
+        {
+            "question": "What was Jack Shephard’s profession pre-plane crash, on 'Lost'?",
+            "answers": [
+                {
+                    "txt": "Surgeon"
+                },
+                {
+                    "txt": "Software developer"
+                },
+                {
+                    "txt": "Construction manager"
+                },
+                {
+                    "txt": "Interior designer"
+                }
+            ]
+        },
+        /*25*/
+        {
+            "question": "In 'The Witcher', what was the first beast Geralt encounters?",
+            "answers": [
+                {
+                    "txt": "Kikimora"
+                },
+                {
+                    "txt": "Arachas"
+                },
+                {
+                    "txt": "Endrega"
+                },
+                {
+                    "txt": "Centipede"
+                }
+            ]
+        },
+        /*26*/
+        {
+            "question": "In 'The Queen's Gambit', which player scares Beth?",
+            "answers": [
+                {
+                    "txt": "The Russian"
+                },
+                {
+                    "txt": "The German"
+                },
+                {
+                    "txt": "The Chinese"
+                },
+                {
+                    "txt": "The Indian"
+                }
+            ]
+        },
+        /*27*/
+        {
+            "question": "In 'Gossip Girl', Rufus was Lily's __ husband?",
+            "answers": [
+                {
+                    "txt": "Fifth"
+                },
+                {
+                    "txt": "Third"
+                },
+                {
+                    "txt": "Fourth"
+                },
+                {
+                    "txt": "Sixth"
+                }
+            ]
+        },
+        /*28*/
+        {
+            "question": "What is the name of the woman who works as a prostitute in 'Westworld'?",
+            "answers": [
+                {
+                    "txt": "Clementine"
+                },
+                {
+                    "txt": "Sharlot"
+                },
+                {
+                    "txt": "Caroline"
+                },
+                {
+                    "txt": "Montana"
+                }
+            ]
+        },
+        /*29*/
+        {
+            "question": "At the end of the episode 'Be Right Back' (of 'Black Mirror') - what does Martha do with Ash's clone?",
+            "answers": [
+                {
+                    "txt": "Keeps it away in the attic"
+                },
+                {
+                    "txt": "Asks it to jump off a cliff"
+                },
+                {
+                    "txt": "Switches it off"
+                },
+                {
+                    "txt": "Gives back to the company"
+                }
+            ]
+        },
+        /*30*/
+        {
+            "question": "How does Rick from 'Rick and Morty' hop across universes and dimensions? ",
+            "answers": [
+                {
+                    "txt": "A portal gun"
+                },
+                {
+                    "txt": "A sonic screwdriver"
+                },
+                {
+                    "txt": "A puzzle box"
+                },
+                {
+                    "txt": "A pair of laser goggles"
+                }
+            ]
+        }
+    ],
+    "HighScores": {
+        "Omry": 500,
+        "Yair": 720,
+        "omry": 660
+    }
+}

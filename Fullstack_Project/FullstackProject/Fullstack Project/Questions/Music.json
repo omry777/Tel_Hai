@@ -1,0 +1,552 @@
+{
+    "ImageUrl": {
+        "url": "https://pickamusic.com/uploads/source/music%20pic.jpg"
+    },
+    "Questions": [
+        /*1*/
+        {
+            "question": "Which Beatle was NOT an original member of the band?",
+            "answers": [
+                {
+                    "txt": "Ringo Starr"
+                },
+                {
+                    "txt": "John Lennon"
+                },
+                {
+                    "txt": "Paul McCartney"
+                },
+                {
+                    "txt": "George Harrison"
+                }
+            ]
+        },
+        /*2*/
+        {
+            "question": "Which of these Michael Jackson songs was released first?",
+            "answers": [
+                {
+                    "txt": "Ben"
+                },
+                {
+                    "txt": "Beat It"
+                },
+                {
+                    "txt": "Billie Jean"
+                },
+                {
+                    "txt": "Bad"
+                }
+            ]
+        },
+        /*3*/
+        {
+            "question": "Which of these rock bands was first to debut an album?",
+            "answers": [
+                {
+                    "txt": "Pink Floyd"
+                },
+                {
+                    "txt": "Led Zeppelin"
+                },
+                {
+                    "txt": "Aerosmith"
+                },
+                {
+                    "txt": "Queen"
+                }
+            ]
+        },
+        /*4*/
+        {
+            "question": "Which artist has won the Grammy Award for 'Best Rap Album' the most times?",
+            "answers": [
+                {
+                    "txt": "Eminem"
+                },
+                {
+                    "txt": "Jay-Z"
+                },
+                {
+                    "txt": "OutKast"
+                },
+                {
+                    "txt": "Kanye West"
+                }
+            ]
+        },
+        /*5*/
+        {
+            "question": "Justin Timberlake was the former lead singer of which famous boy band?",
+            "answers": [
+                {
+                    "txt": "NSYNC"
+                },
+                {
+                    "txt": "New Kids on the Block"
+                },
+                {
+                    "txt": "Westlife"
+                },
+                {
+                    "txt": "Backstreet Boys"
+                }
+            ]
+        },
+        /*6*/
+        {
+            "question": "Which member of Maroon 5 founded his own record label in his hometown of New Orleans, Louisiana?",
+            "answers": [
+                {
+                    "txt": "PJ Morton"
+                },
+                {
+                    "txt": "Adam Levine"
+                },
+                {
+                    "txt": "James Valentine"
+                },
+                {
+                    "txt": "Jesse Carmichael"
+                }
+            ]
+        },
+        /*7*/
+        {
+            "question": "Which rapper is featured on Fifth Harmony's song 'Worth It'?",
+            "answers": [
+                {
+                    "txt": "Kid Ink"
+                },
+                {
+                    "txt": "Lil Wayne"
+                },
+                {
+                    "txt": "Eminem"
+                },
+                {
+                    "txt": "Drake"
+                }
+            ]
+        },
+        /*8*/
+        {
+            "question": "How many kids does Snoop Dogg have?",
+            "answers": [
+                {
+                    "txt": "3"
+                },
+                {
+                    "txt": "1"
+                },
+                {
+                    "txt": "5"
+                },
+                {
+                    "txt": "None"
+                }
+            ]
+        },
+        /*9*/
+        {
+            "question": "Which classic 1980's band are responsible for the hit 'Sweet Dreams (Are Made of This)'?",
+            "answers": [
+                {
+                    "txt": "The Eurythmics"
+                },
+                {
+                    "txt": "Depeche Mode"
+                },
+                {
+                    "txt": "Iron Maiden"
+                },
+                {
+                    "txt": "Duran Duran"
+                }
+            ]
+        },
+        /*10*/
+        {
+            "question": "Which famous American pop singer was actually born in the State of Hawaii?",
+            "answers": [
+                {
+                    "txt": "Bruno Mars"
+                },
+                {
+                    "txt": "Rihanna"
+                },
+                {
+                    "txt": "Ariana Grande"
+                },
+                {
+                    "txt": "Marilyn Manson"
+                }
+            ]
+        },
+        /*11*/
+        {
+            "question": "Which singer began her rise to superstardom actually as a dancer on a sketch-comedy television program?",
+            "answers": [
+                {
+                    "txt": "Jennifer Lopez"
+                },
+                {
+                    "txt": "Janet Jackson"
+                },
+                {
+                    "txt": "Beyonce"
+                },
+                {
+                    "txt": "Christian Aguilera"
+                }
+            ]
+        },
+        /*12*/
+        {
+            "question": "Who was the lead singer of the band 'Queen'?",
+            "answers": [
+                {
+                    "txt": "Freddie Mercury"
+                },
+                {
+                    "txt": "Bob Dylan"
+                },
+                {
+                    "txt": "Mike Jagger"
+                },
+                {
+                    "txt": "Axl Rose"
+                }
+            ]
+        },
+        /*13*/
+        {
+            "question": "Lady Gaga derived her stage name from a song performed by which legendary band?",
+            "answers": [
+                {
+                    "txt": "Queen"
+                },
+                {
+                    "txt": "Black Sabbath"
+                },
+                {
+                    "txt": "The Beatle"
+                },
+                {
+                    "txt": "Led Zeppelin"
+                }
+            ]
+        },
+        /*14*/
+        {
+            "question": "Which music icon began his career as a member of a group called The Wailers?",
+            "answers": [
+                {
+                    "txt": "Bob Marley"
+                },
+                {
+                    "txt": "Madonna"
+                },
+                {
+                    "txt": "Michael Jackson"
+                },
+                {
+                    "txt": "Celine Dion"
+                }
+            ]
+        },
+        /*15*/
+        {
+            "question": "Who is the lead singer of Pearl Jam?",
+            "answers": [
+                {
+                    "txt": "Eddie Vedder"
+                },
+                {
+                    "txt": "Adam Duritz"
+                },
+                {
+                    "txt": "Johnathan Davis"
+                },
+                {
+                    "txt": "Brett Anderson"
+                }
+            ]
+        },
+        /*16*/
+        {
+            "question": "Mi Reflejo was a Spanish-speaking album released by which famous musician?",
+            "answers": [
+                {
+                    "txt": "Christina Aguilera"
+                },
+                {
+                    "txt": "Celine Dion"
+                },
+                {
+                    "txt": "Lil Kim"
+                },
+                {
+                    "txt": "Britney Spears"
+                }
+            ]
+        },
+        /*17*/
+        {
+            "question": "Where is Kanye West from?",
+            "answers": [
+                {
+                    "txt": "Chicago"
+                },
+                {
+                    "txt": "Los Angeles"
+                },
+                {
+                    "txt": "New York"
+                },
+                {
+                    "txt": "Miami"
+                }
+            ]
+        },
+        /*18*/
+        {
+            "question": "R. Kelly's unforgettable 'I Believe I Can Fly' was originally featured on the soundtrack of which movie?",
+            "answers": [
+                {
+                    "txt": "Space Jam"
+                },
+                {
+                    "txt": "Romeo + Juliet"
+                },
+                {
+                    "txt": "Batman Forever"
+                },
+                {
+                    "txt": "The Crow"
+                }
+            ]
+        },
+        /*19*/
+        {
+            "question": "Which band released the song 'Hey There Delilah'?",
+            "answers": [
+                {
+                    "txt": "Plain White T's"
+                },
+                {
+                    "txt": "Fall Out Boy"
+                },
+                {
+                    "txt": "My Chemical Romance"
+                },
+                {
+                    "txt": "Paramore"
+                }
+            ]
+        },
+        /*20*/
+        {
+            "question": "Elvis Presley passed away in which year?",
+            "answers": [
+                {
+                    "txt": "1977"
+                },
+                {
+                    "txt": "1972"
+                },
+                {
+                    "txt": "1974"
+                },
+                {
+                    "txt": "1979"
+                }
+            ]
+        },
+        /*21*/
+        {
+            "question": "What was Britney Spears' first single called?",
+            "answers": [
+                {
+                    "txt": "Baby One More Time"
+                },
+                {
+                    "txt": "Toxic"
+                },
+                {
+                    "txt": "Oops!... I Did It Again"
+                },
+                {
+                    "txt": "Womanizer"
+                }
+            ]
+        },
+        /*22*/
+        {
+            "question": "Ariana Grande has had five albums out - how many reached Number One in the UK?",
+            "answers": [
+                {
+                    "txt": "3"
+                },
+                {
+                    "txt": "1"
+                },
+                {
+                    "txt": "4"
+                },
+                {
+                    "txt": "None"
+                }
+            ]
+        },
+        /*23*/
+        {
+            "question": "Who was not a member of Destiny’s Child?",
+            "answers": [
+                {
+                    "txt": "Alicia Keys"
+                },
+                {
+                    "txt": "Beyonce"
+                },
+                {
+                    "txt": "Kelly Rowland"
+                },
+                {
+                    "txt": "LeToya Luckett"
+                }
+            ]
+        },
+        /*24*/
+        {
+            "question": "At the GRAMMYs, who became the youngest solo artist of all time to win Album of the Year?",
+            "answers": [
+                {
+                    "txt": "Billie Eilish"
+                },
+                {
+                    "txt": "Lorde"
+                },
+                {
+                    "txt": "Justin Bieber"
+                },
+                {
+                    "txt": "Selena Gomez"
+                }
+            ]
+        },
+        /*25*/
+        {
+            "question": "What is Rihanna's real name?",
+            "answers": [
+                {
+                    "txt": "Robyn"
+                },
+                {
+                    "txt": "Roro"
+                },
+                {
+                    "txt": "Riri"
+                },
+                {
+                    "txt": "Respusha"
+                }
+            ]
+        },
+        /*26*/
+        {
+            "question": "Which artist got his name from his producer claiming that he 'sees music like it’s the Matrix'?",
+            "answers": [
+                {
+                    "txt": "Ne-Yo"
+                },
+                {
+                    "txt": "Eminem"
+                },
+                {
+                    "txt": "Timbaland"
+                },
+                {
+                    "txt": "50 cent"
+                }
+            ]
+        },
+        /*27*/
+        {
+            "question": "Choose the artist that isn't originally from UK:",
+            "answers": [
+                {
+                    "txt": "Taylor Swift"
+                },
+                {
+                    "txt": "Sam Smith"
+                },
+                {
+                    "txt": "Jessie J"
+                },
+                {
+                    "txt": "Tinie Tempah"
+                }
+            ]
+        },
+        /*28*/
+        {
+            "question": "Which band has the iconic song 'Wonderwall'?",
+            "answers": [
+                {
+                    "txt": "Oasis"
+                },
+                {
+                    "txt": "Guns N' Roses"
+                },
+                {
+                    "txt": "Genesis"
+                },
+                {
+                    "txt": "Nirvana"
+                }
+            ]
+        },
+        /*29*/
+        {
+            "question": "Choose the artist that is not a rapper:",
+            "answers": [
+                {
+                    "txt": "Katy Perry"
+                },
+                {
+                    "txt": "Nicki Minaj"
+                },
+                {
+                    "txt": "Cardi B"
+                },
+                {
+                    "txt": "Iggy Azalea"
+                }
+            ]
+        },
+        /*30*/
+        {
+            "question": "Which of the followings is not a 'Black Eyed Peas' song?",
+            "answers": [
+                {
+                    "txt": "Sky Full Of Stars"
+                },
+                {
+                    "txt": "Boom Boom Pow"
+                },
+                {
+                    "txt": "Where Is the Love?"
+                },
+                {
+                    "txt": "I Gotta Feeling"
+                }
+            ]
+        }
+    ],
+    "HighScores": {
+        "Omry": 500,
+        "Yair": 720,
+        "omry": 660
+    }
+}
