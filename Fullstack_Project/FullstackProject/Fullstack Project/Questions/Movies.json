@@ -1,0 +1,552 @@
+{
+    "ImageUrl": {
+        "url": "https://i1.wp.com/www.pcgalaxy.co.il/wp-content/uploads/2020/06/CINEMA-POPCORN-%D7%94%D7%A1%D7%A8%D7%98%D7%99%D7%9D-%D7%94%D7%A8%D7%90%D7%A9%D7%95%D7%A0%D7%99%D7%9D-%D7%A7%D7%95%D7%9C%D7%A0%D7%95%D7%A2-%D7%A4%D7%95%D7%A4%D7%A7%D7%95%D7%A8%D7%9F.jpg?ssl=1"
+    },
+    "Questions": [
+        /*1*/
+        {
+            "question": "What was the first movie in the Marvel Cinematic Universe?",
+            "answers": [
+                {
+                    "txt": "Iron Man"
+                },
+                {
+                    "txt": "Spider-Man"
+                },
+                {
+                    "txt": "The Avengers"
+                },
+                {
+                    "txt": "Batman"
+                }
+            ]
+        },
+        /*2*/
+        {
+            "question": "Which of these actors DIDN'T appear in 'Pulp Fiction'?",
+            "answers": [
+                {
+                    "txt": "John Turturro"
+                },
+                {
+                    "txt": "Samuel L. Jackson"
+                },
+                {
+                    "txt": "Uma Thurman"
+                },
+                {
+                    "txt": "Bruce Willis"
+                }
+            ]
+        },
+        /*3*/
+        {
+            "question": "In the movie 'Frozen', who is Olaf?",
+            "answers": [
+                {
+                    "txt": "A snowman"
+                },
+                {
+                    "txt": "A reindeer"
+                },
+                {
+                    "txt": "A ghost"
+                },
+                {
+                    "txt": "A knight"
+                }
+            ]
+        },
+        /*4*/
+        {
+            "question": "For which of these movies did Leonardo DiCaprio win an Oscar for Best Actor?",
+            "answers": [
+                {
+                    "txt": "The Revenant"
+                },
+                {
+                    "txt": "Blood Diamond"
+                },
+                {
+                    "txt": "Titanic"
+                },
+                {
+                    "txt": "The Last King of Scotland"
+                }
+            ]
+        },
+        /*5*/
+        {
+            "question": "In the 'Godfather' series, where was Vito Corleone born?",
+            "answers": [
+                {
+                    "txt": "Corleone, Sicily"
+                },
+                {
+                    "txt": "Rome"
+                },
+                {
+                    "txt": "Athens"
+                },
+                {
+                    "txt": "New York"
+                }
+            ]
+        },
+        /*6*/
+        {
+            "question": "Where is the Temple of Doom in 'Indiana Jones and the Temple of Doom'?",
+            "answers": [
+                {
+                    "txt": "India"
+                },
+                {
+                    "txt": "China"
+                },
+                {
+                    "txt": "South America"
+                },
+                {
+                    "txt": "Israel"
+                }
+            ]
+        },
+        /*7*/
+        {
+            "question": "What was the first official Mickey Mouse cartoon made in Technicolor?",
+            "answers": [
+                {
+                    "txt": "The Band Concert"
+                },
+                {
+                    "txt": "Fantasia"
+                },
+                {
+                    "txt": "Parade of the Award Nominees"
+                },
+                {
+                    "txt": "Steamboat Willie"
+                }
+            ]
+        },
+        /*8*/
+        {
+            "question": "In what classic horror film series was the killer's name Michael Myers?",
+            "answers": [
+                {
+                    "txt": "Halloween"
+                },
+                {
+                    "txt": "Child's Play"
+                },
+                {
+                    "txt": "Friday the 13th"
+                },
+                {
+                    "txt": "A Nightmare on Elm Street"
+                }
+            ]
+        },
+        /*9*/
+        {
+            "question": "Which classic horror film series featured a serial kill",
+            "answers": [
+                {
+                    "txt": "Halloween"
+                },
+                {
+                    "txt": "Friday the 13th"
+                },
+                {
+                    "txt": "A Nightmare on Elm Street"
+                },
+                {
+                    "txt": "The Texas Chainsaw Massacre"
+                }
+            ]
+        },
+        /*10*/
+        {
+            "question": "What is the name of the giant spider that paralyzes Frodo in 'the Return of the King'?",
+            "answers": [
+                {
+                    "txt": "Shelob"
+                },
+                {
+                    "txt": "Sauron"
+                },
+                {
+                    "txt": "Charlotte"
+                },
+                {
+                    "txt": "Anansi"
+                }
+            ]
+        },
+        /*11*/
+        {
+            "question": "What is Forrest Gump's IQ?",
+            "answers": [
+                {
+                    "txt": "75"
+                },
+                {
+                    "txt": "50"
+                },
+                {
+                    "txt": "90"
+                },
+                {
+                    "txt": "110"
+                }
+            ]
+        },
+        /*12*/
+        {
+            "question": "In the movie 'The Shawshank Redemption', what was Andrew Dufresne's profession?",
+            "answers": [
+                {
+                    "txt": "A banker"
+                },
+                {
+                    "txt": "A lawyer"
+                },
+                {
+                    "txt": "A teacher"
+                },
+                {
+                    "txt": "A plumber"
+                }
+            ]
+        },
+        /*13*/
+        {
+            "question": "What is the name of the serial killer Clarice (Silence of the Lambs) is trying to get Hannibal Lecter to help her track down?",
+            "answers": [
+                {
+                    "txt": "Buffalo Bill"
+                },
+                {
+                    "txt": "Wild Bill"
+                },
+                {
+                    "txt": "Billy the Kid"
+                },
+                {
+                    "txt": "John Doe"
+                }
+            ]
+        },
+        /*14*/
+        {
+            "question": "What is the name of the device used to facilitate dream sharing in the movie 'Inception'?",
+            "answers": [
+                {
+                    "txt": "PASIV"
+                },
+                {
+                    "txt": "Somnacinator"
+                },
+                {
+                    "txt": "Inceptor"
+                },
+                {
+                    "txt": "Carbonator"
+                }
+            ]
+        },
+        /*15*/
+        {
+            "question": "What famous actor is known for the saying, 'I'll be back'?",
+            "answers": [
+                {
+                    "txt": "Arnold Schwarzenegger"
+                },
+                {
+                    "txt": "Will Smith"
+                },
+                {
+                    "txt": "Christopher Ford"
+                },
+                {
+                    "txt": "Tom Hanks"
+                }
+            ]
+        },
+        /*16*/
+        {
+            "question": "What is the name of the actress who played Hermione Granger in the Harry Potter series of films?",
+            "answers": [
+                {
+                    "txt": "Emma Watson"
+                },
+                {
+                    "txt": "Mila Kunis"
+                },
+                {
+                    "txt": "Jessica Alba"
+                },
+                {
+                    "txt": "Jennifer Lawrence"
+                }
+            ]
+        },
+        /*17*/
+        {
+            "question": "All scenes that take place within the Matrix have what color tint?",
+            "answers": [
+                {
+                    "txt": "Green"
+                },
+                {
+                    "txt": "Red"
+                },
+                {
+                    "txt": "Blue"
+                },
+                {
+                    "txt": "Yellow"
+                }
+            ]
+        },
+        /*18*/
+        {
+            "question": "In 'V for Vendetta', what happens after V dies?",
+            "answers": [
+                {
+                    "txt": "Evey takes his identity and there is a bloody revolution"
+                },
+                {
+                    "txt": "Everyone takes his identity and there is a peaceful revolution"
+                },
+                {
+                    "txt": "He becomes a martyr and a figurehead for the underground rebels"
+                },
+                {
+                    "txt": "The Government destroys his image by arranging an atrocity and framing him for it"
+                }
+            ]
+        },
+        /*19*/
+        {
+            "question": "In 'A Clockwork Orange', what does Alex call the crimes he and his friends commit?",
+            "answers": [
+                {
+                    "txt": "Ultraviolence"
+                },
+                {
+                    "txt": "Superviolence"
+                },
+                {
+                    "txt": "Violence plus"
+                },
+                {
+                    "txt": "Megaviolence"
+                }
+            ]
+        },
+        /*20*/
+        {
+            "question": "Which actress played Katniss Everdeen in 'The Hunger Games'?",
+            "answers": [
+                {
+                    "txt": "Jennifer Lawrence"
+                },
+                {
+                    "txt": "Kate Winslet"
+                },
+                {
+                    "txt": "Anne Hathaway"
+                },
+                {
+                    "txt": "Natalie Portman"
+                }
+            ]
+        },
+        /*21*/
+        {
+            "question": "in The Notebook', where does Noah first see Allie?",
+            "answers": [
+                {
+                    "txt": "On the bumper cars"
+                },
+                {
+                    "txt": "On the Ferris wheel"
+                },
+                {
+                    "txt": "Playing a carnival game"
+                },
+                {
+                    "txt": "Getting dunked in the dunk tank"
+                }
+            ]
+        },
+        /*22*/
+        {
+            "question": "Who didn't play the role of 'The Joker'?",
+            "answers": [
+                {
+                    "txt": "Zac Efron"
+                },
+                {
+                    "txt": "Heath Ledger"
+                },
+                {
+                    "txt": "Joaquin Phoenix"
+                },
+                {
+                    "txt": "Jared Leto"
+                }
+            ]
+        },
+        /*23*/
+        {
+            "question": "In 'Twilight', in which class does Bella sit next to Edward on the first day of school?",
+            "answers": [
+                {
+                    "txt": "Biology"
+                },
+                {
+                    "txt": "English"
+                },
+                {
+                    "txt": "Chemistry"
+                },
+                {
+                    "txt": "Math"
+                }
+            ]
+        },
+        /*24*/
+        {
+            "question": "What fictional planet is the superhero, 'Superman', from?",
+            "answers": [
+                {
+                    "txt": "Krypton"
+                },
+                {
+                    "txt": "Daxam"
+                },
+                {
+                    "txt": "Rao"
+                },
+                {
+                    "txt": "Bizzaro"
+                }
+            ]
+        },
+        /*25*/
+        {
+            "question": "What is the first rule of 'Fight Club'?",
+            "answers": [
+                {
+                    "txt": "Never talk about Fight Club"
+                },
+                {
+                    "txt": "To leave all of your problems at the door"
+                },
+                {
+                    "txt": "No women allowed"
+                },
+                {
+                    "txt": "No one uses their real name"
+                }
+            ]
+        },
+        /*26*/
+        {
+            "question": "\"What is Captain Sparrow's first name in 'Pirates of the Caribbean'?",
+            "answers": [
+                {
+                    "txt": "Jack"
+                },
+                {
+                    "txt": "Zach"
+                },
+                {
+                    "txt": "Jake"
+                },
+                {
+                    "txt": "Chuck"
+                }
+            ]
+        },
+        /*27*/
+        {
+            "question": "In 'Mean Girls', what did Regina write about herself in the Burn Book?",
+            "answers": [
+                {
+                    "txt": "She's a fugly slut"
+                },
+                {
+                    "txt": "She's a grotsky little byotch"
+                },
+                {
+                    "txt": "She's a drug pusher"
+                },
+                {
+                    "txt": "She made out with a hot dog"
+                }
+            ]
+        },
+        /*28*/
+        {
+            "question": "In 'Clueless', how did Cher's mother die?",
+            "answers": [
+                {
+                    "txt": "A freak accident during liposuction"
+                },
+                {
+                    "txt": "Complications after her nose job"
+                },
+                {
+                    "txt": "In a car accident"
+                },
+                {
+                    "txt": "During child birth"
+                }
+            ]
+        },
+        /*29*/
+        {
+            "question": "What fictional city is the home of Batman?",
+            "answers": [
+                {
+                    "txt": "Gotham City"
+                },
+                {
+                    "txt": "Gateway City"
+                },
+                {
+                    "txt": "The Hidden City"
+                },
+                {
+                    "txt": "Zenith City"
+                }
+            ]
+        },
+        /*30*/
+        {
+            "question": "When the 'Titanic' hit an iceberg and sank?",
+            "answers": [
+                {
+                    "txt": "1912"
+                },
+                {
+                    "txt": "1910"
+                },
+                {
+                    "txt": "1922"
+                },
+                {
+                    "txt": "1897"
+                }
+            ]
+        }
+    ],
+    "HighScores": {
+        "Omry": 500,
+        "Yair": 720,
+        "omry": 660
+    }
+}
