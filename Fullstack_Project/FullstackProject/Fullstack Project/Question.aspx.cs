@@ -3,7 +3,6 @@ using System;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.IO;
-using System.Linq;
 using System.Web.UI.WebControls;
 
 namespace Fullstack_Project
@@ -27,13 +26,12 @@ namespace Fullstack_Project
                 Response.Redirect("Login.aspx");
 
             buttons = new Button[4] { ans0, ans1, ans2, ans3 };
-            wasAsked = new int[numberOfQuestions];
-            for ( int i = 0; i < numberOfQuestions; i++ )
-                wasAsked[i] = -1;
+
 
             dir = $"{ConfigurationManager.ConnectionStrings["QuestionsDirectoryString"].ConnectionString}{Session["category"].ToString()}.json";
             json = JObject.Parse(File.ReadAllText(@dir));
             getQuestionsAmount();
+
         }
 
         //Updates SQL and json if needed
@@ -97,6 +95,7 @@ namespace Fullstack_Project
 
         protected void loadQuestion(object sender, EventArgs e)
         {
+
             if ( qCount == numberOfQuestions )
             {
                 //Finished all questions. set display accoridngly
@@ -104,7 +103,7 @@ namespace Fullstack_Project
                 Timer1.Enabled = false;
                 questionText.Text = $"Good Job!\nFinal Score: {score}";
                 qNum.Text = "";
-                
+
                 for ( int num = 0; num < 3; num++ )
                     buttons[num].Visible = false;
 
@@ -116,6 +115,16 @@ namespace Fullstack_Project
 
             } else if ( qCount <= numberOfQuestions )
             {
+                if ( qCount == 0 )
+                {
+
+                    wasAsked = new int[numberOfQuestions];
+
+                    for ( int i = 0; i < numberOfQuestions; i++ )
+                        wasAsked[i] = -1;
+                    for ( int i = 0; i < 3; i++ )
+                        buttons[i].Visible = true;
+                }
                 //get new question
                 int r = getRandomQuestion();
                 wasAsked[qCount++] = r;
@@ -153,6 +162,7 @@ namespace Fullstack_Project
                 case "Click me!":
                     score = 0;
                     qCount = 0;
+
                     Timer1.Enabled = true;
                     break;
                 default:
@@ -172,11 +182,18 @@ namespace Fullstack_Project
             do
             {
                 temp = rand.Next(maxQuestion);
-            } while ( wasAsked.Contains<int>(temp) );
+            } while ( Array.Exists(wasAsked, elem => elem == temp) );
 
             return temp;
         }
 
+        private bool contains(int[] arr, int temp)
+        {
+            for ( int i = 0; i < arr.Length && arr[i] != -1; i++ )
+                if ( arr[i] == temp )
+                    return true;
+            return false;
+        }
         private void getQuestionsAmount()
         {
             maxQuestion = 0;

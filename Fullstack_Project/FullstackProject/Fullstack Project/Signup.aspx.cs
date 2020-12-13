@@ -37,7 +37,7 @@ namespace Fullstack_Project
                 else
                 {
                     reader.Close();
-                    command = new SqlCommand("INSERT INTO TKUsersTable VALUES (@id, @username, @password, 0);", con);
+                    command = new SqlCommand("INSERT INTO TKUsersTable VALUES (@id, @username, @password, 0, '-');", con);
                     command.Parameters.AddWithValue("@username", username.Text);
                     command.Parameters.AddWithValue("@id",userCount++);
                     command.Parameters.AddWithValue("@password", Encrypt(password.Text));
