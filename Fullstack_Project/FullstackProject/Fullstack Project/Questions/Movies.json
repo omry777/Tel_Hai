@@ -365,7 +365,7 @@
         },
         /*21*/
         {
-            "question": "in The Notebook', where does Noah first see Allie?",
+            "question": "in 'The Notebook', where does Noah first see Allie?",
             "answers": [
                 {
                     "txt": "On the bumper cars"
@@ -455,7 +455,7 @@
         },
         /*26*/
         {
-            "question": "\"What is Captain Sparrow's first name in 'Pirates of the Caribbean'?",
+            "question": "What is Captain Sparrow's first name in 'Pirates of the Caribbean'?",
             "answers": [
                 {
                     "txt": "Jack"

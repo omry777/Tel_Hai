@@ -1,692 +1,692 @@
 {
-  "ImageUrl": {
-    "url": "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX21829328.jpg"
-  },
-  "Questions": [
-    {
-      "question": "When the Americas were discoverd?",
-      "answers": [
-        {
-          "txt": "1492"
-        },
-        {
-          "txt": "1896"
-        },
-        {
-          "txt": "1677"
-        },
-        {
-          "txt": "1312"
-        }
-      ]
+    "ImageUrl": {
+        "url": "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX21829328.jpg"
     },
-    {
-      "question": "Who discoverd radioactivity?",
-      "answers": [
+    "Questions": [
         {
-          "txt": "Marie Curie"
+            "question": "When the Americas were discoverd?",
+            "answers": [
+                {
+                    "txt": "1492"
+                },
+                {
+                    "txt": "1896"
+                },
+                {
+                    "txt": "1677"
+                },
+                {
+                    "txt": "1312"
+                }
+            ]
         },
         {
-          "txt": "Alexander Grahm-Bell"
+            "question": "Who discoverd radioactivity?",
+            "answers": [
+                {
+                    "txt": "Marie Curie"
+                },
+                {
+                    "txt": "Alexander Grahm-Bell"
+                },
+                {
+                    "txt": "Nicola Tesla"
+                },
+                {
+                    "txt": "Rick Sanchez"
+                }
+            ]
         },
         {
-          "txt": "Nicola Tesla"
+            "question": "When World War II Started?",
+            "answers": [
+                {
+                    "txt": "1 September, 1939"
+                },
+                {
+                    "txt": "20 June, 1938"
+                },
+                {
+                    "txt": "20 April, 1940"
+                },
+                {
+                    "txt": "4 June, 1939 "
+                }
+            ]
         },
         {
-          "txt": "Rick Sanchez"
+            "question": "What Marked The End of Medieval Times?",
+            "answers": [
+                {
+                    "txt": "Rise of The Ottoman Empire"
+                },
+                {
+                    "txt": "Fall of Rome"
+                },
+                {
+                    "txt": "The Bronze Age"
+                },
+                {
+                    "txt": "The Printing Press"
+                }
+            ]
+        },
+        {
+            "question": "Who Discovered The Americas?",
+            "answers": [
+                {
+                    "txt": "Christopher Colombus"
+                },
+                {
+                    "txt": "Americo Vespuchi"
+                },
+                {
+                    "txt": "Vasco De-Gamma"
+                },
+                {
+                    "txt": "Rick Sanchez"
+                }
+            ]
+        },
+        {
+            "question": "Who Lead Great Britian During WWII?",
+            "answers": [
+                {
+                    "txt": "Winston Cherchill"
+                },
+                {
+                    "txt": "Elizabeth II"
+                },
+                {
+                    "txt": "Neville Chamberlin"
+                },
+                {
+                    "txt": "Alan Turing"
+                }
+            ]
+        },
+        {
+            "question": "When The French Revolution Accured?",
+            "answers": [
+                {
+                    "txt": "1789"
+                },
+                {
+                    "txt": "1764"
+                },
+                {
+                    "txt": "1777"
+                },
+                {
+                    "txt": "1806"
+                }
+            ]
+        },
+        {
+            "question": "What's written on the Amercian Dollar Bill($$$)?",
+            "answers": [
+                {
+                    "txt": "In God We Trust"
+                },
+                {
+                    "txt": "Make America Great Again"
+                },
+                {
+                    "txt": "Illuminati"
+                },
+                {
+                    "txt": "Rick Sanchez"
+                }
+            ]
+        },
+        {
+            "question": "What was the kingdom Thailand originated from?",
+            "answers": [
+                {
+                    "txt": "Siam"
+                },
+                {
+                    "txt": "Ming"
+                },
+                {
+                    "txt": "Shu"
+                },
+                {
+                    "txt": "Thing"
+                }
+            ]
+        },
+        {
+            "question": "Which house won 'Wars of The Roses'?",
+            "answers": [
+                {
+                    "txt": "Lancaster"
+                },
+                {
+                    "txt": "York"
+                },
+                {
+                    "txt": "Cornwell"
+                },
+                {
+                    "txt": "Oxford"
+                }
+            ]
+        },
+        {
+            "question": "Which nations faught in the 100 years war?",
+            "answers": [
+                {
+                    "txt": "England & France"
+                },
+                {
+                    "txt": "France & Austria"
+                },
+                {
+                    "txt": "Austria & Germany"
+                },
+                {
+                    "txt": "U.S.A & Great Britian"
+                }
+            ]
+        },
+        {
+            "question": "What kind of gas was used in the trenches during World War I?",
+            "answers": [
+                {
+                    "txt": "Mustard gas"
+                },
+                {
+                    "txt": "Radon"
+                },
+                {
+                    "txt": "VX"
+                },
+                {
+                    "txt": "Sarin"
+                }
+            ]
+        },
+        {
+            "question": "What city was buried by Mount Vesuvius in 79 A.D.?",
+            "answers": [
+                {
+                    "txt": "Pompeii"
+                },
+                {
+                    "txt": "Naples"
+                },
+                {
+                    "txt": "Milan"
+                },
+                {
+                    "txt": "Rome"
+                }
+            ]
+        },
+        {
+            "question": "Who painted the ceiling of the Sistine Chapel?",
+            "answers": [
+                {
+                    "txt": "Michelangelo"
+                },
+                {
+                    "txt": "Leonardo da Vinci"
+                },
+                {
+                    "txt": "Vincent van Gogh"
+                },
+                {
+                    "txt": "Gustave Dore"
+                }
+            ]
+        },
+        {
+            "question": "When did the Cold War officially end?",
+            "answers": [
+                {
+                    "txt": "1989"
+                },
+                {
+                    "txt": "1992"
+                },
+                {
+                    "txt": "1945"
+                },
+                {
+                    "txt": "1976"
+                }
+            ]
+        },
+        {
+            "question": "Which European country was the first to allow women to vote?",
+            "answers": [
+                {
+                    "txt": "Finland"
+                },
+                {
+                    "txt": "France"
+                },
+                {
+                    "txt": "Britain"
+                },
+                {
+                    "txt": "Italy"
+                }
+            ]
+        },
+        {
+            "question": "Which one of the seven ancient wonders of the world is still standing today?",
+            "answers": [
+                {
+                    "txt": "The Great Pyramid of Giza"
+                },
+                {
+                    "txt": "Statue of Zeus at Olympia"
+                },
+                {
+                    "txt": "Temple of Artemis at Ephesus"
+                },
+                {
+                    "txt": "Hanging Gardens of Babylon"
+                }
+            ]
+        },
+        {
+            "question": "What is the world's smallest country?",
+            "answers": [
+                {
+                    "txt": "Vatican"
+                },
+                {
+                    "txt": "Lebanon"
+                },
+                {
+                    "txt": "Israel"
+                },
+                {
+                    "txt": "Monaco"
+                }
+            ]
+        },
+        {
+            "question": "How many years did the 100 years war last?",
+            "answers": [
+                {
+                    "txt": "116 years"
+                },
+                {
+                    "txt": "100 years"
+                },
+                {
+                    "txt": "97 years"
+                },
+                {
+                    "txt": "25 years"
+                }
+            ]
+        },
+        {
+            "question": "How many U.S. presidents have been assassinated?",
+            "answers": [
+                {
+                    "txt": "4"
+                },
+                {
+                    "txt": "2"
+                },
+                {
+                    "txt": "1"
+                },
+                {
+                    "txt": "none"
+                }
+            ]
+        },
+        {
+            "question": "How many times has the Mona Lisa been stolen?",
+            "answers": [
+                {
+                    "txt": "1"
+                },
+                {
+                    "txt": "never"
+                },
+                {
+                    "txt": "3"
+                },
+                {
+                    "txt": "2"
+                }
+            ]
+        },
+        {
+            "question": "In which year was the Berlin Wall torn down?",
+            "answers": [
+                {
+                    "txt": "1989"
+                },
+                {
+                    "txt": "1974"
+                },
+                {
+                    "txt": "1993"
+                },
+                {
+                    "txt": "1968"
+                }
+            ]
+        },
+        {
+            "question": "The 'Whitechapel Murderer' is the nickname given to which serial killer?",
+            "answers": [
+                {
+                    "txt": "Jack the Ripper"
+                },
+                {
+                    "txt": "Zodiac Killer"
+                },
+                {
+                    "txt": "Ted Bundy"
+                },
+                {
+                    "txt": "Jeffrey Dahmer"
+                }
+            ]
+        },
+        {
+            "question": "Who invented the telephone?",
+            "answers": [
+                {
+                    "txt": "Alexander Graham Bell"
+                },
+                {
+                    "txt": "Thomas Edison"
+                },
+                {
+                    "txt": "Galileo Galilei"
+                },
+                {
+                    "txt": "Benjamin Franklin"
+                }
+            ]
+        },
+        {
+            "question": "In which country was the largest known T-Rex skeleton found?",
+            "answers": [
+                {
+                    "txt": "Canada"
+                },
+                {
+                    "txt": "USA"
+                },
+                {
+                    "txt": "Brazil"
+                },
+                {
+                    "txt": "South Africa"
+                }
+            ]
+        },
+        {
+            "question": "When was Pearl Harbor bombed?",
+            "answers": [
+                {
+                    "txt": "1941"
+                },
+                {
+                    "txt": "1945"
+                },
+                {
+                    "txt": "1943"
+                },
+                {
+                    "txt": "1940"
+                }
+            ]
+        },
+        {
+            "question": "The ancient Mayan civilization existed in which modern day country?",
+            "answers": [
+                {
+                    "txt": "Guatemala"
+                },
+                {
+                    "txt": "Brazil"
+                },
+                {
+                    "txt": "Panama"
+                },
+                {
+                    "txt": "Honduras"
+                }
+            ]
+        },
+        {
+            "question": "When was the television invented?",
+            "answers": [
+                {
+                    "txt": "1927"
+                },
+                {
+                    "txt": "1971"
+                },
+                {
+                    "txt": "1958"
+                },
+                {
+                    "txt": "1940"
+                }
+            ]
+        },
+        {
+            "question": "Where was Cleopatra's birthplace?",
+            "answers": [
+                {
+                    "txt": "Greece"
+                },
+                {
+                    "txt": "Egypt"
+                },
+                {
+                    "txt": "Babylon"
+                },
+                {
+                    "txt": "Rome"
+                }
+            ]
+        },
+        {
+            "question": "Where was the assassination that led to World War I took place?",
+            "answers": [
+                {
+                    "txt": "Sarajevo"
+                },
+                {
+                    "txt": "Berlin"
+                },
+                {
+                    "txt": "Zagreb"
+                },
+                {
+                    "txt": "Vienna"
+                }
+            ]
+        },
+        {
+            "question": "From what city did the Titanic set sail?",
+            "answers": [
+                {
+                    "txt": "South Hampton"
+                },
+                {
+                    "txt": "Seattle"
+                },
+                {
+                    "txt": "Los Angeles"
+                },
+                {
+                    "txt": "New Orleans"
+                }
+            ]
+        },
+        {
+            "question": "The Statue of Liberty was a gift from which country?",
+            "answers": [
+                {
+                    "txt": "France"
+                },
+                {
+                    "txt": "Canada"
+                },
+                {
+                    "txt": "Australia"
+                },
+                {
+                    "txt": "United Kingdom"
+                }
+            ]
+        },
+        {
+            "question": "What was the first city to reach a population of 1 million?",
+            "answers": [
+                {
+                    "txt": "Ancient Rome"
+                },
+                {
+                    "txt": "New Delhi"
+                },
+                {
+                    "txt": "Beijing"
+                },
+                {
+                    "txt": "Shanghai"
+                }
+            ]
+        },
+        {
+            "question": "What country won the first World Cup?",
+            "answers": [
+                {
+                    "txt": "Uruguay"
+                },
+                {
+                    "txt": "Spain"
+                },
+                {
+                    "txt": "Argentina"
+                },
+                {
+                    "txt": "Brazil"
+                }
+            ]
+        },
+        {
+            "question": "What is the best selling novel of all time?",
+            "answers": [
+                {
+                    "txt": "Don Quixote"
+                },
+                {
+                    "txt": "One Hundred Years of Solitude"
+                },
+                {
+                    "txt": "Moby Dick"
+                },
+                {
+                    "txt": "War and Peace"
+                }
+            ]
+        },
+        {
+            "question": "What was the name of the Greek Goddess of Love?",
+            "answers": [
+                {
+                    "txt": "Aphrodite"
+                },
+                {
+                    "txt": "Athena"
+                },
+                {
+                    "txt": "Artemis"
+                },
+                {
+                    "txt": "Hera"
+                }
+            ]
+        },
+        {
+            "question": "The Iconic and Historical Speech, 'I Have a Dream' was delivered by?",
+            "answers": [
+                {
+                    "txt": "Martin Luther King"
+                },
+                {
+                    "txt": "George Washington"
+                },
+                {
+                    "txt": "Margaret Thatcher"
+                },
+                {
+                    "txt": "Mahatma Gandhi"
+                }
+            ]
+        },
+        {
+            "question": "Dr. Livingstone explored what continent?",
+            "answers": [
+                {
+                    "txt": "Africa"
+                },
+                {
+                    "txt": "Asia"
+                },
+                {
+                    "txt": "Europe"
+                },
+                {
+                    "txt": "Australia"
+                }
+            ]
+        },
+        {
+            "question": "Which Queen of England had the name 'Bloody Mary'?",
+            "answers": [
+                {
+                    "txt": "Mary I"
+                },
+                {
+                    "txt": "Elizabeth I"
+                },
+                {
+                    "txt": "Victoria"
+                },
+                {
+                    "txt": "Eleanor"
+                }
+            ]
+        },
+        {
+            "question": "What is the biggest ocean in the world?",
+            "answers": [
+                {
+                    "txt": "Pacific Ocean"
+                },
+                {
+                    "txt": "Atlantic Ocean"
+                },
+                {
+                    "txt": "Indian Ocean"
+                },
+                {
+                    "txt": "Arctic Ocean"
+                }
+            ]
         }
-      ]
-    },
-    {
-      "question": "When World War II Started?",
-      "answers": [
-        {
-          "txt": "1 September, 1939"
-        },
-        {
-          "txt": "20 June, 1938"
-        },
-        {
-          "txt": "20 April, 1940"
-        },
-        {
-          "txt": "4 June, 1939 "
-        }
-      ]
-    },
-    {
-      "question": "What Marked The End of Medieval Times?",
-      "answers": [
-        {
-          "txt": "Rise of The Ottoman Empire"
-        },
-        {
-          "txt": "Fall of Rome"
-        },
-        {
-          "txt": "The Bronze Age"
-        },
-        {
-          "txt": "The Printing Press"
-        }
-      ]
-    },
-    {
-      "question": "Who Discovered The Americas?",
-      "answers": [
-        {
-          "txt": "Christopher Colombus"
-        },
-        {
-          "txt": "Americo Vespuchi"
-        },
-        {
-          "txt": "Vasco De-Gamma"
-        },
-        {
-          "txt": "Rick Sanchez"
-        }
-      ]
-    },
-    {
-      "question": "Who Lead Great Britian During WWII?",
-      "answers": [
-        {
-          "txt": "Winston Cherchill"
-        },
-        {
-          "txt": "Elizabeth II"
-        },
-        {
-          "txt": "Neville Chamberlin"
-        },
-        {
-          "txt": "Alan Turing"
-        }
-      ]
-    },
-    {
-      "question": "When The French Revolution Accured?",
-      "answers": [
-        {
-          "txt": "1789"
-        },
-        {
-          "txt": "1764"
-        },
-        {
-          "txt": "1777"
-        },
-        {
-          "txt": "1806"
-        }
-      ]
-    },
-    {
-      "question": "What's written on the Amercian Dollar Bill($$$)?",
-      "answers": [
-        {
-          "txt": "In God We Trust"
-        },
-        {
-          "txt": "Make America Great Again"
-        },
-        {
-          "txt": "Illuminati"
-        },
-        {
-          "txt": "Rick Sanchez"
-        }
-      ]
-    },
-    {
-      "question": "What was the kingdom Thailand originated from?",
-      "answers": [
-        {
-          "txt": "Siam"
-        },
-        {
-          "txt": "Ming"
-        },
-        {
-          "txt": "Shu"
-        },
-        {
-          "txt": "Thing"
-        }
-      ]
-    },
-    {
-      "question": "Which house won 'Wars of The Roses'?",
-      "answers": [
-        {
-          "txt": "Lancaster"
-        },
-        {
-          "txt": "York"
-        },
-        {
-          "txt": "Cornwell"
-        },
-        {
-          "txt": "Oxford"
-        }
-      ]
-    },
-    {
-      "question": "Which nations faught in the 100 years war?",
-      "answers": [
-        {
-          "txt": "England & France"
-        },
-        {
-          "txt": "France & Austria"
-        },
-        {
-          "txt": "Austria & Germany"
-        },
-        {
-          "txt": "U.S.A & Great Britian"
-        }
-      ]
-    },
-    {
-      "question": "What kind of gas was used in the trenches during World War I?",
-      "answers": [
-        {
-          "txt": "Mustard gas"
-        },
-        {
-          "txt": "Radon"
-        },
-        {
-          "txt": "VX"
-        },
-        {
-          "txt": "Sarin"
-        }
-      ]
-    },
-    {
-      "question": "What city was buried by Mount Vesuvius in 79 A.D.?",
-      "answers": [
-        {
-          "txt": "Pompeii"
-        },
-        {
-          "txt": "Naples"
-        },
-        {
-          "txt": "Milan"
-        },
-        {
-          "txt": "Rome"
-        }
-      ]
-    },
-    {
-      "question": "Who painted the ceiling of the Sistine Chapel?",
-      "answers": [
-        {
-          "txt": "Michelangelo"
-        },
-        {
-          "txt": "Leonardo da Vinci"
-        },
-        {
-          "txt": "Vincent van Gogh"
-        },
-        {
-          "txt": "Gustave Dore"
-        }
-      ]
-    },
-    {
-      "question": "When did the Cold War officially end?",
-      "answers": [
-        {
-          "txt": "1989"
-        },
-        {
-          "txt": "1992"
-        },
-        {
-          "txt": "1945"
-        },
-        {
-          "txt": "1976"
-        }
-      ]
-    },
-    {
-      "question": "Which European country was the first to allow women to vote?",
-      "answers": [
-        {
-          "txt": "Finland"
-        },
-        {
-          "txt": "France"
-        },
-        {
-          "txt": "Britain"
-        },
-        {
-          "txt": "Italy"
-        }
-      ]
-    },
-    {
-      "question": "Which one of the seven ancient wonders of the world is still standing today?",
-      "answers": [
-        {
-          "txt": "The Great Pyramid of Giza"
-        },
-        {
-          "txt": "Statue of Zeus at Olympia"
-        },
-        {
-          "txt": "Temple of Artemis at Ephesus"
-        },
-        {
-          "txt": "Hanging Gardens of Babylon"
-        }
-      ]
-    },
-    {
-      "question": "What is the world's smallest country?",
-      "answers": [
-        {
-          "txt": "Vatican"
-        },
-        {
-          "txt": "Lebanon"
-        },
-        {
-          "txt": "Israel"
-        },
-        {
-          "txt": "Monaco"
-        }
-      ]
-    },
-    {
-      "question": "How many years did the 100 years war last?",
-      "answers": [
-        {
-          "txt": "116 years"
-        },
-        {
-          "txt": "100 years"
-        },
-        {
-          "txt": "97 years"
-        },
-        {
-          "txt": "25 years"
-        }
-      ]
-    },
-    {
-      "question": "How many U.S. presidents have been assassinated?",
-      "answers": [
-        {
-          "txt": "4"
-        },
-        {
-          "txt": "2"
-        },
-        {
-          "txt": "1"
-        },
-        {
-          "txt": "none"
-        }
-      ]
-    },
-    {
-      "question": "How many times has the Mona Lisa been stolen?",
-      "answers": [
-        {
-          "txt": "1"
-        },
-        {
-          "txt": "never"
-        },
-        {
-          "txt": "3"
-        },
-        {
-          "txt": "2"
-        }
-      ]
-    },
-    {
-      "question": "In which year was the Berlin Wall torn down?",
-      "answers": [
-        {
-          "txt": "1989"
-        },
-        {
-          "txt": "1974"
-        },
-        {
-          "txt": "1993"
-        },
-        {
-          "txt": "1968"
-        }
-      ]
-    },
-    {
-      "question": "The �Whitechapel Murderer� is the nickname given to which serial killer?",
-      "answers": [
-        {
-          "txt": "Jack the Ripper"
-        },
-        {
-          "txt": "Zodiac Killer"
-        },
-        {
-          "txt": "Ted Bundy"
-        },
-        {
-          "txt": "Jeffrey Dahmer"
-        }
-      ]
-    },
-    {
-      "question": "Who invented the telephone?",
-      "answers": [
-        {
-          "txt": "Alexander Graham Bell"
-        },
-        {
-          "txt": "Thomas Edison"
-        },
-        {
-          "txt": "Galileo Galilei"
-        },
-        {
-          "txt": "Benjamin Franklin"
-        }
-      ]
-    },
-    {
-      "question": "In which country was the largest known T-Rex skeleton found?",
-      "answers": [
-        {
-          "txt": "Canada"
-        },
-        {
-          "txt": "USA"
-        },
-        {
-          "txt": "Brazil"
-        },
-        {
-          "txt": "South Africa"
-        }
-      ]
-    },
-    {
-      "question": "When was Pearl Harbor bombed?",
-      "answers": [
-        {
-          "txt": "1941"
-        },
-        {
-          "txt": "1945"
-        },
-        {
-          "txt": "1943"
-        },
-        {
-          "txt": "1940"
-        }
-      ]
-    },
-    {
-      "question": "The ancient Mayan civilization existed in which modern day country?",
-      "answers": [
-        {
-          "txt": "Guatemala"
-        },
-        {
-          "txt": "Brazil"
-        },
-        {
-          "txt": "Panama"
-        },
-        {
-          "txt": "Honduras"
-        }
-      ]
-    },
-    {
-      "question": "When was the television invented?",
-      "answers": [
-        {
-          "txt": "1927"
-        },
-        {
-          "txt": "1971"
-        },
-        {
-          "txt": "1958"
-        },
-        {
-          "txt": "1940"
-        }
-      ]
-    },
-    {
-      "question": "Where was Cleopatra's birthplace?",
-      "answers": [
-        {
-          "txt": "Greece"
-        },
-        {
-          "txt": "Egypt"
-        },
-        {
-          "txt": "Babylon"
-        },
-        {
-          "txt": "Rome"
-        }
-      ]
-    },
-    {
-      "question": "Where was the assassination that led to World War I took place?",
-      "answers": [
-        {
-          "txt": "Sarajevo"
-        },
-        {
-          "txt": "Berlin"
-        },
-        {
-          "txt": "Zagreb"
-        },
-        {
-          "txt": "Vienna"
-        }
-      ]
-    },
-    {
-      "question": "From what city did the Titanic set sail?",
-      "answers": [
-        {
-          "txt": "South Hampton"
-        },
-        {
-          "txt": "Seattle"
-        },
-        {
-          "txt": "Los Angeles"
-        },
-        {
-          "txt": "New Orleans"
-        }
-      ]
-    },
-    {
-      "question": "The Statue of Liberty was a gift from which country?",
-      "answers": [
-        {
-          "txt": "France"
-        },
-        {
-          "txt": "Canada"
-        },
-        {
-          "txt": "Australia"
-        },
-        {
-          "txt": "United Kingdom"
-        }
-      ]
-    },
-    {
-      "question": "What was the first city to reach a population of 1 million?",
-      "answers": [
-        {
-          "txt": "Ancient Rome"
-        },
-        {
-          "txt": "New Delhi"
-        },
-        {
-          "txt": "Beijing"
-        },
-        {
-          "txt": "Shanghai"
-        }
-      ]
-    },
-    {
-      "question": "What country won the first World Cup?",
-      "answers": [
-        {
-          "txt": "Uruguay"
-        },
-        {
-          "txt": "Spain"
-        },
-        {
-          "txt": "Argentina"
-        },
-        {
-          "txt": "Brazil"
-        }
-      ]
-    },
-    {
-      "question": "What is the best selling novel of all time?",
-      "answers": [
-        {
-          "txt": "Don Quixote"
-        },
-        {
-          "txt": "One Hundred Years of Solitude"
-        },
-        {
-          "txt": "Moby Dick"
-        },
-        {
-          "txt": "War and Peace"
-        }
-      ]
-    },
-    {
-      "question": "What was the name of the Greek Goddess of Love?",
-      "answers": [
-        {
-          "txt": "Aphrodite"
-        },
-        {
-          "txt": "Athena"
-        },
-        {
-          "txt": "Artemis"
-        },
-        {
-          "txt": "Hera"
-        }
-      ]
-    },
-    {
-      "question": "The Iconic and Historical Speech, �I Have a Dream� was delivered by?",
-      "answers": [
-        {
-          "txt": "Martin Luther King"
-        },
-        {
-          "txt": "George Washington"
-        },
-        {
-          "txt": "Margaret Thatcher"
-        },
-        {
-          "txt": "Mahatma Gandhi"
-        }
-      ]
-    },
-    {
-      "question": "Dr. Livingstone explored what continent?",
-      "answers": [
-        {
-          "txt": "Africa"
-        },
-        {
-          "txt": "Asia"
-        },
-        {
-          "txt": "Europe"
-        },
-        {
-          "txt": "Australia"
-        }
-      ]
-    },
-    {
-      "question": "Which Queen of England had the name 'Bloody Mary'?",
-      "answers": [
-        {
-          "txt": "Mary I"
-        },
-        {
-          "txt": "Elizabeth I"
-        },
-        {
-          "txt": "Victoria"
-        },
-        {
-          "txt": "Eleanor"
-        }
-      ]
-    },
-    {
-      "question": "What is the biggest ocean in the world?",
-      "answers": [
-        {
-          "txt": "Pacific Ocean"
-        },
-        {
-          "txt": "Atlantic Ocean"
-        },
-        {
-          "txt": "Indian Ocean"
-        },
-        {
-          "txt": "Arctic Ocean"
-        }
-      ]
+    ],
+    "HighScores": {
+        "Yair": 0,
+        "Omry": 70,
+        "omry": 270
     }
-  ],
-  "HighScores": {
-    "Yair": 500,
-    "Omry": 70,
-    "omry": 270
-  }
 }
