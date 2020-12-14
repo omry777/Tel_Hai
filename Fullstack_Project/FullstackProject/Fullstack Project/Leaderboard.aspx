@@ -13,14 +13,10 @@
         </div>
         <asp:Label ID="message" runat="server"></asp:Label>
         <br />
-        <br />
-        <asp:Table ID="tableDiv" runat="server" align="center">
-            <asp:TableRow BorderWidth="2">
-                <asp:TableCell>
-                    <asp:GridView ID="table" AutoGenerateColumns="true" runat="server" OnSelectedIndexChanged="table_SelectedIndexChanged"></asp:GridView>
-                </asp:TableCell>
-            </asp:TableRow>
-        </asp:Table>
+        <br />      
+        <div>
+            <asp:PlaceHolder ID="DBDataPlaceHolder" runat="server"></asp:PlaceHolder>
+        </div>
         <br />
         <hr />
         <asp:Button ID="back" CssClass="backBtn" runat="server" Text="Back" PostBackUrl="~/Login.aspx" />

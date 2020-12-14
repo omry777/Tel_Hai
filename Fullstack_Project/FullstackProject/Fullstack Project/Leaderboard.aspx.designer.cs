@@ -42,22 +42,13 @@ namespace Fullstack_Project
         protected global::System.Web.UI.WebControls.Label message;
 
         /// <summary>
-        /// tableDiv control.
+        /// DBDataPlaceHolder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table tableDiv;
-
-        /// <summary>
-        /// table control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView table;
+        protected global::System.Web.UI.WebControls.PlaceHolder DBDataPlaceHolder;
 
         /// <summary>
         /// back control.
